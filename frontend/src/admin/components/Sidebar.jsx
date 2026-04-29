@@ -6,10 +6,18 @@ import CategoryIcon from '@mui/icons-material/Category';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Box, IconButton } from '@mui/material';
+import { Box, IconButton, Collapse } from '@mui/material';
+import SettingsIcon from '@mui/icons-material/Settings';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import LanguageIcon from '@mui/icons-material/Language';
+import GroupIcon from '@mui/icons-material/Group';
+import TuneIcon from '@mui/icons-material/Tune';
+import ExtensionIcon from '@mui/icons-material/Extension';
 
 export default function Sidebar({ collapsed, onToggle }) {
   const navigate = useNavigate();
+  const [settingsExpanded, setSettingsExpanded] = React.useState(false);
 
   const handleLogout = () => {
     localStorage.removeItem('token');
@@ -65,6 +73,48 @@ export default function Sidebar({ collapsed, onToggle }) {
               {!collapsed && <span className="text-[15px]">{item.name}</span>}
             </NavLink>
           ))}
+
+          {/* Expandable Settings Menu */}
+          <div className="flex flex-col">
+            <button
+              onClick={() => {
+                if (collapsed) onToggle(); // Expand sidebar if collapsed when clicking settings
+                setSettingsExpanded(!settingsExpanded);
+              }}
+              className={`flex items-center ${collapsed ? 'justify-center' : 'justify-between px-4'} py-3 rounded-2xl transition-all duration-200 hover:text-white hover:bg-[#2d3136] ${settingsExpanded && !collapsed ? 'text-white' : ''}`}
+              title="Settings"
+            >
+              <div className="flex items-center gap-4">
+                <SettingsIcon fontSize="small" />
+                {!collapsed && <span className="text-[15px]">Settings</span>}
+              </div>
+              {!collapsed && (settingsExpanded ? <ExpandLessIcon fontSize="small" /> : <ExpandMoreIcon fontSize="small" />)}
+            </button>
+
+            <Collapse in={settingsExpanded && !collapsed} timeout="auto" unmountOnExit>
+              <div className="flex flex-col gap-1 mt-1 ml-4 pl-4 border-l border-gray-700">
+                {[
+                  { name: 'General Settings', path: '/admin/settings/general', icon: <TuneIcon sx={{ fontSize: 16 }} /> },
+                  { name: 'User Settings',    path: '/admin/settings/users',   icon: <GroupIcon sx={{ fontSize: 16 }} /> },
+                  { name: 'Website Settings', path: '/admin/settings/website', icon: <LanguageIcon sx={{ fontSize: 16 }} /> },
+                  { name: 'Integration',      path: '/admin/settings/integration', icon: <ExtensionIcon sx={{ fontSize: 16 }} /> },
+                ].map((sub) => (
+                  <NavLink
+                    key={sub.name}
+                    to={sub.path}
+                    className={({ isActive }) =>
+                      `flex items-center gap-3 px-3 py-2 rounded-xl transition-all duration-200 text-sm ${
+                        isActive ? 'text-white bg-[#2d3136]' : 'hover:text-white hover:translate-x-1'
+                      }`
+                    }
+                  >
+                    {sub.icon}
+                    <span>{sub.name}</span>
+                  </NavLink>
+                ))}
+              </div>
+            </Collapse>
+          </div>
         </nav>
       </div>
 

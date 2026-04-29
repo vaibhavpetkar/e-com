@@ -11,19 +11,27 @@ export default function VerifyEmail() {
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
 
+  const hasCalled = React.useRef(false);
+
   useEffect(() => {
+    if (hasCalled.current) return;
+    
     const token = searchParams.get('token');
     if (!token) {
       setStatus('error');
       setMessage('No verification token found in the URL.');
       return;
     }
+
+    hasCalled.current = true;
+    
     API.get(`/auth/verify-email?token=${token}`)
       .then((res) => {
         setStatus('success');
         setMessage(res.data.message);
       })
       .catch((err) => {
+        // If we get an error but we already succeeded, don't overwrite
         setStatus('error');
         setMessage(err.response?.data?.error || 'Verification failed. The link may have expired.');
       });

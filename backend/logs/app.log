@@ -41,3 +41,71 @@
 [2026-04-29T01:55:53.229Z] [REQUEST] GET /api/users/audit-logs? | status=200 duration=4ms ip=::1
 [2026-04-29T01:55:53.232Z] [REQUEST] GET /api/users/all | status=304 duration=2ms ip=::1
 [2026-04-29T01:55:53.236Z] [REQUEST] GET /api/users/audit-logs? | status=304 duration=3ms ip=::1
+[2026-04-29T02:05:46.820Z] [REQUEST] POST /api/auth/register | status=201 duration=163ms ip=::1
+[2026-04-29T02:06:16.165Z] [REQUEST] POST /api/auth/login | status=200 duration=192ms ip=::1
+[2026-04-29T02:11:50.298Z] [REQUEST] POST /api/auth/login | status=200 duration=160ms ip=::1
+[2026-04-29T02:11:50.694Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=1ms ip=::1
+[2026-04-29T02:11:54.920Z] [REQUEST] GET /api/users/settings | status=304 duration=3ms ip=::1
+[2026-04-29T02:11:54.923Z] [REQUEST] GET /api/users/settings | status=304 duration=2ms ip=::1
+[2026-04-29T02:12:31.280Z] [REQUEST] GET /api/users/settings | status=304 duration=167ms ip=::1
+[2026-04-29T02:12:31.283Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-04-29T02:12:33.112Z] [REQUEST] PUT /api/users/settings | status=200 duration=8ms ip=::1
+[2026-04-29T02:12:37.999Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=1ms ip=::1
+[2026-04-29T02:12:40.702Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=2ms ip=::1
+[2026-04-29T02:13:24.986Z] [WARN   ] POST /api/auth/register | status=409 duration=53ms ip=::1
+[2026-04-29T02:13:40.657Z] [REQUEST] POST /api/auth/login | status=200 duration=159ms ip=::1
+[2026-04-29T02:13:51.169Z] [REQUEST] GET /api/users/all | status=200 duration=83ms ip=::1
+[2026-04-29T02:13:51.180Z] [REQUEST] GET /api/users/all | status=304 duration=1ms ip=::1
+[2026-04-29T02:13:51.189Z] [REQUEST] GET /api/users/audit-logs? | status=200 duration=101ms ip=::1
+[2026-04-29T02:13:51.196Z] [REQUEST] GET /api/users/audit-logs? | status=304 duration=2ms ip=::1
+[2026-04-29T02:15:23.417Z] [REQUEST] POST /api/auth/register | status=201 duration=3282ms ip=::1
+[2026-04-29T02:20:30.911Z] [SUCCESS] Server started | port=5000 env=development
+[2026-04-29T02:20:31.987Z] [SUCCESS] Server started | port=5000 env=development
+[2026-04-29T02:23:35.806Z] [SUCCESS] Server started | port=5000 env=development
+[2026-04-29T02:24:25.418Z] [SUCCESS] Server started | port=5000 env=development
+[2026-04-29T02:25:20.291Z] [SUCCESS] Server started | port=5000 env=development
+[2026-04-29T02:26:39.884Z] [SUCCESS] Server started | port=5000 env=development
+[2026-04-29T02:26:49.933Z] [SUCCESS] Server started | port=5000 env=development
+[2026-04-29T02:26:55.145Z] [REQUEST] GET /api/users/all | status=200 duration=133ms ip=::1
+[2026-04-29T02:26:55.150Z] [REQUEST] GET /api/users/audit-logs? | status=304 duration=109ms ip=::1
+[2026-04-29T02:26:55.162Z] [REQUEST] GET /api/users/all | status=304 duration=2ms ip=::1
+[2026-04-29T02:26:55.179Z] [REQUEST] GET /api/users/audit-logs? | status=304 duration=3ms ip=::1
+[2026-04-29T02:27:00.075Z] [REQUEST] GET /api/users/audit-logs? | status=304 duration=3ms ip=::1
+[2026-04-29T02:27:04.036Z] [REQUEST] GET /api/users/audit-logs? | status=304 duration=3ms ip=::1
+[2026-04-29T02:27:56.620Z] [WARN   ] POST /api/auth/login | status=403 duration=261ms ip=::1
+[2026-04-29T02:28:06.171Z] [REQUEST] POST /api/auth/resend-verification | status=200 duration=4067ms ip=::1
+[2026-04-29T02:28:52.671Z] [WARN   ] 404 Not Found: GET /verify-email?token=7e00b4ffb1f796442668608b0683fda567bd52b31a1ceaf16352ee710f07a30c | ip=::1
+[2026-04-29T02:28:52.674Z] [WARN   ] GET /verify-email?token=7e00b4ffb1f796442668608b0683fda567bd52b31a1ceaf16352ee710f07a30c | status=404 duration=3ms ip=::1
+[2026-04-29T02:28:52.716Z] [WARN   ] 404 Not Found: GET /favicon.ico | ip=::1
+[2026-04-29T02:28:52.718Z] [WARN   ] GET /favicon.ico | status=404 duration=2ms ip=::1
+[2026-04-29T02:29:00.920Z] [WARN   ] GET /api/auth/verify-email?token=7e00b4ffb1f796442668608b0683fda567bd52b31a1ceaf16352ee710f07a30c | status=400 duration=57ms ip=::1
+[2026-04-29T02:29:00.923Z] [WARN   ] GET /api/auth/verify-email?token=7e00b4ffb1f796442668608b0683fda567bd52b31a1ceaf16352ee710f07a30c | status=400 duration=2ms ip=::1
+[2026-04-29T02:29:19.815Z] [REQUEST] GET /api/users/audit-logs? | status=304 duration=153ms ip=::1
+[2026-04-29T02:31:36.468Z] [SUCCESS] Server started | port=5000 env=development
+[2026-04-29T02:32:28.476Z] [REQUEST] POST /api/auth/login | status=200 duration=195ms ip=::1 body={"email":"rajvaibhavpetkar007@gmail.com","password":"******"}
+[2026-04-29T02:32:39.222Z] [WARN   ] POST /api/auth/login | status=403 duration=156ms ip=::1
+[2026-04-29T02:32:46.320Z] [REQUEST] GET /api/users/all | status=304 duration=7ms ip=::1
+[2026-04-29T02:32:46.333Z] [REQUEST] GET /api/users/all | status=304 duration=2ms ip=::1
+[2026-04-29T02:32:46.391Z] [REQUEST] GET /api/users/audit-logs? | status=200 duration=74ms ip=::1
+[2026-04-29T02:32:46.400Z] [REQUEST] GET /api/users/audit-logs? | status=304 duration=3ms ip=::1
+[2026-04-29T02:33:01.955Z] [WARN   ] POST /api/auth/login | status=403 duration=257ms ip=::1
+[2026-04-29T02:33:08.406Z] [REQUEST] POST /api/auth/resend-verification | status=200 duration=2914ms ip=::1 body={"email":"metir29190@hacknapp.com"}
+[2026-04-29T02:34:22.957Z] [SUCCESS] Server started | port=5000 frontend=http://localhost:3000 env=development
+[2026-04-29T02:34:38.039Z] [SUCCESS] Server started | port=5000 frontend=http://localhost:3000 env=development
+[2026-04-29T02:34:47.817Z] [REQUEST] POST /api/auth/resend-verification | status=200 duration=3461ms ip=::1 body={"email":"metir29190@hacknapp.com"}
+[2026-04-29T02:35:20.147Z] [WARN   ] GET /api/auth/verify-email?token=7e00b4ffb1f796442668608b0683fda567bd52b31a1ceaf16352ee710f07a30c | status=400 duration=72ms ip=::1
+[2026-04-29T02:35:20.150Z] [WARN   ] GET /api/auth/verify-email?token=7e00b4ffb1f796442668608b0683fda567bd52b31a1ceaf16352ee710f07a30c | status=400 duration=2ms ip=::1
+[2026-04-29T02:36:17.740Z] [WARN   ] POST /api/auth/login | status=403 duration=264ms ip=::1
+[2026-04-29T02:36:49.532Z] [REQUEST] POST /api/auth/resend-verification | status=200 duration=2970ms ip=::1 body={"email":"metir29190@hacknapp.com"}
+[2026-04-29T02:37:29.838Z] [REQUEST] POST /api/auth/register | status=201 duration=2997ms ip=::1 body={"name":"xocirin232","email":"xocirin232@hacknapp.com","password":"******","role":"VIEWER"}
+[2026-04-29T02:37:53.679Z] [REQUEST] GET /api/auth/verify-email?token=0ca1fa4314dac372cf2d2fe12ebd4ae33183eaea4f58814d123ade5e867c5b69 | status=200 duration=56ms ip=::1
+[2026-04-29T02:37:53.683Z] [WARN   ] GET /api/auth/verify-email?token=0ca1fa4314dac372cf2d2fe12ebd4ae33183eaea4f58814d123ade5e867c5b69 | status=400 duration=2ms ip=::1
+[2026-04-29T02:38:20.753Z] [WARN   ] GET /api/auth/verify-email?token=0ca1fa4314dac372cf2d2fe12ebd4ae33183eaea4f58814d123ade5e867c5b69 | status=400 duration=82ms ip=::1
+[2026-04-29T02:38:56.867Z] [REQUEST] POST /api/auth/login | status=200 duration=266ms ip=::1 body={"email":"xocirin232@hacknapp.com","password":"******"}
+[2026-04-29T02:39:28.449Z] [REQUEST] GET /api/users/audit-logs? | status=200 duration=58ms ip=::1
+[2026-04-29T02:40:57.078Z] [REQUEST] GET /api/users/audit-logs? | status=304 duration=90ms ip=::1
+[2026-04-29T02:40:57.143Z] [REQUEST] GET /api/users/all | status=200 duration=162ms ip=::1
+[2026-04-29T02:40:57.401Z] [REQUEST] GET /api/users/all | status=304 duration=2ms ip=::1
+[2026-04-29T02:40:57.402Z] [REQUEST] GET /api/users/audit-logs? | status=304 duration=2ms ip=::1
+[2026-04-29T02:41:05.444Z] [REQUEST] GET /api/users/profile | status=200 duration=2ms ip=::1
+[2026-04-29T02:41:05.452Z] [REQUEST] GET /api/users/profile | status=304 duration=2ms ip=::1

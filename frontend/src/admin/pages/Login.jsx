@@ -1,22 +1,25 @@
 import React, { useState } from 'react';
 import {
   Container, Box, Typography, TextField, Button,
-  Link, Alert, CircularProgress
+  Link, Alert, CircularProgress, Dialog, DialogTitle,
+  DialogContent, DialogActions, IconButton
 } from '@mui/material';
+import { Close as CloseIcon, Email as EmailIcon } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 import { API } from '../../services/api';
 
 export default function Login({ toggleForm }) {
-  const [email, setEmail]       = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [emailError, setEmailError]   = useState(false);
+  const [emailError, setEmailError] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
   const [emailHelperText, setEmailHelperText] = useState('');
-  const [loading, setLoading]   = useState(false);
+  const [loading, setLoading] = useState(false);
   const [serverError, setServerError] = useState('');
   const [pendingVerification, setPendingVerification] = useState(false);
   const [pendingEmail, setPendingEmail] = useState('');
   const [resendMsg, setResendMsg] = useState('');
+  const [resendLoading, setResendLoading] = useState(false);
 
   const navigate = useNavigate();
 
@@ -67,11 +70,14 @@ export default function Login({ toggleForm }) {
 
   const handleResend = async () => {
     setResendMsg('');
+    setResendLoading(true);
     try {
       const res = await API.post('/auth/resend-verification', { email: pendingEmail });
       setResendMsg(res.data.message);
     } catch (err) {
       setResendMsg(err.response?.data?.error || 'Failed to resend. Try again.');
+    } finally {
+      setResendLoading(false);
     }
   };
 
@@ -88,23 +94,6 @@ export default function Login({ toggleForm }) {
         <Typography component="h2" variant="h6" sx={{ mb: 3, color: 'text.secondary' }}>
           Sign in to your admin account
         </Typography>
-
-        {/* Pending Verification Banner */}
-        {pendingVerification && (
-          <Alert severity="warning" sx={{ width: '100%', mb: 2, borderRadius: 2 }}>
-            <strong>Email not verified.</strong> Please check your inbox for the verification link.
-            <Box sx={{ mt: 1 }}>
-              <Button size="small" variant="outlined" color="warning" onClick={handleResend}>
-                Resend Verification Email
-              </Button>
-            </Box>
-            {resendMsg && (
-              <Typography variant="caption" display="block" sx={{ mt: 1, color: 'text.secondary' }}>
-                {resendMsg}
-              </Typography>
-            )}
-          </Alert>
-        )}
 
         {/* Server Error */}
         {serverError && (
@@ -131,7 +120,6 @@ export default function Login({ toggleForm }) {
             variant="outlined" sx={{ mb: 1 }}
           />
 
-          {/* Forgot Password */}
           <Box sx={{ display: 'flex', justifyContent: 'flex-end', mb: 2 }}>
             <Link
               href="#"
@@ -159,6 +147,57 @@ export default function Login({ toggleForm }) {
           </Link>
         </Box>
       </Box>
+
+      {/* Verification Required Popup */}
+      <Dialog
+        open={pendingVerification}
+        onClose={() => setPendingVerification(false)}
+        PaperProps={{ sx: { borderRadius: 3, p: 1, maxWidth: 400 } }}
+      >
+        <DialogTitle sx={{ display: 'flex', alignItems: 'center', gap: 1, fontWeight: 'bold' }}>
+          <EmailIcon color="warning" />
+          Verify Your Email
+          <IconButton
+            onClick={() => setPendingVerification(false)}
+            sx={{ position: 'absolute', right: 8, top: 8 }}
+          >
+            <CloseIcon />
+          </IconButton>
+        </DialogTitle>
+        <DialogContent>
+          <Typography variant="body1" sx={{ mb: 2 }}>
+            Your account is registered but <strong>not yet verified</strong>.
+          </Typography>
+          <Typography variant="body2" color="text.secondary" sx={{ mb: 3 }}>
+            We sent a verification link to <strong>{pendingEmail}</strong>. Please check your inbox (and spam folder) to activate your account.
+          </Typography>
+
+          {resendMsg && (
+            <Alert severity={resendMsg.includes('resent') ? "success" : "info"} sx={{ mb: 2, borderRadius: 2 }}>
+              {resendMsg}
+            </Alert>
+          )}
+        </DialogContent>
+        <DialogActions sx={{ px: 3, pb: 3, flexDirection: 'column', gap: 1 }}>
+          <Button
+            fullWidth
+            variant="contained"
+            onClick={handleResend}
+            disabled={resendLoading}
+            sx={{ bgcolor: '#1a1d21', borderRadius: 2, py: 1, '&:hover': { bgcolor: '#2d3748' } }}
+          >
+            {resendLoading ? <CircularProgress size={20} color="inherit" /> : 'Resend Verification Email'}
+          </Button>
+          <Button
+            fullWidth
+            variant="text"
+            onClick={() => setPendingVerification(false)}
+            sx={{ color: 'text.secondary' }}
+          >
+            Maybe Later
+          </Button>
+        </DialogActions>
+      </Dialog>
     </Container>
   );
 }

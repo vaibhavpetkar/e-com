@@ -23,6 +23,12 @@ export const requestLogger = (req, res, next) => {
         } else if (status >= 400) {
             logger.warn(`${method} ${originalUrl}`, meta);
         } else {
+            // For POST/PUT/PATCH, log the request body too if it exists
+            if (['POST', 'PUT', 'PATCH'].includes(method) && req.body && Object.keys(req.body).length > 0) {
+                const bodyClone = { ...req.body };
+                if (bodyClone.password) bodyClone.password = '******'; // Sanitize password
+                meta.body = JSON.stringify(bodyClone);
+            }
             logger.request(`${method} ${originalUrl}`, meta);
         }
     });

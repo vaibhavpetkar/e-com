@@ -9,6 +9,10 @@ import Profile from "./admin/pages/Profile";
 import VerifyEmail from "./admin/pages/VerifyEmail";
 import ForgotPassword from "./admin/pages/ForgotPassword";
 import AuditLogs from "./admin/pages/AuditLogs";
+import GeneralSettings from "./admin/pages/GeneralSettings";
+import UserSettings from "./admin/pages/UserSettings";
+import WebsiteSettings from "./admin/pages/WebsiteSettings";
+import IntegrationSettings from "./admin/pages/IntegrationSettings";
 import NotFound from "./admin/pages/NotFound";
 import AdminLayout from "./admin/layout/AdminLayout";
 
@@ -29,7 +33,15 @@ const ProtectedRoute = ({ children, role }) => {
     }
 
     if (!token) return <Navigate to="/admin/login" />;
-    if (role && user?.role !== role) return <Navigate to="/" />;
+    
+    const validRoles = ["ADMIN", "EDITOR", "VIEWER"];
+    if (!validRoles.includes(user?.role)) return <Navigate to="/admin/login" />;
+
+    if (role && user?.role !== role) {
+        // If they don't have the specific role (e.g. they are a VIEWER trying to access an ADMIN-only page)
+        // for now, we'll let them see the dashboard instead of an infinite loop
+        return <Navigate to="/admin/dashboard" />;
+    }
     return children;
 };
 
@@ -37,6 +49,9 @@ function App() {
     return (
         <BrowserRouter>
             <Routes>
+                {/* Redirect root to dashboard */}
+                <Route path="/" element={<Navigate to="/admin/dashboard" replace />} />
+
                 {/* ===== CLIENT ROUTES ===== */}
                 <Route path="/products" element={<Products />} />
 
@@ -49,16 +64,71 @@ function App() {
                 <Route
                     path="/admin"
                     element={
-                        <ProtectedRoute role="ADMIN">
+                        <ProtectedRoute>
                             <AdminLayout />
                         </ProtectedRoute>
                     }
                 >
                     <Route path="dashboard" element={<Dashboard />} />
-                    <Route path="categories" element={<CategoryMaster />} />
-                    <Route path="products" element={<ProductMaster />} />
+                    <Route 
+                        path="categories" 
+                        element={
+                            <ProtectedRoute role="ADMIN">
+                                <CategoryMaster />
+                            </ProtectedRoute>
+                        } 
+                    />
+                    <Route 
+                        path="products" 
+                        element={
+                            <ProtectedRoute role="ADMIN">
+                                <ProductMaster />
+                            </ProtectedRoute>
+                        } 
+                    />
                     <Route path="profile" element={<Profile />} />
-                    <Route path="audit-logs" element={<AuditLogs />} />
+                    <Route 
+                        path="audit-logs" 
+                        element={
+                            <ProtectedRoute role="ADMIN">
+                                <AuditLogs />
+                            </ProtectedRoute>
+                        } 
+                    />
+                    
+                    {/* Settings Sub-routes (Admin Only) */}
+                    <Route 
+                        path="settings/general" 
+                        element={
+                            <ProtectedRoute role="ADMIN">
+                                <GeneralSettings />
+                            </ProtectedRoute>
+                        } 
+                    />
+                    <Route 
+                        path="settings/users" 
+                        element={
+                            <ProtectedRoute role="ADMIN">
+                                <UserSettings />
+                            </ProtectedRoute>
+                        } 
+                    />
+                    <Route 
+                        path="settings/website" 
+                        element={
+                            <ProtectedRoute role="ADMIN">
+                                <WebsiteSettings />
+                            </ProtectedRoute>
+                        } 
+                    />
+                    <Route 
+                        path="settings/integration" 
+                        element={
+                            <ProtectedRoute role="ADMIN">
+                                <IntegrationSettings />
+                            </ProtectedRoute>
+                        } 
+                    />
                 </Route>
 
                 {/* ===== FALLBACK ===== */}
