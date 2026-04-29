@@ -1,0 +1,43 @@
+[2026-04-29T01:43:11.895Z] [SUCCESS] Server started | port=5000 env=development
+[2026-04-29T01:43:17.168Z] [REQUEST] GET /api/users/profile | status=304 duration=114ms ip=::1
+[2026-04-29T01:43:17.247Z] [REQUEST] GET /api/users/profile | status=304 duration=16ms ip=::1
+[2026-04-29T01:43:17.300Z] [REQUEST] GET /api/users/settings | status=200 duration=202ms ip=::1
+[2026-04-29T01:43:17.362Z] [REQUEST] GET /api/users/all | status=200 duration=252ms ip=::1
+[2026-04-29T01:43:56.432Z] [REQUEST] PUT /api/users/profile | status=200 duration=72ms ip=::1
+[2026-04-29T01:44:08.309Z] [REQUEST] PUT /api/users/profile | status=200 duration=70ms ip=::1
+[2026-04-29T01:44:10.785Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=200 duration=14ms ip=::1
+[2026-04-29T01:45:27.690Z] [REQUEST] GET /api/users/audit | status=200 duration=56ms ip=::1
+[2026-04-29T01:52:09.240Z] [REQUEST] GET /api/users/settings | status=304 duration=70ms ip=::1
+[2026-04-29T01:52:14.002Z] [SUCCESS] Server started | port=5000 env=development
+[2026-04-29T01:52:14.434Z] [REQUEST] GET /api/users/profile | status=200 duration=195ms ip=::1
+[2026-04-29T01:52:14.640Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=200 duration=9ms ip=::1
+[2026-04-29T01:52:28.198Z] [WARN   ] 404 Not Found: GET /api/users/audit-logs? | ip=::1
+[2026-04-29T01:52:28.199Z] [WARN   ] GET /api/users/audit-logs? | status=404 duration=2ms ip=::1
+[2026-04-29T01:52:28.212Z] [WARN   ] 404 Not Found: GET /api/users/audit-logs? | ip=::1
+[2026-04-29T01:52:28.214Z] [WARN   ] GET /api/users/audit-logs? | status=404 duration=2ms ip=::1
+[2026-04-29T01:52:28.277Z] [REQUEST] GET /api/users/all | status=200 duration=82ms ip=::1
+[2026-04-29T01:52:28.283Z] [REQUEST] GET /api/users/all | status=304 duration=3ms ip=::1
+[2026-04-29T01:52:40.881Z] [WARN   ] 404 Not Found: GET /api/users/audit-logs?startDate=2026-04-29&endDate=2026-04-29&userId=1& | ip=::1
+[2026-04-29T01:52:40.882Z] [WARN   ] GET /api/users/audit-logs?startDate=2026-04-29&endDate=2026-04-29&userId=1& | status=404 duration=2ms ip=::1
+[2026-04-29T01:52:41.952Z] [WARN   ] 404 Not Found: GET /api/users/audit-logs | ip=::1
+[2026-04-29T01:52:41.955Z] [WARN   ] GET /api/users/audit-logs | status=404 duration=3ms ip=::1
+[2026-04-29T01:52:43.557Z] [WARN   ] 404 Not Found: GET /api/users/audit-logs? | ip=::1
+[2026-04-29T01:52:43.558Z] [WARN   ] GET /api/users/audit-logs? | status=404 duration=1ms ip=::1
+[2026-04-29T01:52:46.582Z] [WARN   ] 404 Not Found: GET /api/users/audit-logs? | ip=::1
+[2026-04-29T01:52:46.584Z] [WARN   ] GET /api/users/audit-logs? | status=404 duration=3ms ip=::1
+[2026-04-29T01:52:54.495Z] [WARN   ] 404 Not Found: GET /api/users/audit-logs?startDate=2026-04-01&endDate=2026-04-30& | ip=::1
+[2026-04-29T01:52:54.496Z] [WARN   ] GET /api/users/audit-logs?startDate=2026-04-01&endDate=2026-04-30& | status=404 duration=1ms ip=::1
+[2026-04-29T01:52:56.807Z] [WARN   ] 404 Not Found: GET /api/users/audit-logs?startDate=2026-04-01&endDate=2026-04-30&userId=1& | ip=::1
+[2026-04-29T01:52:56.808Z] [WARN   ] GET /api/users/audit-logs?startDate=2026-04-01&endDate=2026-04-30&userId=1& | status=404 duration=2ms ip=::1
+[2026-04-29T01:53:46.618Z] [SUCCESS] Server started | port=5000 env=development
+[2026-04-29T01:54:19.218Z] [REQUEST] GET /api/users/audit-logs? | status=200 duration=94ms ip=::1
+[2026-04-29T01:54:19.223Z] [REQUEST] GET /api/users/audit-logs? | status=304 duration=3ms ip=::1
+[2026-04-29T01:54:19.224Z] [REQUEST] GET /api/users/all | status=304 duration=120ms ip=::1
+[2026-04-29T01:54:19.228Z] [REQUEST] GET /api/users/all | status=304 duration=2ms ip=::1
+[2026-04-29T01:55:32.067Z] [REQUEST] GET /api/users/audit-logs? | status=304 duration=57ms ip=::1
+[2026-04-29T01:55:49.612Z] [REQUEST] POST /api/auth/login | status=200 duration=167ms ip=::1
+[2026-04-29T01:55:49.866Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=2ms ip=::1
+[2026-04-29T01:55:53.224Z] [REQUEST] GET /api/users/all | status=304 duration=3ms ip=::1
+[2026-04-29T01:55:53.229Z] [REQUEST] GET /api/users/audit-logs? | status=200 duration=4ms ip=::1
+[2026-04-29T01:55:53.232Z] [REQUEST] GET /api/users/all | status=304 duration=2ms ip=::1
+[2026-04-29T01:55:53.236Z] [REQUEST] GET /api/users/audit-logs? | status=304 duration=3ms ip=::1

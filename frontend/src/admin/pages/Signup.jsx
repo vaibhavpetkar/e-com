@@ -127,13 +127,16 @@ export default function Signup({ toggleForm }) {
     if (!hasError) {
       try {
         const res = await API.post("/auth/register", { name, email, password, role });
-        alert(res.data); // e.g. "User created"
-        if (res.data === "User created") {
-          toggleForm(true); // Go back to login after signup
+        if (res.data.requiresVerification) {
+          alert("Registration successful! Please check your email to verify your account before logging in.");
+        } else {
+          alert("Account created successfully! You can now log in.");
         }
+        toggleForm(true); // Go back to login
       } catch (error) {
+        const errMsg = error.response?.data?.error || "Signup failed due to an error.";
         console.error("Signup failed", error);
-        alert("Signup failed due to an error.");
+        alert(errMsg);
       }
     }
   };

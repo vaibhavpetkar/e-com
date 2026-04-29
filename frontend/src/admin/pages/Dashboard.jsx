@@ -4,14 +4,10 @@ import PersonIcon from '@mui/icons-material/Person';
 import HistoryIcon from '@mui/icons-material/History';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import { useNavigate } from 'react-router-dom';
-import ProfileModal from '../components/ProfileModal';
-import LogHistoryModal from '../components/LogHistoryModal';
 
 export default function Dashboard() {
   const [user, setUser] = useState(null);
   const [anchorEl, setAnchorEl] = useState(null);
-  const [profileOpen, setProfileOpen] = useState(false);
-  const [logOpen, setLogOpen] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -71,18 +67,20 @@ export default function Dashboard() {
           anchorEl={anchorEl}
           open={Boolean(anchorEl)}
           onClose={handleMenuClose}
-          PaperProps={{
-            elevation: 3,
-            sx: { mt: 1.5, borderRadius: 3, minWidth: 200 }
+          slotProps={{
+            paper: {
+              elevation: 3,
+              sx: { mt: 1.5, borderRadius: 3, minWidth: 200 }
+            }
           }}
           transformOrigin={{ horizontal: 'right', vertical: 'top' }}
           anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
         >
-          <MenuItem onClick={() => { handleMenuClose(); setProfileOpen(true); }}>
+          <MenuItem onClick={() => { handleMenuClose(); navigate('/admin/profile'); }}>
             <ListItemIcon><PersonIcon fontSize="small" /></ListItemIcon>
             Profile
           </MenuItem>
-          <MenuItem onClick={() => { handleMenuClose(); setLogOpen(true); }}>
+          <MenuItem onClick={() => { handleMenuClose(); navigate('/admin/audit-logs'); }}>
             <ListItemIcon><HistoryIcon fontSize="small" /></ListItemIcon>
             Log History
           </MenuItem>
@@ -105,16 +103,6 @@ export default function Dashboard() {
       </div>
 
       {/* Modals */}
-      <ProfileModal 
-        open={profileOpen} 
-        onClose={() => setProfileOpen(false)} 
-        user={user} 
-        onProfileUpdated={(updatedUser) => setUser(updatedUser)} 
-      />
-      <LogHistoryModal 
-        open={logOpen} 
-        onClose={() => setLogOpen(false)} 
-      />
     </div>
   );
 }
