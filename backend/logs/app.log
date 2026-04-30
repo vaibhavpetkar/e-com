@@ -571,3 +571,23 @@
 [2026-04-30T02:57:58.775Z] [REQUEST] GET /api/stock | status=200 duration=187ms ip=::1
 [2026-04-30T02:57:58.875Z] [REQUEST] GET /api/stock | status=304 duration=3ms ip=::1
 [2026-04-30T02:57:58.886Z] [ERROR  ] GET /api/products | status=500 duration=5ms ip=::1
+[2026-04-30T03:01:12.173Z] [REQUEST] POST /api/auth/login | status=200 duration=171ms ip=::1 body={"email":"vaibhavprakashpetkar@gmail.com","password":"******"}
+[2026-04-30T03:01:13.181Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=3ms ip=::1
+[2026-04-30T03:01:27.384Z] [ERROR  ] GET /api/products | status=500 duration=66ms ip=::1
+[2026-04-30T03:01:27.403Z] [REQUEST] GET /api/categories | status=304 duration=85ms ip=::1
+[2026-04-30T03:01:27.413Z] [REQUEST] GET /api/categories | status=304 duration=3ms ip=::1
+[2026-04-30T03:01:27.514Z] [ERROR  ] GET /api/products | status=500 duration=121ms ip=::1
+[2026-04-30T03:01:37.587Z] [REQUEST] GET /api/categories | status=304 duration=60ms ip=::1
+[2026-04-30T03:01:37.590Z] [REQUEST] GET /api/categories | status=304 duration=2ms ip=::1
+[2026-04-30T03:01:38.799Z] [REQUEST] GET /api/stock | status=304 duration=8ms ip=::1
+[2026-04-30T03:01:38.805Z] [REQUEST] GET /api/stock | status=304 duration=2ms ip=::1
+[2026-04-30T03:01:38.857Z] [ERROR  ] GET /api/products | status=500 duration=65ms ip=::1
+[2026-04-30T03:01:38.867Z] [ERROR  ] GET /api/products | status=500 duration=4ms ip=::1
+[2026-04-30T03:01:49.884Z] [REQUEST] GET /api/users/settings | status=304 duration=53ms ip=::1
+[2026-04-30T03:01:49.887Z] [REQUEST] GET /api/users/settings | status=304 duration=2ms ip=::1
+[2026-04-30T03:02:04.685Z] [REQUEST] GET /api/users/manage/all | status=304 duration=69ms ip=::1
+[2026-04-30T03:02:04.693Z] [REQUEST] GET /api/users/manage/all | status=304 duration=2ms ip=::1
+[2026-04-30T03:02:23.210Z] [REQUEST] GET /api/users/manage/deleted | status=304 duration=104ms ip=::1
+[2026-04-30T03:02:23.214Z] [REQUEST] GET /api/users/manage/deleted | status=304 duration=3ms ip=::1
+[2026-04-30T03:02:36.780Z] [REQUEST] GET /api/users/profile | status=304 duration=99ms ip=::1
+[2026-04-30T03:02:36.785Z] [REQUEST] GET /api/users/profile | status=304 duration=1ms ip=::1
