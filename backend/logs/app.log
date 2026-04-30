@@ -364,3 +364,35 @@
 [2026-04-30T02:09:02.384Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=0ms ip=::1
 [2026-04-30T02:09:02.497Z] [REQUEST] GET /api/users/settings | status=304 duration=72ms ip=::1
 [2026-04-30T02:09:02.512Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-04-30T02:10:04.007Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=1ms ip=::1
+[2026-04-30T02:10:04.171Z] [REQUEST] GET /api/users/settings | status=304 duration=129ms ip=::1
+[2026-04-30T02:10:04.201Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-04-30T02:10:56.828Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=200 duration=6ms ip=::1
+[2026-04-30T02:10:56.906Z] [REQUEST] GET /api/users/settings | status=200 duration=86ms ip=::1
+[2026-04-30T02:10:56.916Z] [REQUEST] GET /api/users/settings | status=200 duration=80ms ip=::1
+[2026-04-30T02:11:45.501Z] [REQUEST] GET /api/users/settings | status=200 duration=2ms ip=::1
+[2026-04-30T02:11:45.519Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=19ms ip=::1
+[2026-04-30T02:11:45.521Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-04-30T02:11:50.052Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=200 duration=3ms ip=::1
+[2026-04-30T02:11:50.070Z] [REQUEST] GET /api/users/settings | status=200 duration=2ms ip=::1
+[2026-04-30T02:11:50.073Z] [REQUEST] GET /api/users/settings | status=200 duration=1ms ip=::1
+[2026-04-30T02:12:22.387Z] [ERROR  ] Unhandled error on GET /api/products | message=column p.category_id does not exist stack=at E:\Project\e-com\backend\node_modules\pg-pool\index.js:45:11
+[2026-04-30T02:12:22.394Z] [ERROR  ] GET /api/products | status=500 duration=65ms ip=::1
+[2026-04-30T02:12:22.412Z] [REQUEST] GET /api/categories | status=304 duration=76ms ip=::1
+[2026-04-30T02:12:22.436Z] [REQUEST] GET /api/categories | status=304 duration=1ms ip=::1
+[2026-04-30T02:12:22.488Z] [ERROR  ] Unhandled error on GET /api/products | message=column p.category_id does not exist stack=at E:\Project\e-com\backend\node_modules\pg-pool\index.js:45:11
+[2026-04-30T02:12:22.491Z] [ERROR  ] GET /api/products | status=500 duration=91ms ip=::1
+[2026-04-30T02:12:23.894Z] [REQUEST] GET /api/categories | status=304 duration=1ms ip=::1
+[2026-04-30T02:12:23.911Z] [REQUEST] GET /api/categories | status=304 duration=1ms ip=::1
+[2026-04-30T02:12:27.372Z] [REQUEST] GET /api/users/settings | status=304 duration=3ms ip=::1
+[2026-04-30T02:12:27.376Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-04-30T02:12:29.287Z] [REQUEST] GET /api/users/manage/all | status=304 duration=6ms ip=::1
+[2026-04-30T02:12:29.310Z] [REQUEST] GET /api/users/manage/all | status=304 duration=1ms ip=::1
+[2026-04-30T02:12:31.940Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-04-30T02:12:31.945Z] [REQUEST] GET /api/users/settings | status=304 duration=2ms ip=::1
+[2026-04-30T02:13:48.760Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=200 duration=2ms ip=::1
+[2026-04-30T02:13:48.874Z] [REQUEST] GET /api/users/settings | status=200 duration=107ms ip=::1
+[2026-04-30T02:13:48.881Z] [REQUEST] GET /api/users/settings | status=200 duration=115ms ip=::1
+[2026-04-30T02:17:22.727Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=1ms ip=::1
+[2026-04-30T02:17:22.920Z] [REQUEST] GET /api/users/settings | status=304 duration=190ms ip=::1
+[2026-04-30T02:17:22.923Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
