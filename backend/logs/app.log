@@ -109,3 +109,18 @@
 [2026-04-29T02:40:57.402Z] [REQUEST] GET /api/users/audit-logs? | status=304 duration=2ms ip=::1
 [2026-04-29T02:41:05.444Z] [REQUEST] GET /api/users/profile | status=200 duration=2ms ip=::1
 [2026-04-29T02:41:05.452Z] [REQUEST] GET /api/users/profile | status=304 duration=2ms ip=::1
+[2026-04-29T02:49:58.503Z] [SUCCESS] Server started | port=5000 frontend=http://localhost:3000 env=development
+[2026-04-29T02:50:04.514Z] [REQUEST] POST /api/auth/login | status=200 duration=221ms ip=::1 body={"email":"vaibhavprakashpetkar@gmail.com","password":"******"}
+[2026-04-29T02:50:05.517Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=200 duration=8ms ip=::1
+[2026-04-29T02:50:08.334Z] [ERROR  ] GET /api/categories | status=500 duration=7ms ip=::1
+[2026-04-29T02:50:08.496Z] [ERROR  ] GET /api/categories | status=500 duration=151ms ip=::1
+[2026-04-29T02:50:09.452Z] [ERROR  ] GET /api/categories | status=500 duration=58ms ip=::1
+[2026-04-29T02:50:09.469Z] [ERROR  ] Unhandled error on GET /api/products | message=column p.category_id does not exist stack=at E:\Project\e-com\backend\node_modules\pg-pool\index.js:45:11
+[2026-04-29T02:50:09.476Z] [ERROR  ] GET /api/products | status=500 duration=81ms ip=::1
+[2026-04-29T02:50:09.530Z] [ERROR  ] GET /api/categories | status=500 duration=69ms ip=::1
+[2026-04-29T02:50:09.549Z] [ERROR  ] Unhandled error on GET /api/products | message=column p.category_id does not exist stack=at E:\Project\e-com\backend\node_modules\pg-pool\index.js:45:11
+[2026-04-29T02:50:09.554Z] [ERROR  ] GET /api/products | status=500 duration=71ms ip=::1
+[2026-04-29T02:50:11.523Z] [REQUEST] GET /api/users/settings | status=200 duration=155ms ip=::1
+[2026-04-29T02:50:11.527Z] [REQUEST] GET /api/users/settings | status=304 duration=3ms ip=::1
+[2026-04-29T02:50:25.985Z] [REQUEST] GET /api/users/settings | status=304 duration=53ms ip=::1
+[2026-04-29T02:50:25.988Z] [REQUEST] GET /api/users/settings | status=304 duration=2ms ip=::1
