@@ -2,10 +2,10 @@ import { pool } from "../config/db.js";
 
 export const createCategory = async (req, res) => {
     try {
-        const { name, description } = req.body;
+        const { name, description, parentId, level } = req.body;
         const result = await pool.query(
-            "INSERT INTO categories (name, description) VALUES ($1, $2) RETURNING *",
-            [name, description]
+            "INSERT INTO categories (name, description, parent_id, level) VALUES ($1, $2, $3, $4) RETURNING *",
+            [name, description, parentId || null, level || 1]
         );
         res.status(201).json(result.rows[0]);
     } catch (error) {
@@ -16,7 +16,9 @@ export const createCategory = async (req, res) => {
 
 export const getCategories = async (req, res) => {
     try {
-        const result = await pool.query("SELECT * FROM categories WHERE is_deleted = false ORDER BY id ASC");
+        // Fetch all categories and build a hierarchy or just return flat list
+        // Returning flat list for now, frontend can build hierarchy
+        const result = await pool.query("SELECT * FROM categories WHERE is_deleted = false ORDER BY level ASC, id ASC");
         res.json(result.rows);
     } catch (error) {
         console.error(error);
@@ -29,14 +31,14 @@ export const deleteCategory = async (req, res) => {
         const { id } = req.params;
         const result = await pool.query(
             "UPDATE categories SET is_deleted=true, deleted_at=NOW(), deleted_by=$1 WHERE id=$2 RETURNING name",
-            [req.user.id, id]
+            [req.user?.id, id]
         );
         if (result.rows.length === 0) return res.status(404).json({ error: "Category not found" });
 
         // Audit log
         await pool.query(
             "INSERT INTO audit_logs (user_id, action, ip_address) VALUES ($1,$2,$3)",
-            [req.user.id, `CATEGORY_SOFT_DELETE: ${result.rows[0].name}`, req.ip]
+            [req.user?.id, `CATEGORY_SOFT_DELETE: ${result.rows[0].name}`, req.ip]
         );
 
         res.json({ message: "Category moved to recycle bin" });
@@ -72,7 +74,7 @@ export const restoreCategory = async (req, res) => {
         // Audit log
         await pool.query(
             "INSERT INTO audit_logs (user_id, action, ip_address) VALUES ($1,$2,$3)",
-            [req.user.id, `CATEGORY_RESTORE: ${result.rows[0].name}`, req.ip]
+            [req.user?.id, `CATEGORY_RESTORE: ${result.rows[0].name}`, req.ip]
         );
 
         res.json({ message: "Category restored successfully" });

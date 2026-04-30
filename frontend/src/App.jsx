@@ -14,6 +14,7 @@ import UserSettings from "./admin/pages/UserSettings";
 import WebsiteSettings from "./admin/pages/WebsiteSettings";
 import IntegrationSettings from "./admin/pages/IntegrationSettings";
 import RecycleBin from "./admin/pages/RecycleBin";
+import StockManagement from "./admin/pages/StockManagement";
 import NotFound from "./admin/pages/NotFound";
 import AdminLayout from "./admin/layout/AdminLayout";
 
@@ -84,6 +85,14 @@ function App() {
                         element={
                             <ProtectedRoute role="ADMIN">
                                 <ProductMaster />
+                            </ProtectedRoute>
+                        } 
+                    />
+                    <Route 
+                        path="products/stocks" 
+                        element={
+                            <ProtectedRoute role="ADMIN">
+                                <StockManagement />
                             </ProtectedRoute>
                         } 
                     />

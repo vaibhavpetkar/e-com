@@ -396,3 +396,178 @@
 [2026-04-30T02:17:22.727Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=1ms ip=::1
 [2026-04-30T02:17:22.920Z] [REQUEST] GET /api/users/settings | status=304 duration=190ms ip=::1
 [2026-04-30T02:17:22.923Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-04-30T02:18:57.055Z] [REQUEST] GET /api/users/manage/all | status=304 duration=111ms ip=::1
+[2026-04-30T02:18:57.060Z] [REQUEST] GET /api/users/manage/all | status=304 duration=1ms ip=::1
+[2026-04-30T02:18:57.183Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=1ms ip=::1
+[2026-04-30T02:19:03.295Z] [REQUEST] GET /api/users/settings | status=304 duration=3ms ip=::1
+[2026-04-30T02:19:03.299Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-04-30T02:19:33.979Z] [REQUEST] GET /api/users/settings | status=304 duration=50ms ip=::1
+[2026-04-30T02:19:33.982Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-04-30T02:20:04.537Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=1ms ip=::1
+[2026-04-30T02:20:10.320Z] [ERROR  ] Unhandled error on GET /api/products | message=column p.category_id does not exist stack=at E:\Project\e-com\backend\node_modules\pg-pool\index.js:45:11
+[2026-04-30T02:20:10.329Z] [ERROR  ] GET /api/products | status=500 duration=116ms ip=::1
+[2026-04-30T02:20:10.339Z] [REQUEST] GET /api/categories | status=304 duration=124ms ip=::1
+[2026-04-30T02:20:10.351Z] [REQUEST] GET /api/categories | status=304 duration=1ms ip=::1
+[2026-04-30T02:20:10.399Z] [ERROR  ] Unhandled error on GET /api/products | message=column p.category_id does not exist stack=at E:\Project\e-com\backend\node_modules\pg-pool\index.js:45:11
+[2026-04-30T02:20:10.399Z] [ERROR  ] GET /api/products | status=500 duration=62ms ip=::1
+[2026-04-30T02:20:20.059Z] [REQUEST] GET /api/users/settings | status=304 duration=3ms ip=::1
+[2026-04-30T02:20:20.096Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-04-30T02:21:16.508Z] [REQUEST] GET /api/users/profile | status=304 duration=58ms ip=::1
+[2026-04-30T02:21:16.513Z] [REQUEST] GET /api/users/profile | status=304 duration=2ms ip=::1
+[2026-04-30T02:21:16.662Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=0ms ip=::1
+[2026-04-30T02:21:24.109Z] [ERROR  ] Unhandled error on GET /api/products | message=column p.category_id does not exist stack=at E:\Project\e-com\backend\node_modules\pg-pool\index.js:45:11
+[2026-04-30T02:21:24.112Z] [ERROR  ] GET /api/products | status=500 duration=5ms ip=::1
+[2026-04-30T02:21:24.187Z] [REQUEST] GET /api/categories | status=304 duration=79ms ip=::1
+[2026-04-30T02:21:24.197Z] [REQUEST] GET /api/categories | status=304 duration=1ms ip=::1
+[2026-04-30T02:21:24.208Z] [ERROR  ] Unhandled error on GET /api/products | message=column p.category_id does not exist stack=at E:\Project\e-com\backend\node_modules\pg-pool\index.js:45:11
+[2026-04-30T02:21:24.210Z] [ERROR  ] GET /api/products | status=500 duration=91ms ip=::1
+[2026-04-30T02:21:25.988Z] [REQUEST] GET /api/categories | status=304 duration=1ms ip=::1
+[2026-04-30T02:21:25.992Z] [REQUEST] GET /api/categories | status=304 duration=1ms ip=::1
+[2026-04-30T02:21:40.321Z] [REQUEST] GET /api/users/settings | status=304 duration=53ms ip=::1
+[2026-04-30T02:21:40.325Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-04-30T02:22:22.823Z] [REQUEST] GET /api/users/settings | status=200 duration=1ms ip=::1
+[2026-04-30T02:22:22.839Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=1ms ip=::1
+[2026-04-30T02:22:22.846Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-04-30T02:25:54.733Z] [REQUEST] GET /api/categories | status=304 duration=55ms ip=::1
+[2026-04-30T02:25:54.737Z] [REQUEST] GET /api/categories | status=304 duration=1ms ip=::1
+[2026-04-30T02:25:56.304Z] [ERROR  ] Unhandled error on GET /api/products | message=column p.category_id does not exist stack=at E:\Project\e-com\backend\node_modules\pg-pool\index.js:45:11
+[2026-04-30T02:25:56.306Z] [ERROR  ] GET /api/products | status=500 duration=4ms ip=::1
+[2026-04-30T02:25:56.382Z] [ERROR  ] Unhandled error on GET /api/products | message=column p.category_id does not exist stack=at E:\Project\e-com\backend\node_modules\pg-pool\index.js:45:11
+[2026-04-30T02:25:56.390Z] [ERROR  ] GET /api/products | status=500 duration=73ms ip=::1
+[2026-04-30T02:25:56.394Z] [REQUEST] GET /api/categories | status=304 duration=91ms ip=::1
+[2026-04-30T02:25:56.417Z] [REQUEST] GET /api/categories | status=304 duration=2ms ip=::1
+[2026-04-30T02:25:57.288Z] [REQUEST] GET /api/categories | status=304 duration=1ms ip=::1
+[2026-04-30T02:25:57.291Z] [REQUEST] GET /api/categories | status=304 duration=1ms ip=::1
+[2026-04-30T02:26:02.928Z] [ERROR  ] Unhandled error on GET /api/products | message=column p.category_id does not exist stack=at E:\Project\e-com\backend\node_modules\pg-pool\index.js:45:11
+[2026-04-30T02:26:02.930Z] [ERROR  ] GET /api/products | status=500 duration=4ms ip=::1
+[2026-04-30T02:26:02.995Z] [REQUEST] GET /api/categories | status=304 duration=68ms ip=::1
+[2026-04-30T02:26:03.003Z] [REQUEST] GET /api/categories | status=304 duration=1ms ip=::1
+[2026-04-30T02:26:03.026Z] [ERROR  ] Unhandled error on GET /api/products | message=column p.category_id does not exist stack=at E:\Project\e-com\backend\node_modules\pg-pool\index.js:45:11
+[2026-04-30T02:26:03.027Z] [ERROR  ] GET /api/products | status=500 duration=88ms ip=::1
+[2026-04-30T02:29:39.306Z] [REQUEST] GET /api/users/manage/all | status=304 duration=71ms ip=::1
+[2026-04-30T02:29:39.310Z] [REQUEST] GET /api/users/manage/all | status=304 duration=1ms ip=::1
+[2026-04-30T02:29:45.239Z] [REQUEST] GET /api/categories | status=304 duration=3ms ip=::1
+[2026-04-30T02:29:45.243Z] [REQUEST] GET /api/categories | status=304 duration=1ms ip=::1
+[2026-04-30T02:29:46.875Z] [REQUEST] GET /api/categories | status=304 duration=1ms ip=::1
+[2026-04-30T02:29:46.878Z] [ERROR  ] Unhandled error on GET /api/products | message=column p.category_id does not exist stack=at E:\Project\e-com\backend\node_modules\pg-pool\index.js:45:11
+[2026-04-30T02:29:46.882Z] [ERROR  ] GET /api/products | status=500 duration=6ms ip=::1
+[2026-04-30T02:29:47.738Z] [ERROR  ] Unhandled error on GET /api/products | message=column p.category_id does not exist stack=at E:\Project\e-com\backend\node_modules\pg-pool\index.js:45:11
+[2026-04-30T02:29:47.740Z] [ERROR  ] GET /api/products | status=500 duration=854ms ip=::1
+[2026-04-30T02:29:47.741Z] [REQUEST] GET /api/categories | status=304 duration=856ms ip=::1
+[2026-04-30T02:39:44.636Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=1ms ip=::1
+[2026-04-30T02:39:44.723Z] [ERROR  ] Unhandled error on GET /api/products | message=column p.category_id does not exist stack=at E:\Project\e-com\backend\node_modules\pg-pool\index.js:45:11
+[2026-04-30T02:39:44.727Z] [ERROR  ] GET /api/products | status=500 duration=83ms ip=::1
+[2026-04-30T02:39:44.745Z] [REQUEST] GET /api/categories | status=304 duration=91ms ip=::1
+[2026-04-30T02:39:44.755Z] [ERROR  ] Unhandled error on GET /api/products | message=column p.category_id does not exist stack=at E:\Project\e-com\backend\node_modules\pg-pool\index.js:45:11
+[2026-04-30T02:39:44.756Z] [ERROR  ] GET /api/products | status=500 duration=3ms ip=::1
+[2026-04-30T02:39:44.834Z] [REQUEST] GET /api/categories | status=304 duration=80ms ip=::1
+[2026-04-30T02:40:44.149Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=200 duration=2ms ip=::1
+[2026-04-30T02:40:48.900Z] [ERROR  ] Unhandled error on GET /api/products | message=column p.name does not exist stack=at E:\Project\e-com\backend\node_modules\pg-pool\index.js:45:11
+[2026-04-30T02:40:48.907Z] [ERROR  ] GET /api/products | status=500 duration=74ms ip=::1
+[2026-04-30T02:40:48.909Z] [REQUEST] GET /api/categories | status=304 duration=71ms ip=::1
+[2026-04-30T02:40:48.929Z] [REQUEST] GET /api/categories | status=304 duration=1ms ip=::1
+[2026-04-30T02:40:48.952Z] [ERROR  ] Unhandled error on GET /api/products | message=column p.name does not exist stack=at E:\Project\e-com\backend\node_modules\pg-pool\index.js:45:11
+[2026-04-30T02:40:48.956Z] [ERROR  ] GET /api/products | status=500 duration=6ms ip=::1
+[2026-04-30T02:40:51.079Z] [REQUEST] GET /api/categories | status=304 duration=64ms ip=::1
+[2026-04-30T02:40:51.083Z] [REQUEST] GET /api/categories | status=304 duration=1ms ip=::1
+[2026-04-30T02:41:17.720Z] [ERROR  ] Unhandled error on GET /api/products | message=column p.name does not exist stack=at E:\Project\e-com\backend\node_modules\pg-pool\index.js:45:11
+[2026-04-30T02:41:17.742Z] [ERROR  ] GET /api/products | status=500 duration=96ms ip=::1
+[2026-04-30T02:41:17.746Z] [REQUEST] GET /api/categories | status=304 duration=100ms ip=::1
+[2026-04-30T02:41:17.752Z] [REQUEST] GET /api/categories | status=304 duration=1ms ip=::1
+[2026-04-30T02:41:17.831Z] [ERROR  ] Unhandled error on GET /api/products | message=column p.name does not exist stack=at E:\Project\e-com\backend\node_modules\pg-pool\index.js:45:11
+[2026-04-30T02:41:17.831Z] [ERROR  ] GET /api/products | status=500 duration=79ms ip=::1
+[2026-04-30T02:41:57.183Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=200 duration=3ms ip=::1
+[2026-04-30T02:41:57.320Z] [ERROR  ] Unhandled error on GET /api/products | message=column p.name does not exist stack=at E:\Project\e-com\backend\node_modules\pg-pool\index.js:45:11
+[2026-04-30T02:41:57.332Z] [ERROR  ] GET /api/products | status=500 duration=100ms ip=::1
+[2026-04-30T02:41:57.334Z] [REQUEST] GET /api/categories | status=200 duration=103ms ip=::1
+[2026-04-30T02:41:57.351Z] [ERROR  ] Unhandled error on GET /api/products | message=column p.name does not exist stack=at E:\Project\e-com\backend\node_modules\pg-pool\index.js:45:11
+[2026-04-30T02:41:57.352Z] [ERROR  ] GET /api/products | status=500 duration=121ms ip=::1
+[2026-04-30T02:41:57.417Z] [REQUEST] GET /api/categories | status=200 duration=184ms ip=::1
+[2026-04-30T02:42:14.034Z] [REQUEST] GET /api/categories | status=304 duration=87ms ip=::1
+[2026-04-30T02:42:14.051Z] [REQUEST] GET /api/categories | status=304 duration=1ms ip=::1
+[2026-04-30T02:42:26.396Z] [ERROR  ] Unhandled error on GET /api/products | message=column p.name does not exist stack=at E:\Project\e-com\backend\node_modules\pg-pool\index.js:45:11
+[2026-04-30T02:42:26.397Z] [ERROR  ] GET /api/products | status=500 duration=69ms ip=::1
+[2026-04-30T02:42:26.468Z] [ERROR  ] Unhandled error on GET /api/products | message=column p.name does not exist stack=at E:\Project\e-com\backend\node_modules\pg-pool\index.js:45:11
+[2026-04-30T02:42:26.470Z] [ERROR  ] GET /api/products | status=500 duration=69ms ip=::1
+[2026-04-30T02:42:26.493Z] [REQUEST] GET /api/categories | status=304 duration=165ms ip=::1
+[2026-04-30T02:42:26.498Z] [REQUEST] GET /api/categories | status=304 duration=1ms ip=::1
+[2026-04-30T02:47:20.038Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=3ms ip=::1
+[2026-04-30T02:47:20.151Z] [ERROR  ] Unhandled error on GET /api/products | message=column p.name does not exist stack=at E:\Project\e-com\backend\node_modules\pg-pool\index.js:45:11
+[2026-04-30T02:47:20.166Z] [ERROR  ] GET /api/products | status=500 duration=132ms ip=::1
+[2026-04-30T02:47:20.225Z] [REQUEST] GET /api/categories | status=304 duration=190ms ip=::1
+[2026-04-30T02:47:20.239Z] [REQUEST] GET /api/categories | status=304 duration=1ms ip=::1
+[2026-04-30T02:47:20.302Z] [ERROR  ] Unhandled error on GET /api/products | message=column p.name does not exist stack=at E:\Project\e-com\backend\node_modules\pg-pool\index.js:45:11
+[2026-04-30T02:47:20.305Z] [ERROR  ] GET /api/products | status=500 duration=111ms ip=::1
+[2026-04-30T02:47:49.824Z] [ERROR  ] Unhandled error on GET /api/products | message=column p.name does not exist stack=at E:\Project\e-com\backend\node_modules\pg-pool\index.js:45:11
+[2026-04-30T02:47:52.145Z] [ERROR  ] Unhandled error on GET /api/products | message=column p.name does not exist stack=at E:\Project\e-com\backend\node_modules\pg-pool\index.js:45:11
+[2026-04-30T02:47:52.166Z] [ERROR  ] GET /api/products | status=500 duration=23ms ip=::1
+[2026-04-30T02:47:52.167Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=1ms ip=::1
+[2026-04-30T02:47:52.246Z] [ERROR  ] Unhandled error on GET /api/products | message=column p.name does not exist stack=at E:\Project\e-com\backend\node_modules\pg-pool\index.js:45:11
+[2026-04-30T02:47:52.259Z] [ERROR  ] GET /api/products | status=500 duration=86ms ip=::1
+[2026-04-30T02:47:52.285Z] [REQUEST] GET /api/categories | status=200 duration=118ms ip=::1
+[2026-04-30T02:47:52.308Z] [REQUEST] GET /api/categories | status=304 duration=1ms ip=::1
+[2026-04-30T02:53:26.162Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=1ms ip=::1
+[2026-04-30T02:53:26.319Z] [REQUEST] GET /api/categories | status=304 duration=158ms ip=::1
+[2026-04-30T02:53:26.357Z] [REQUEST] GET /api/categories | status=304 duration=1ms ip=::1
+[2026-04-30T02:53:26.424Z] [ERROR  ] Unhandled error on GET /api/products | message=column p.name does not exist stack=at E:\Project\e-com\backend\node_modules\pg-pool\index.js:45:11
+[2026-04-30T02:53:26.434Z] [ERROR  ] GET /api/products | status=500 duration=273ms ip=::1
+[2026-04-30T02:53:26.484Z] [ERROR  ] Unhandled error on GET /api/products | message=column p.name does not exist stack=at E:\Project\e-com\backend\node_modules\pg-pool\index.js:45:11
+[2026-04-30T02:53:26.521Z] [ERROR  ] GET /api/products | status=500 duration=40ms ip=::1
+[2026-04-30T02:53:34.422Z] [ERROR  ] Unhandled error on GET /api/products | message=column p.name does not exist stack=at E:\Project\e-com\backend\node_modules\pg-pool\index.js:45:11
+[2026-04-30T02:53:34.454Z] [ERROR  ] GET /api/products | status=500 duration=577ms ip=::1
+[2026-04-30T02:53:34.495Z] [REQUEST] GET /api/categories | status=304 duration=618ms ip=::1
+[2026-04-30T02:53:34.552Z] [ERROR  ] Unhandled error on GET /api/products | message=column p.name does not exist stack=at E:\Project\e-com\backend\node_modules\pg-pool\index.js:45:11
+[2026-04-30T02:53:34.574Z] [ERROR  ] GET /api/products | status=500 duration=26ms ip=::1
+[2026-04-30T02:53:34.669Z] [REQUEST] GET /api/categories | status=304 duration=121ms ip=::1
+[2026-04-30T02:53:40.558Z] [ERROR  ] Unhandled error on GET /api/products | message=column p.name does not exist stack=at E:\Project\e-com\backend\node_modules\pg-pool\index.js:45:11
+[2026-04-30T02:53:40.604Z] [ERROR  ] GET /api/products | status=500 duration=48ms ip=::1
+[2026-04-30T02:53:40.704Z] [REQUEST] GET /api/categories | status=304 duration=148ms ip=::1
+[2026-04-30T02:54:15.421Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=200 duration=2ms ip=::1
+[2026-04-30T02:54:15.567Z] [REQUEST] GET /api/categories | status=200 duration=100ms ip=::1
+[2026-04-30T02:54:15.576Z] [REQUEST] GET /api/categories | status=200 duration=118ms ip=::1
+[2026-04-30T02:54:15.588Z] [ERROR  ] Unhandled error on GET /api/products | message=column p.name does not exist stack=at E:\Project\e-com\backend\node_modules\pg-pool\index.js:45:11
+[2026-04-30T02:54:15.593Z] [ERROR  ] GET /api/products | status=500 duration=140ms ip=::1
+[2026-04-30T02:54:15.604Z] [ERROR  ] Unhandled error on GET /api/products | message=column p.name does not exist stack=at E:\Project\e-com\backend\node_modules\pg-pool\index.js:45:11
+[2026-04-30T02:54:15.609Z] [ERROR  ] GET /api/products | status=500 duration=146ms ip=::1
+[2026-04-30T02:54:21.014Z] [ERROR  ] Unhandled error on GET /api/products | message=column p.name does not exist stack=at E:\Project\e-com\backend\node_modules\pg-pool\index.js:45:11
+[2026-04-30T02:54:21.018Z] [ERROR  ] GET /api/products | status=500 duration=6ms ip=::1
+[2026-04-30T02:54:21.024Z] [REQUEST] GET /api/categories | status=304 duration=1ms ip=::1
+[2026-04-30T02:54:21.032Z] [REQUEST] GET /api/categories | status=304 duration=1ms ip=::1
+[2026-04-30T02:54:21.112Z] [ERROR  ] Unhandled error on GET /api/products | message=column p.name does not exist stack=at E:\Project\e-com\backend\node_modules\pg-pool\index.js:45:11
+[2026-04-30T02:54:21.116Z] [ERROR  ] GET /api/products | status=500 duration=85ms ip=::1
+[2026-04-30T02:54:22.995Z] [REQUEST] GET /api/categories | status=304 duration=1ms ip=::1
+[2026-04-30T02:54:22.999Z] [REQUEST] GET /api/categories | status=304 duration=1ms ip=::1
+[2026-04-30T02:54:23.869Z] [ERROR  ] Unhandled error on GET /api/products | message=column p.name does not exist stack=at E:\Project\e-com\backend\node_modules\pg-pool\index.js:45:11
+[2026-04-30T02:54:23.879Z] [ERROR  ] GET /api/products | status=500 duration=12ms ip=::1
+[2026-04-30T02:54:23.983Z] [ERROR  ] Unhandled error on GET /api/products | message=column p.name does not exist stack=at E:\Project\e-com\backend\node_modules\pg-pool\index.js:45:11
+[2026-04-30T02:54:23.991Z] [ERROR  ] GET /api/products | status=500 duration=103ms ip=::1
+[2026-04-30T02:54:24.017Z] [REQUEST] GET /api/categories | status=304 duration=136ms ip=::1
+[2026-04-30T02:54:24.025Z] [REQUEST] GET /api/categories | status=304 duration=1ms ip=::1
+[2026-04-30T02:54:40.914Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=1ms ip=::1
+[2026-04-30T02:54:41.059Z] [REQUEST] GET /api/categories | status=304 duration=103ms ip=::1
+[2026-04-30T02:54:41.084Z] [ERROR  ] Unhandled error on GET /api/products | message=column p.name does not exist stack=at E:\Project\e-com\backend\node_modules\pg-pool\index.js:45:11
+[2026-04-30T02:54:41.089Z] [ERROR  ] GET /api/products | status=500 duration=140ms ip=::1
+[2026-04-30T02:54:41.094Z] [REQUEST] GET /api/categories | status=304 duration=1ms ip=::1
+[2026-04-30T02:54:41.100Z] [ERROR  ] Unhandled error on GET /api/products | message=column p.name does not exist stack=at E:\Project\e-com\backend\node_modules\pg-pool\index.js:45:11
+[2026-04-30T02:54:41.118Z] [ERROR  ] GET /api/products | status=500 duration=20ms ip=::1
+[2026-04-30T02:54:48.134Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=200 duration=2ms ip=::1
+[2026-04-30T02:54:48.248Z] [REQUEST] GET /api/categories | status=200 duration=78ms ip=::1
+[2026-04-30T02:54:48.253Z] [REQUEST] GET /api/categories | status=200 duration=85ms ip=::1
+[2026-04-30T02:54:48.283Z] [ERROR  ] Unhandled error on GET /api/products | message=column p.name does not exist stack=at E:\Project\e-com\backend\node_modules\pg-pool\index.js:45:11
+[2026-04-30T02:54:48.287Z] [ERROR  ] GET /api/products | status=500 duration=135ms ip=::1
+[2026-04-30T02:54:48.308Z] [ERROR  ] Unhandled error on GET /api/products | message=column p.name does not exist stack=at E:\Project\e-com\backend\node_modules\pg-pool\index.js:45:11
+[2026-04-30T02:54:48.320Z] [ERROR  ] GET /api/products | status=500 duration=151ms ip=::1
+[2026-04-30T02:54:58.429Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=200 duration=2ms ip=::1
+[2026-04-30T02:54:58.575Z] [REQUEST] GET /api/categories | status=200 duration=97ms ip=::1
+[2026-04-30T02:54:58.621Z] [REQUEST] GET /api/categories | status=200 duration=137ms ip=::1
+[2026-04-30T02:56:18.737Z] [SUCCESS] Server started | port=5000 frontend=undefined env=development
+[2026-04-30T02:56:31.503Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=9ms ip=::1
+[2026-04-30T02:56:55.794Z] [WARN   ] POST /api/auth/login | status=401 duration=208ms ip=::1
+[2026-04-30T02:57:13.592Z] [SUCCESS] Server started | port=5000 frontend=undefined env=development
+[2026-04-30T02:57:20.289Z] [REQUEST] POST /api/auth/login | status=200 duration=216ms ip=::1 body={"email":"vaibhavprakashpetkar@gmail.com","password":"******"}
+[2026-04-30T02:57:20.955Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=3ms ip=::1
+[2026-04-30T02:57:58.582Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=2ms ip=::1
+[2026-04-30T02:57:58.719Z] [ERROR  ] GET /api/products | status=500 duration=100ms ip=::1
+[2026-04-30T02:57:58.775Z] [REQUEST] GET /api/stock | status=200 duration=187ms ip=::1
+[2026-04-30T02:57:58.875Z] [REQUEST] GET /api/stock | status=304 duration=3ms ip=::1
+[2026-04-30T02:57:58.886Z] [ERROR  ] GET /api/products | status=500 duration=5ms ip=::1

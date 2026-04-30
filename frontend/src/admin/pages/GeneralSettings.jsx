@@ -17,7 +17,9 @@ import SaveRoundedIcon from '@mui/icons-material/SaveRounded';
 import InfoRoundedIcon from '@mui/icons-material/InfoRounded';
 import AccessTimeRoundedIcon from '@mui/icons-material/AccessTimeRounded';
 import CloudQueueRoundedIcon from '@mui/icons-material/CloudQueueRounded';
+import PaymentsRoundedIcon from '@mui/icons-material/PaymentsRounded';
 import { API } from '../../services/api';
+import { MenuItem, Select, FormControl, InputLabel } from '@mui/material';
 
 export default function GeneralSettings() {
   const [loading, setLoading] = useState(true);
@@ -30,6 +32,7 @@ export default function GeneralSettings() {
   const [settings, setSettings] = useState({
     require_email_verification: 'false',
     app_domain: '',
+    default_currency: 'USD',
     smtp_host: '',
     smtp_port: '587',
     smtp_user: '',
@@ -70,7 +73,7 @@ export default function GeneralSettings() {
   const handleSaveAll = async () => {
     setSaving(true);
     try {
-      const keys = ['app_domain', 'smtp_host', 'smtp_port', 'smtp_user', 'smtp_pass', 'smtp_from'];
+      const keys = ['app_domain', 'default_currency', 'smtp_host', 'smtp_port', 'smtp_user', 'smtp_pass', 'smtp_from'];
       await Promise.all(keys.map(k => 
         API.put('/users/settings', { key: k, value: settings[k] })
       ));
@@ -207,8 +210,8 @@ export default function GeneralSettings() {
           </Paper>
         </Grid>
 
-        {/* Row 2: Security & Domain (Side by Side on Desktop) */}
-        <Grid item xs={12} md={6}>
+        {/* Row 2: Security, Domain & Currency (Side by Side on Desktop) */}
+        <Grid item xs={12} md={4}>
           <Paper sx={{ 
             p: 3, borderRadius: 8, bgcolor: 'rgba(255,255,255,0.7)', backdropFilter: 'blur(10px)',
             border: '1px solid #e2e8f0',
@@ -239,7 +242,7 @@ export default function GeneralSettings() {
           </Paper>
         </Grid>
 
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={4}>
           <Paper sx={{ 
             p: 3, borderRadius: 8, bgcolor: 'rgba(255,255,255,0.7)', backdropFilter: 'blur(10px)',
             border: '1px solid #e2e8f0',
@@ -268,6 +271,42 @@ export default function GeneralSettings() {
                   sx: { fontSize: '0.9rem', fontWeight: 700, px: 1 } 
                 }}
               />
+            </Box>
+          </Paper>
+        </Grid>
+
+        <Grid item xs={12} md={4}>
+          <Paper sx={{ 
+            p: 3, borderRadius: 8, bgcolor: 'rgba(255,255,255,0.7)', backdropFilter: 'blur(10px)',
+            border: '1px solid #e2e8f0',
+            height: '100%',
+            display: 'flex', flexDirection: 'column', justifyContent: 'center'
+          }}>
+            <Stack direction="row" spacing={2} sx={{ alignItems: 'center', mb: 3, justifyContent: {xs: 'center', md: 'flex-start'} }}>
+              <Box sx={{ p: 1.5, borderRadius: 4, bgcolor: '#fef2f2', color: '#dc2626' }}>
+                <PaymentsRoundedIcon sx={{ fontSize: 24 }} />
+              </Box>
+              <Box>
+                <Typography variant="h6" fontWeight="900" color="#1e293b">Localization</Typography>
+                <Typography variant="caption" color="#64748b" fontWeight="600">Global Currency</Typography>
+              </Box>
+            </Stack>
+            <Box sx={{ p: 1, borderRadius: 6, bgcolor: '#f8fafc', border: '1px solid #e2e8f0' }}>
+              <FormControl fullWidth size="small" variant="standard">
+                <Select
+                  value={settings.default_currency}
+                  onChange={(e) => setSettings({ ...settings, default_currency: e.target.value })}
+                  disableUnderline
+                  sx={{ fontSize: '0.9rem', fontWeight: 700, px: 1 }}
+                >
+                  <MenuItem value="USD">USD ($)</MenuItem>
+                  <MenuItem value="INR">INR (₹)</MenuItem>
+                  <MenuItem value="EUR">EUR (€)</MenuItem>
+                  <MenuItem value="GBP">GBP (£)</MenuItem>
+                  <MenuItem value="AED">AED (د.إ)</MenuItem>
+                  <MenuItem value="CAD">CAD ($)</MenuItem>
+                </Select>
+              </FormControl>
             </Box>
           </Paper>
         </Grid>

@@ -22,6 +22,7 @@ import TuneRoundedIcon from '@mui/icons-material/TuneRounded';
 import ExtensionRoundedIcon from '@mui/icons-material/ExtensionRounded';
 import PersonRoundedIcon from '@mui/icons-material/PersonRounded';
 import DeleteSweepRoundedIcon from '@mui/icons-material/DeleteSweepRounded';
+import InventoryRoundedIcon from '@mui/icons-material/Inventory2Rounded';
 
 export default function Sidebar({ collapsed, onToggle, mobileOpen, onMobileClose, isMobile }) {
   const navigate = useNavigate();
@@ -50,10 +51,16 @@ export default function Sidebar({ collapsed, onToggle, mobileOpen, onMobileClose
     navigate('/admin/login');
   };
 
+  const [productsExpanded, setProductsExpanded] = useState(false);
+
   const navItems = [
-    { name: 'Dashboard',   path: '/admin/dashboard',  icon: <DashboardRoundedIcon /> },
-    { name: 'Categories',  path: '/admin/categories', icon: <CategoryRoundedIcon /> },
-    { name: 'Products',    path: '/admin/products',   icon: <ShoppingCartRoundedIcon /> },
+    { name: 'Dashboard', path: '/admin/dashboard', icon: <DashboardRoundedIcon /> },
+  ];
+
+  const productSubItems = [
+    { name: 'All Products', path: '/admin/products', icon: <ShoppingCartRoundedIcon sx={{ fontSize: 18 }} /> },
+    { name: 'Categories',   path: '/admin/categories', icon: <CategoryRoundedIcon sx={{ fontSize: 18 }} /> },
+    { name: 'Stocks',       path: '/admin/products/stocks', icon: <InventoryRoundedIcon sx={{ fontSize: 18 }} /> },
   ];
 
   const settingItems = [
@@ -163,6 +170,71 @@ export default function Sidebar({ collapsed, onToggle, mobileOpen, onMobileClose
             </Tooltip>
           );
         })}
+
+        {/* Expandable Products */}
+        <ListItem disablePadding sx={{ mb: 1 }}>
+          <ListItemButton
+            onClick={() => {
+              if (collapsed && !isMobile) onToggle();
+              setProductsExpanded(!productsExpanded);
+            }}
+            sx={{
+              borderRadius: '16px',
+              py: 1.5,
+              px: (collapsed && !isMobile) ? 0 : 2,
+              justifyContent: (collapsed && !isMobile) ? 'center' : 'flex-start',
+              color: productsExpanded ? '#fff' : 'inherit',
+              '&:hover': { bgcolor: 'rgba(255, 255, 255, 0.05)', color: '#fff' }
+            }}
+          >
+            <ListItemIcon sx={{ minWidth: (collapsed && !isMobile) ? 0 : 40, color: 'inherit', justifyContent: 'center' }}>
+              <ShoppingCartRoundedIcon />
+            </ListItemIcon>
+            {(!collapsed || isMobile) && (
+              <>
+                <ListItemText 
+                  primary="Products" 
+                  slotProps={{ 
+                    primary: { sx: { fontSize: '15px', fontWeight: 500 } } 
+                  }} 
+                />
+                {productsExpanded ? <ExpandLessRoundedIcon /> : <ExpandMoreRoundedIcon />}
+              </>
+            )}
+          </ListItemButton>
+        </ListItem>
+
+        <Collapse in={productsExpanded && (!collapsed || isMobile)} timeout="auto" unmountOnExit>
+          <List component="div" disablePadding sx={{ pl: (collapsed && !isMobile) ? 0 : 4, mb: 1 }}>
+            {productSubItems.map((sub) => {
+              const subActive = location.pathname === sub.path;
+              return (
+                <ListItemButton
+                  key={sub.name}
+                  onClick={() => {
+                    navigate(sub.path);
+                    if (isMobile) onMobileClose();
+                  }}
+                  sx={{
+                    borderRadius: '12px',
+                    py: 1,
+                    mb: 0.5,
+                    color: subActive ? '#6366f1' : 'inherit',
+                    '&:hover': { color: '#fff' }
+                  }}
+                >
+                  <ListItemIcon sx={{ minWidth: 32, color: 'inherit' }}>{sub.icon}</ListItemIcon>
+                  <ListItemText 
+                    primary={sub.name} 
+                    slotProps={{ 
+                      primary: { sx: { fontSize: '13px', fontWeight: subActive ? 700 : 400 } } 
+                    }} 
+                  />
+                </ListItemButton>
+              );
+            })}
+          </List>
+        </Collapse>
 
         {/* Expandable Settings */}
         <ListItem disablePadding sx={{ mt: 2 }}>
