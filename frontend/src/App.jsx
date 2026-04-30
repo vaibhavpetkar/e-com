@@ -13,6 +13,7 @@ import GeneralSettings from "./admin/pages/GeneralSettings";
 import UserSettings from "./admin/pages/UserSettings";
 import WebsiteSettings from "./admin/pages/WebsiteSettings";
 import IntegrationSettings from "./admin/pages/IntegrationSettings";
+import RecycleBin from "./admin/pages/RecycleBin";
 import NotFound from "./admin/pages/NotFound";
 import AdminLayout from "./admin/layout/AdminLayout";
 
@@ -108,7 +109,7 @@ function App() {
                     <Route 
                         path="settings/users" 
                         element={
-                            <ProtectedRoute role="ADMIN">
+                            <ProtectedRoute>
                                 <UserSettings />
                             </ProtectedRoute>
                         } 
@@ -126,6 +127,14 @@ function App() {
                         element={
                             <ProtectedRoute role="ADMIN">
                                 <IntegrationSettings />
+                            </ProtectedRoute>
+                        } 
+                    />
+                    <Route 
+                        path="recycle-bin" 
+                        element={
+                            <ProtectedRoute role="ADMIN">
+                                <RecycleBin />
                             </ProtectedRoute>
                         } 
                     />

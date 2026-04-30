@@ -124,3 +124,216 @@
 [2026-04-29T02:50:11.527Z] [REQUEST] GET /api/users/settings | status=304 duration=3ms ip=::1
 [2026-04-29T02:50:25.985Z] [REQUEST] GET /api/users/settings | status=304 duration=53ms ip=::1
 [2026-04-29T02:50:25.988Z] [REQUEST] GET /api/users/settings | status=304 duration=2ms ip=::1
+[2026-04-30T00:59:06.170Z] [SUCCESS] Server started | port=5000 frontend=http://localhost:3000 env=development
+[2026-04-30T00:59:33.451Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=14ms ip=::1
+[2026-04-30T01:01:12.056Z] [REQUEST] GET /api/users/settings | status=200 duration=142ms ip=::1
+[2026-04-30T01:01:12.060Z] [REQUEST] GET /api/users/profile | status=304 duration=126ms ip=::1
+[2026-04-30T01:01:12.065Z] [REQUEST] GET /api/users/all | status=304 duration=129ms ip=::1
+[2026-04-30T01:01:12.069Z] [REQUEST] GET /api/users/profile | status=304 duration=3ms ip=::1
+[2026-04-30T01:01:30.926Z] [REQUEST] GET /api/users/settings | status=304 duration=63ms ip=::1
+[2026-04-30T01:01:30.930Z] [REQUEST] GET /api/users/settings | status=304 duration=2ms ip=::1
+[2026-04-30T01:02:28.511Z] [REQUEST] GET /api/users/settings | status=304 duration=59ms ip=::1
+[2026-04-30T01:02:28.516Z] [REQUEST] GET /api/users/settings | status=304 duration=3ms ip=::1
+[2026-04-30T01:02:29.948Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=1ms ip=::1
+[2026-04-30T01:02:32.380Z] [REQUEST] GET /api/users/settings | status=304 duration=2ms ip=::1
+[2026-04-30T01:02:32.388Z] [REQUEST] GET /api/users/profile | status=304 duration=5ms ip=::1
+[2026-04-30T01:02:32.423Z] [REQUEST] GET /api/users/profile | status=304 duration=2ms ip=::1
+[2026-04-30T01:02:32.486Z] [REQUEST] GET /api/users/all | status=304 duration=101ms ip=::1
+[2026-04-30T01:02:32.546Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=0ms ip=::1
+[2026-04-30T01:09:48.192Z] [REQUEST] GET /api/users/all | status=304 duration=125ms ip=::1
+[2026-04-30T01:09:48.197Z] [REQUEST] GET /api/users/all | status=304 duration=2ms ip=::1
+[2026-04-30T01:09:48.223Z] [REQUEST] GET /api/users/audit-logs? | status=200 duration=153ms ip=::1
+[2026-04-30T01:09:48.229Z] [REQUEST] GET /api/users/audit-logs? | status=304 duration=2ms ip=::1
+[2026-04-30T01:12:02.090Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=1ms ip=::1
+[2026-04-30T01:12:04.612Z] [REQUEST] GET /api/users/profile | status=304 duration=80ms ip=::1
+[2026-04-30T01:12:04.619Z] [REQUEST] GET /api/users/profile | status=304 duration=2ms ip=::1
+[2026-04-30T01:12:21.985Z] [REQUEST] GET /api/users/profile | status=304 duration=98ms ip=::1
+[2026-04-30T01:12:22.038Z] [REQUEST] GET /api/users/profile | status=304 duration=1ms ip=::1
+[2026-04-30T01:12:22.075Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=0ms ip=::1
+[2026-04-30T01:12:30.230Z] [REQUEST] GET /api/users/profile | status=304 duration=2ms ip=::1
+[2026-04-30T01:12:30.236Z] [REQUEST] GET /api/users/profile | status=304 duration=2ms ip=::1
+[2026-04-30T01:12:30.249Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=0ms ip=::1
+[2026-04-30T01:13:03.539Z] [REQUEST] GET /api/users/all | status=304 duration=87ms ip=::1
+[2026-04-30T01:13:03.562Z] [REQUEST] GET /api/users/profile | status=304 duration=112ms ip=::1
+[2026-04-30T01:13:03.573Z] [REQUEST] GET /api/users/settings | status=304 duration=122ms ip=::1
+[2026-04-30T01:13:04.376Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=0ms ip=::1
+[2026-04-30T01:13:27.105Z] [REQUEST] GET /api/users/all | status=304 duration=109ms ip=::1
+[2026-04-30T01:13:27.117Z] [REQUEST] GET /api/users/all | status=304 duration=1ms ip=::1
+[2026-04-30T01:13:27.283Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=0ms ip=::1
+[2026-04-30T01:15:19.123Z] [REQUEST] GET /api/users/profile | status=304 duration=71ms ip=::1
+[2026-04-30T01:15:19.132Z] [REQUEST] GET /api/users/profile | status=304 duration=2ms ip=::1
+[2026-04-30T01:15:19.138Z] [REQUEST] GET /api/users/all | status=304 duration=78ms ip=::1
+[2026-04-30T01:15:19.157Z] [REQUEST] GET /api/users/settings | status=304 duration=99ms ip=::1
+[2026-04-30T01:15:49.839Z] [REQUEST] GET /api/users/profile | status=200 duration=2ms ip=::1
+[2026-04-30T01:15:49.846Z] [REQUEST] GET /api/users/profile | status=304 duration=2ms ip=::1
+[2026-04-30T01:15:50.201Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=0ms ip=::1
+[2026-04-30T01:16:42.244Z] [REQUEST] GET /api/users/all | status=304 duration=83ms ip=::1
+[2026-04-30T01:16:42.248Z] [REQUEST] GET /api/users/audit-logs? | status=304 duration=79ms ip=::1
+[2026-04-30T01:16:42.255Z] [REQUEST] GET /api/users/all | status=304 duration=2ms ip=::1
+[2026-04-30T01:16:42.269Z] [REQUEST] GET /api/users/audit-logs? | status=304 duration=2ms ip=::1
+[2026-04-30T01:16:59.983Z] [REQUEST] GET /api/users/audit-logs? | status=304 duration=59ms ip=::1
+[2026-04-30T01:17:03.394Z] [REQUEST] GET /api/users/profile | status=304 duration=1ms ip=::1
+[2026-04-30T01:17:03.414Z] [REQUEST] GET /api/users/profile | status=304 duration=3ms ip=::1
+[2026-04-30T01:17:03.651Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=1ms ip=::1
+[2026-04-30T01:18:09.520Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=1ms ip=::1
+[2026-04-30T01:18:09.589Z] [REQUEST] GET /api/users/profile | status=304 duration=65ms ip=::1
+[2026-04-30T01:18:39.260Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=1ms ip=::1
+[2026-04-30T01:18:39.365Z] [REQUEST] GET /api/users/profile | status=304 duration=99ms ip=::1
+[2026-04-30T01:18:39.374Z] [REQUEST] GET /api/users/profile | status=304 duration=1ms ip=::1
+[2026-04-30T01:19:48.230Z] [REQUEST] GET /api/users/all | status=304 duration=118ms ip=::1
+[2026-04-30T01:19:48.233Z] [REQUEST] GET /api/users/all | status=304 duration=1ms ip=::1
+[2026-04-30T01:19:48.552Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=0ms ip=::1
+[2026-04-30T01:21:52.088Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=1ms ip=::1
+[2026-04-30T01:21:54.681Z] [REQUEST] GET /api/users/profile | status=304 duration=55ms ip=::1
+[2026-04-30T01:21:54.687Z] [REQUEST] GET /api/users/profile | status=304 duration=1ms ip=::1
+[2026-04-30T01:22:52.264Z] [REQUEST] GET /api/users/profile | status=200 duration=61ms ip=::1
+[2026-04-30T01:22:52.278Z] [REQUEST] GET /api/users/profile | status=200 duration=73ms ip=::1
+[2026-04-30T01:22:52.290Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=200 duration=101ms ip=::1
+[2026-04-30T01:22:54.400Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=200 duration=2ms ip=::1
+[2026-04-30T01:22:54.458Z] [REQUEST] GET /api/users/profile | status=200 duration=2ms ip=::1
+[2026-04-30T01:22:54.466Z] [REQUEST] GET /api/users/profile | status=200 duration=2ms ip=::1
+[2026-04-30T01:22:56.332Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=200 duration=2ms ip=::1
+[2026-04-30T01:22:56.384Z] [REQUEST] GET /api/users/profile | status=200 duration=2ms ip=::1
+[2026-04-30T01:22:56.390Z] [REQUEST] GET /api/users/profile | status=200 duration=1ms ip=::1
+[2026-04-30T01:25:42.317Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=200 duration=2ms ip=::1
+[2026-04-30T01:25:42.417Z] [REQUEST] GET /api/users/profile | status=200 duration=104ms ip=::1
+[2026-04-30T01:25:42.570Z] [REQUEST] GET /api/users/profile | status=200 duration=228ms ip=::1
+[2026-04-30T01:25:46.703Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=200 duration=2ms ip=::1
+[2026-04-30T01:25:46.759Z] [REQUEST] GET /api/users/profile | status=200 duration=2ms ip=::1
+[2026-04-30T01:25:46.766Z] [REQUEST] GET /api/users/profile | status=200 duration=1ms ip=::1
+[2026-04-30T01:25:54.632Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=200 duration=2ms ip=::1
+[2026-04-30T01:25:54.682Z] [REQUEST] GET /api/users/profile | status=200 duration=2ms ip=::1
+[2026-04-30T01:25:54.686Z] [REQUEST] GET /api/users/profile | status=200 duration=1ms ip=::1
+[2026-04-30T01:26:20.964Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=200 duration=2ms ip=::1
+[2026-04-30T01:26:21.074Z] [REQUEST] GET /api/users/profile | status=200 duration=65ms ip=::1
+[2026-04-30T01:26:21.086Z] [REQUEST] GET /api/users/profile | status=200 duration=71ms ip=::1
+[2026-04-30T01:26:30.560Z] [ERROR  ] GET /api/categories | status=500 duration=10ms ip=::1
+[2026-04-30T01:26:30.571Z] [ERROR  ] GET /api/categories | status=500 duration=3ms ip=::1
+[2026-04-30T01:26:36.625Z] [REQUEST] GET /api/users/profile | status=304 duration=53ms ip=::1
+[2026-04-30T01:26:36.630Z] [REQUEST] GET /api/users/profile | status=304 duration=2ms ip=::1
+[2026-04-30T01:28:50.296Z] [REQUEST] GET /api/users/profile | status=200 duration=405ms ip=::1
+[2026-04-30T01:28:50.306Z] [REQUEST] GET /api/users/profile | status=200 duration=414ms ip=::1
+[2026-04-30T01:28:50.837Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=1ms ip=::1
+[2026-04-30T01:29:16.802Z] [REQUEST] GET /api/users/profile | status=200 duration=58ms ip=::1
+[2026-04-30T01:29:16.814Z] [REQUEST] GET /api/users/profile | status=200 duration=69ms ip=::1
+[2026-04-30T01:29:16.949Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=0ms ip=::1
+[2026-04-30T01:29:58.604Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=1ms ip=::1
+[2026-04-30T01:30:07.700Z] [REQUEST] GET /api/users/profile | status=304 duration=59ms ip=::1
+[2026-04-30T01:30:07.704Z] [REQUEST] GET /api/users/profile | status=304 duration=2ms ip=::1
+[2026-04-30T01:30:07.839Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=1ms ip=::1
+[2026-04-30T01:31:22.348Z] [REQUEST] GET /api/users/profile | status=304 duration=65ms ip=::1
+[2026-04-30T01:31:22.355Z] [REQUEST] GET /api/users/profile | status=304 duration=2ms ip=::1
+[2026-04-30T01:31:22.504Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=0ms ip=::1
+[2026-04-30T01:33:17.325Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=200 duration=6ms ip=::1
+[2026-04-30T01:33:17.412Z] [REQUEST] GET /api/users/profile | status=200 duration=75ms ip=::1
+[2026-04-30T01:33:17.429Z] [REQUEST] GET /api/users/profile | status=200 duration=91ms ip=::1
+[2026-04-30T01:33:29.841Z] [REQUEST] GET /api/users/all | status=304 duration=62ms ip=::1
+[2026-04-30T01:33:29.851Z] [REQUEST] GET /api/users/all | status=304 duration=2ms ip=::1
+[2026-04-30T01:33:29.880Z] [REQUEST] GET /api/users/audit-logs? | status=304 duration=100ms ip=::1
+[2026-04-30T01:33:29.895Z] [REQUEST] GET /api/users/audit-logs? | status=304 duration=2ms ip=::1
+[2026-04-30T01:34:18.106Z] [REQUEST] GET /api/users/all | status=304 duration=96ms ip=::1
+[2026-04-30T01:34:18.110Z] [REQUEST] GET /api/users/all | status=304 duration=3ms ip=::1
+[2026-04-30T01:34:18.241Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=0ms ip=::1
+[2026-04-30T01:34:36.216Z] [REQUEST] GET /api/users/all | status=304 duration=59ms ip=::1
+[2026-04-30T01:34:36.219Z] [REQUEST] GET /api/users/all | status=304 duration=1ms ip=::1
+[2026-04-30T01:39:27.371Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=200 duration=5ms ip=::1
+[2026-04-30T01:39:27.482Z] [REQUEST] GET /api/users/all | status=200 duration=101ms ip=::1
+[2026-04-30T01:39:27.502Z] [REQUEST] GET /api/users/all | status=200 duration=122ms ip=::1
+[2026-04-30T01:39:45.800Z] [ERROR  ] Unhandled error on GET /api/products | message=column p.category_id does not exist stack=at E:\Project\e-com\backend\node_modules\pg-pool\index.js:45:11
+[2026-04-30T01:39:45.803Z] [ERROR  ] GET /api/products | status=500 duration=67ms ip=::1
+[2026-04-30T01:39:45.827Z] [REQUEST] GET /api/categories | status=200 duration=90ms ip=::1
+[2026-04-30T01:39:45.836Z] [REQUEST] GET /api/categories | status=304 duration=1ms ip=::1
+[2026-04-30T01:39:45.890Z] [ERROR  ] Unhandled error on GET /api/products | message=column p.category_id does not exist stack=at E:\Project\e-com\backend\node_modules\pg-pool\index.js:45:11
+[2026-04-30T01:39:45.892Z] [ERROR  ] GET /api/products | status=500 duration=85ms ip=::1
+[2026-04-30T01:40:37.387Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=1ms ip=::1
+[2026-04-30T01:40:37.459Z] [ERROR  ] Unhandled error on GET /api/products | message=column p.category_id does not exist stack=at E:\Project\e-com\backend\node_modules\pg-pool\index.js:45:11
+[2026-04-30T01:40:37.465Z] [ERROR  ] GET /api/products | status=500 duration=70ms ip=::1
+[2026-04-30T01:40:37.497Z] [REQUEST] GET /api/categories | status=304 duration=91ms ip=::1
+[2026-04-30T01:40:37.511Z] [REQUEST] GET /api/categories | status=304 duration=1ms ip=::1
+[2026-04-30T01:40:37.534Z] [ERROR  ] Unhandled error on GET /api/products | message=column p.category_id does not exist stack=at E:\Project\e-com\backend\node_modules\pg-pool\index.js:45:11
+[2026-04-30T01:40:37.537Z] [ERROR  ] GET /api/products | status=500 duration=67ms ip=::1
+[2026-04-30T01:40:42.584Z] [REQUEST] GET /api/users/all | status=304 duration=6ms ip=::1
+[2026-04-30T01:40:42.663Z] [REQUEST] GET /api/users/all | status=304 duration=2ms ip=::1
+[2026-04-30T01:40:47.393Z] [WARN   ] 404 Not Found: PUT /api/users/status/4 | ip=::1
+[2026-04-30T01:40:47.394Z] [WARN   ] PUT /api/users/status/4 | status=404 duration=2ms ip=::1
+[2026-04-30T01:40:50.394Z] [WARN   ] 404 Not Found: PUT /api/users/status/3 | ip=::1
+[2026-04-30T01:40:50.395Z] [WARN   ] PUT /api/users/status/3 | status=404 duration=1ms ip=::1
+[2026-04-30T01:40:56.258Z] [WARN   ] 404 Not Found: PUT /api/users/status/3 | ip=::1
+[2026-04-30T01:40:56.259Z] [WARN   ] PUT /api/users/status/3 | status=404 duration=1ms ip=::1
+[2026-04-30T01:41:00.637Z] [WARN   ] 404 Not Found: PUT /api/users/status/2 | ip=::1
+[2026-04-30T01:41:00.678Z] [WARN   ] PUT /api/users/status/2 | status=404 duration=41ms ip=::1
+[2026-04-30T01:41:01.760Z] [WARN   ] 404 Not Found: PUT /api/users/status/2 | ip=::1
+[2026-04-30T01:41:01.845Z] [WARN   ] PUT /api/users/status/2 | status=404 duration=85ms ip=::1
+[2026-04-30T01:41:10.804Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=1ms ip=::1
+[2026-04-30T01:41:11.070Z] [REQUEST] GET /api/users/all | status=304 duration=156ms ip=::1
+[2026-04-30T01:41:11.085Z] [REQUEST] GET /api/users/all | status=304 duration=3ms ip=::1
+[2026-04-30T01:41:27.774Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=1ms ip=::1
+[2026-04-30T01:41:27.832Z] [REQUEST] GET /api/users/all | status=304 duration=52ms ip=::1
+[2026-04-30T01:41:27.835Z] [REQUEST] GET /api/users/all | status=304 duration=2ms ip=::1
+[2026-04-30T01:41:29.882Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=1ms ip=::1
+[2026-04-30T01:41:29.906Z] [REQUEST] GET /api/users/all | status=304 duration=25ms ip=::1
+[2026-04-30T01:41:29.909Z] [REQUEST] GET /api/users/all | status=304 duration=1ms ip=::1
+[2026-04-30T01:41:37.216Z] [WARN   ] 404 Not Found: DELETE /api/users/3 | ip=::1
+[2026-04-30T01:41:37.226Z] [WARN   ] DELETE /api/users/3 | status=404 duration=10ms ip=::1
+[2026-04-30T01:41:46.985Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=1ms ip=::1
+[2026-04-30T01:41:47.225Z] [REQUEST] GET /api/users/all | status=304 duration=122ms ip=::1
+[2026-04-30T01:41:47.249Z] [REQUEST] GET /api/users/all | status=304 duration=1ms ip=::1
+[2026-04-30T01:41:50.114Z] [WARN   ] 404 Not Found: GET /api/users/deleted | ip=::1
+[2026-04-30T01:41:50.115Z] [WARN   ] GET /api/users/deleted | status=404 duration=1ms ip=::1
+[2026-04-30T01:41:50.122Z] [WARN   ] 404 Not Found: GET /api/users/deleted | ip=::1
+[2026-04-30T01:41:50.123Z] [WARN   ] GET /api/users/deleted | status=404 duration=1ms ip=::1
+[2026-04-30T01:41:56.242Z] [REQUEST] GET /api/users/all | status=304 duration=2ms ip=::1
+[2026-04-30T01:41:56.245Z] [REQUEST] GET /api/users/all | status=304 duration=1ms ip=::1
+[2026-04-30T01:42:00.315Z] [WARN   ] 404 Not Found: DELETE /api/users/4 | ip=::1
+[2026-04-30T01:42:00.442Z] [WARN   ] DELETE /api/users/4 | status=404 duration=127ms ip=::1
+[2026-04-30T01:42:09.269Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=1ms ip=::1
+[2026-04-30T01:42:09.470Z] [REQUEST] GET /api/users/all | status=304 duration=85ms ip=::1
+[2026-04-30T01:42:09.501Z] [REQUEST] GET /api/users/all | status=304 duration=1ms ip=::1
+[2026-04-30T01:42:19.850Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=200 duration=2ms ip=::1
+[2026-04-30T01:42:20.018Z] [REQUEST] GET /api/users/all | status=200 duration=107ms ip=::1
+[2026-04-30T01:42:20.037Z] [REQUEST] GET /api/users/all | status=200 duration=124ms ip=::1
+[2026-04-30T01:42:23.703Z] [WARN   ] 404 Not Found: DELETE /api/users/3 | ip=::1
+[2026-04-30T01:42:23.704Z] [WARN   ] DELETE /api/users/3 | status=404 duration=1ms ip=::1
+[2026-04-30T01:42:42.447Z] [WARN   ] 404 Not Found: PUT /api/users/status/3 | ip=::1
+[2026-04-30T01:42:42.448Z] [WARN   ] PUT /api/users/status/3 | status=404 duration=1ms ip=::1
+[2026-04-30T01:44:36.443Z] [WARN   ] 404 Not Found: PUT /api/users/status/3 | ip=::1
+[2026-04-30T01:44:36.444Z] [WARN   ] PUT /api/users/status/3 | status=404 duration=1ms ip=::1
+[2026-04-30T01:44:40.214Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=1ms ip=::1
+[2026-04-30T01:44:40.517Z] [REQUEST] GET /api/users/all | status=304 duration=242ms ip=::1
+[2026-04-30T01:44:40.527Z] [REQUEST] GET /api/users/all | status=304 duration=1ms ip=::1
+[2026-04-30T01:45:25.207Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=200 duration=2ms ip=::1
+[2026-04-30T01:45:25.389Z] [REQUEST] GET /api/users/all | status=200 duration=89ms ip=::1
+[2026-04-30T01:45:25.401Z] [REQUEST] GET /api/users/all | status=200 duration=108ms ip=::1
+[2026-04-30T01:45:29.148Z] [WARN   ] 404 Not Found: DELETE /api/users/3 | ip=::1
+[2026-04-30T01:45:29.182Z] [WARN   ] DELETE /api/users/3 | status=404 duration=34ms ip=::1
+[2026-04-30T01:45:35.668Z] [WARN   ] 404 Not Found: PUT /api/users/status/3 | ip=::1
+[2026-04-30T01:45:35.669Z] [WARN   ] PUT /api/users/status/3 | status=404 duration=1ms ip=::1
+[2026-04-30T01:46:34.883Z] [WARN   ] 404 Not Found: DELETE /api/users/user/3 | ip=::1
+[2026-04-30T01:46:34.884Z] [WARN   ] DELETE /api/users/user/3 | status=404 duration=1ms ip=::1
+[2026-04-30T01:46:57.571Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=200 duration=2ms ip=::1
+[2026-04-30T01:46:57.707Z] [REQUEST] GET /api/users/all | status=200 duration=80ms ip=::1
+[2026-04-30T01:46:57.718Z] [REQUEST] GET /api/users/all | status=200 duration=83ms ip=::1
+[2026-04-30T01:47:00.494Z] [WARN   ] 404 Not Found: DELETE /api/users/user/4 | ip=::1
+[2026-04-30T01:47:00.495Z] [WARN   ] DELETE /api/users/user/4 | status=404 duration=1ms ip=::1
+[2026-04-30T01:47:05.659Z] [WARN   ] 404 Not Found: PUT /api/users/status/4 | ip=::1
+[2026-04-30T01:47:05.659Z] [WARN   ] PUT /api/users/status/4 | status=404 duration=0ms ip=::1
+[2026-04-30T01:49:28.042Z] [SUCCESS] Server started | port=5000 frontend=http://localhost:3000 env=development
+[2026-04-30T01:49:31.700Z] [WARN   ] POST /api/auth/login | status=401 duration=479ms ip=::1
+[2026-04-30T01:49:41.033Z] [WARN   ] POST /api/auth/login | status=401 duration=108ms ip=::1
+[2026-04-30T01:50:00.992Z] [SUCCESS] Server started | port=5000 frontend=http://localhost:3000 env=development
+[2026-04-30T01:50:17.794Z] [REQUEST] POST /api/auth/login | status=200 duration=202ms ip=::1 body={"email":"vaibhavprakashpetkar@gmail.com","password":"******"}
+[2026-04-30T01:50:18.428Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=200 duration=13ms ip=::1
+[2026-04-30T01:50:26.594Z] [REQUEST] GET /api/users/manage/deleted | status=200 duration=7ms ip=::1
+[2026-04-30T01:50:26.598Z] [REQUEST] GET /api/users/manage/deleted | status=304 duration=2ms ip=::1
+[2026-04-30T01:50:29.439Z] [ERROR  ] GET /api/users/manage/all | status=500 duration=8ms ip=::1
+[2026-04-30T01:50:29.523Z] [ERROR  ] GET /api/users/manage/all | status=500 duration=65ms ip=::1
+[2026-04-30T01:51:37.235Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=200 duration=4ms ip=::1
+[2026-04-30T01:51:37.330Z] [REQUEST] GET /api/users/manage/all | status=200 duration=85ms ip=::1
+[2026-04-30T01:51:37.348Z] [REQUEST] GET /api/users/manage/all | status=200 duration=104ms ip=::1
+[2026-04-30T01:51:43.296Z] [REQUEST] PUT /api/users/manage/status/3 | status=200 duration=8ms ip=::1 body={"is_active":false}
+[2026-04-30T01:51:48.432Z] [REQUEST] DELETE /api/users/manage/delete/3 | status=200 duration=3ms ip=::1
+[2026-04-30T01:51:48.561Z] [REQUEST] GET /api/users/manage/all | status=200 duration=2ms ip=::1
+[2026-04-30T01:51:50.796Z] [REQUEST] GET /api/users/manage/deleted | status=200 duration=4ms ip=::1
+[2026-04-30T01:51:50.801Z] [REQUEST] GET /api/users/manage/deleted | status=304 duration=1ms ip=::1
+[2026-04-30T01:52:10.842Z] [REQUEST] GET /api/categories/deleted | status=200 duration=60ms ip=::1
+[2026-04-30T01:52:12.267Z] [REQUEST] GET /api/users/manage/deleted | status=304 duration=2ms ip=::1

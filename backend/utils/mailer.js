@@ -40,6 +40,45 @@ export const sendVerificationEmail = async (to, token) => {
 };
 
 /**
+ * Send invitation email to new user added by admin
+ */
+export const sendInvitationEmail = async (to, password, token, username, frontendUrl) => {
+    const link = `${frontendUrl}/verify-email?token=${token}`;
+    await transporter.sendMail({
+        from: `"ProfitPulse" <${process.env.EMAIL_USER}>`,
+        to,
+        subject: "Welcome to ProfitPulse — Your Account is Ready",
+        html: `
+        <div style="font-family:Arial,sans-serif;max-width:520px;margin:auto;background:#f9f9f9;border-radius:12px;overflow:hidden;border:1px solid #e2e8f0;">
+          <div style="background:#1a1d21;padding:28px 32px;text-align:center;">
+            <h1 style="color:#fff;margin:0;font-size:24px;letter-spacing:1px;">ProfitPulse</h1>
+          </div>
+          <div style="padding:36px 32px;">
+            <h2 style="color:#1a1d21;margin-top:0;">Welcome, ${username}!</h2>
+            <p style="color:#555;line-height:1.7;">An account has been created for you on <strong>ProfitPulse</strong>. Below are your temporary login details:</p>
+            
+            <div style="background:#fff;padding:20px;border-radius:8px;margin:24px 0;border:1px dashed #cbd5e1;">
+              <p style="margin:0 0 10px 0;color:#64748b;font-size:14px;"><strong>Email:</strong> ${to}</p>
+              <p style="margin:0;color:#64748b;font-size:14px;"><strong>Temporary Password:</strong> <code style="background:#f1f5f9;padding:2px 6px;border-radius:4px;color:#1a1d21;">${password}</code></p>
+            </div>
+
+            <p style="color:#555;line-height:1.7;">Please click the button below to verify your email and activate your account. You will be prompted to change your password after logging in.</p>
+            
+            <div style="text-align:center;margin:32px 0;">
+              <a href="${link}" style="background:#22c55e;color:#fff;padding:14px 36px;border-radius:8px;text-decoration:none;font-weight:bold;font-size:16px;display:inline-block;">Verify & Activate Account</a>
+            </div>
+            
+            <p style="color:#aaa;font-size:13px;">If the button doesn't work, copy this link: <br/> <a href="${link}" style="color:#1a1d21;">${link}</a></p>
+            
+            <hr style="border:none;border-top:1px solid #eee;margin:24px 0;" />
+            <p style="color:#bbb;font-size:12px;text-align:center;">ProfitPulse Dashboard &bull; ${frontendUrl}</p>
+          </div>
+        </div>
+        `,
+    });
+};
+
+/**
  * Send OTP for password reset
  */
 export const sendOtpEmail = async (to, otp) => {

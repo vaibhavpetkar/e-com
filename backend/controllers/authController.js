@@ -72,6 +72,17 @@ export const login = async (req, res) => {
         }
 
         const user = result.rows[0];
+
+        // Check if user is soft-deleted
+        if (user.is_deleted) {
+            return res.status(403).json({ error: "Account no longer exists" });
+        }
+
+        // Check if user is inactive
+        if (!user.is_active) {
+            return res.status(403).json({ error: "Your account is deactivated. Please contact administrator." });
+        }
+
         const valid = await bcrypt.compare(password, user.password);
         if (!valid) {
             return res.status(401).json({ error: "Incorrect password" });

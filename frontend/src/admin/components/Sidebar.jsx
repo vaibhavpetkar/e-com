@@ -1,23 +1,48 @@
-import React from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
-import DashboardIcon from '@mui/icons-material/Dashboard';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import CategoryIcon from '@mui/icons-material/Category';
-import ExitToAppIcon from '@mui/icons-material/ExitToApp';
-import MenuOpenIcon from '@mui/icons-material/MenuOpen';
-import MenuIcon from '@mui/icons-material/Menu';
-import { Box, IconButton, Collapse } from '@mui/material';
-import SettingsIcon from '@mui/icons-material/Settings';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import ExpandLessIcon from '@mui/icons-material/ExpandLess';
-import LanguageIcon from '@mui/icons-material/Language';
-import GroupIcon from '@mui/icons-material/Group';
-import TuneIcon from '@mui/icons-material/Tune';
-import ExtensionIcon from '@mui/icons-material/Extension';
+import React, { useState, useEffect } from 'react';
+import { NavLink, useNavigate, useLocation } from 'react-router-dom';
+import { 
+  Box, IconButton, Collapse, Avatar, Typography, Tooltip, Divider, 
+  Drawer, List, ListItem, ListItemButton, ListItemIcon, ListItemText, 
+  useTheme, useMediaQuery, Fade
+} from '@mui/material';
 
-export default function Sidebar({ collapsed, onToggle }) {
+// Icons
+import DashboardRoundedIcon from '@mui/icons-material/DashboardRounded';
+import ShoppingCartRoundedIcon from '@mui/icons-material/ShoppingCartRounded';
+import CategoryRoundedIcon from '@mui/icons-material/CategoryRounded';
+import ExitToAppRoundedIcon from '@mui/icons-material/ExitToAppRounded';
+import MenuOpenRoundedIcon from '@mui/icons-material/MenuOpenRounded';
+import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
+import SettingsRoundedIcon from '@mui/icons-material/SettingsRounded';
+import ExpandMoreRoundedIcon from '@mui/icons-material/ExpandMoreRounded';
+import ExpandLessRoundedIcon from '@mui/icons-material/ExpandLessRounded';
+import LanguageRoundedIcon from '@mui/icons-material/LanguageRounded';
+import GroupRoundedIcon from '@mui/icons-material/GroupRounded';
+import TuneRoundedIcon from '@mui/icons-material/TuneRounded';
+import ExtensionRoundedIcon from '@mui/icons-material/ExtensionRounded';
+import PersonRoundedIcon from '@mui/icons-material/PersonRounded';
+import DeleteSweepRoundedIcon from '@mui/icons-material/DeleteSweepRounded';
+
+export default function Sidebar({ collapsed, onToggle, mobileOpen, onMobileClose, isMobile }) {
   const navigate = useNavigate();
-  const [settingsExpanded, setSettingsExpanded] = React.useState(false);
+  const location = useLocation();
+  const [settingsExpanded, setSettingsExpanded] = useState(false);
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    loadUser();
+    window.addEventListener('userUpdated', loadUser);
+    return () => window.removeEventListener('userUpdated', loadUser);
+  }, []);
+
+  const loadUser = () => {
+    try {
+      const userStr = localStorage.getItem('user');
+      if (userStr) setUser(JSON.parse(userStr));
+    } catch (e) {
+      console.error("Sidebar user load error", e);
+    }
+  };
 
   const handleLogout = () => {
     localStorage.removeItem('token');
@@ -26,108 +51,273 @@ export default function Sidebar({ collapsed, onToggle }) {
   };
 
   const navItems = [
-    { name: 'Dashboard',   path: '/admin/dashboard',  icon: <DashboardIcon fontSize="small" /> },
-    { name: 'Categories',  path: '/admin/categories', icon: <CategoryIcon fontSize="small" /> },
-    { name: 'Products',    path: '/admin/products',   icon: <ShoppingCartIcon fontSize="small" /> },
+    { name: 'Dashboard',   path: '/admin/dashboard',  icon: <DashboardRoundedIcon /> },
+    { name: 'Categories',  path: '/admin/categories', icon: <CategoryRoundedIcon /> },
+    { name: 'Products',    path: '/admin/products',   icon: <ShoppingCartRoundedIcon /> },
   ];
 
-  return (
-    <div className={`${collapsed ? 'w-20' : 'w-64'} bg-[#1a1d21] text-[#9ca3af] flex flex-col justify-between py-6 rounded-r-3xl my-2 transition-all duration-300 relative shadow-2xl`}>
-      {/* Toggle Button */}
-      <Box sx={{ position: 'absolute', right: -15, top: 25, zIndex: 10 }}>
+  const settingItems = [
+    { name: 'General', path: '/admin/settings/general', icon: <TuneRoundedIcon sx={{ fontSize: 18 }} /> },
+    { name: 'Users',   path: '/admin/settings/users',   icon: <GroupRoundedIcon sx={{ fontSize: 18 }} /> },
+    { name: 'Archive', path: '/admin/recycle-bin',      icon: <DeleteSweepRoundedIcon sx={{ fontSize: 18 }} /> },
+    { name: 'Website', path: '/admin/settings/website', icon: <LanguageRoundedIcon sx={{ fontSize: 18 }} /> },
+    { name: 'Plugins', path: '/admin/settings/integration', icon: <ExtensionRoundedIcon sx={{ fontSize: 18 }} /> },
+  ];
+
+  const drawerContent = (
+    <Box sx={{ 
+      height: '100%', 
+      display: 'flex', 
+      flexDirection: 'column', 
+      bgcolor: '#0f172a', // Deep slate blue-black
+      color: '#94a3b8',
+      p: 2,
+      position: 'relative',
+      boxShadow: '10px 0 30px rgba(0,0,0,0.1)'
+    }}>
+      {/* Brand Logo */}
+      <Box sx={{ 
+        display: 'flex', 
+        alignItems: 'center', 
+        gap: 2, 
+        px: 2, 
+        py: 3, 
+        mb: 4,
+        justifyContent: (collapsed && !isMobile) ? 'center' : 'flex-start'
+      }}>
+        <Box sx={{ 
+          minWidth: 40, height: 40, 
+          bgcolor: '#6366f1', 
+          borderRadius: '12px', 
+          display: 'flex', 
+          alignItems: 'center', 
+          justifyContent: 'center', 
+          color: '#fff', 
+          fontWeight: '900', 
+          fontSize: '22px',
+          boxShadow: '0 8px 16px -4px rgba(99,102,241,0.5)',
+          background: 'linear-gradient(135deg, #6366f1 0%, #4f46e5 100%)'
+        }}>P</Box>
+        {(!collapsed || isMobile) && (
+          <Typography variant="h6" fontWeight="900" sx={{ color: '#fff', letterSpacing: '-0.5px' }}>
+            ProfitPulse
+          </Typography>
+        )}
+      </Box>
+
+      {/* Navigation List */}
+      <List sx={{ flex: 1, px: 0 }}>
+        {navItems.map((item) => {
+          const isActive = location.pathname === item.path;
+          return (
+            <Tooltip key={item.name} title={(collapsed && !isMobile) ? item.name : ""} placement="right">
+              <ListItem disablePadding sx={{ mb: 1 }}>
+                <ListItemButton
+                  onClick={() => {
+                    navigate(item.path);
+                    if (isMobile) onMobileClose();
+                  }}
+                  sx={{
+                    borderRadius: '16px',
+                    py: 1.5,
+                    px: (collapsed && !isMobile) ? 0 : 2,
+                    justifyContent: (collapsed && !isMobile) ? 'center' : 'flex-start',
+                    bgcolor: isActive ? 'rgba(99, 102, 241, 0.1)' : 'transparent',
+                    color: isActive ? '#fff' : 'inherit',
+                    transition: 'all 0.2s ease',
+                    position: 'relative',
+                    '&:hover': {
+                      bgcolor: 'rgba(255, 255, 255, 0.05)',
+                      color: '#fff',
+                      '& .MuiListItemIcon-root': { color: '#6366f1' }
+                    },
+                    '&::before': isActive ? {
+                      content: '""',
+                      position: 'absolute',
+                      left: 0, top: '20%', bottom: '20%',
+                      width: 4, borderRadius: '0 4px 4px 0',
+                      bgcolor: '#6366f1',
+                      boxShadow: '0 0 10px #6366f1'
+                    } : {}
+                  }}
+                >
+                  <ListItemIcon sx={{ 
+                    minWidth: (collapsed && !isMobile) ? 0 : 40, 
+                    color: isActive ? '#6366f1' : 'inherit',
+                    justifyContent: 'center'
+                  }}>
+                    {item.icon}
+                  </ListItemIcon>
+                  {(!collapsed || isMobile) && (
+                    <ListItemText 
+                      primary={item.name} 
+                      slotProps={{ 
+                        primary: { 
+                          sx: { fontSize: '15px', fontWeight: isActive ? 700 : 500 } 
+                        } 
+                      }} 
+                    />
+                  )}
+                </ListItemButton>
+              </ListItem>
+            </Tooltip>
+          );
+        })}
+
+        {/* Expandable Settings */}
+        <ListItem disablePadding sx={{ mt: 2 }}>
+          <ListItemButton
+            onClick={() => {
+              if (collapsed && !isMobile) onToggle();
+              setSettingsExpanded(!settingsExpanded);
+            }}
+            sx={{
+              borderRadius: '16px',
+              py: 1.5,
+              px: (collapsed && !isMobile) ? 0 : 2,
+              justifyContent: (collapsed && !isMobile) ? 'center' : 'flex-start',
+              color: settingsExpanded ? '#fff' : 'inherit',
+              '&:hover': { bgcolor: 'rgba(255, 255, 255, 0.05)', color: '#fff' }
+            }}
+          >
+            <ListItemIcon sx={{ minWidth: (collapsed && !isMobile) ? 0 : 40, color: 'inherit', justifyContent: 'center' }}>
+              <SettingsRoundedIcon />
+            </ListItemIcon>
+            {(!collapsed || isMobile) && (
+              <>
+                <ListItemText 
+                  primary="Settings" 
+                  slotProps={{ 
+                    primary: { sx: { fontSize: '15px', fontWeight: 500 } } 
+                  }} 
+                />
+                {settingsExpanded ? <ExpandLessRoundedIcon /> : <ExpandMoreRoundedIcon />}
+              </>
+            )}
+          </ListItemButton>
+        </ListItem>
+
+        <Collapse in={settingsExpanded && (!collapsed || isMobile)} timeout="auto" unmountOnExit>
+          <List component="div" disablePadding sx={{ pl: (collapsed && !isMobile) ? 0 : 4, mt: 1 }}>
+            {settingItems.map((sub) => {
+              const subActive = location.pathname === sub.path;
+              return (
+                <ListItemButton
+                  key={sub.name}
+                  onClick={() => {
+                    navigate(sub.path);
+                    if (isMobile) onMobileClose();
+                  }}
+                  sx={{
+                    borderRadius: '12px',
+                    py: 1,
+                    mb: 0.5,
+                    color: subActive ? '#6366f1' : 'inherit',
+                    '&:hover': { color: '#fff' }
+                  }}
+                >
+                  <ListItemIcon sx={{ minWidth: 32, color: 'inherit' }}>{sub.icon}</ListItemIcon>
+                  <ListItemText 
+                    primary={sub.name} 
+                    slotProps={{ 
+                      primary: { sx: { fontSize: '13px', fontWeight: subActive ? 700 : 400 } } 
+                    }} 
+                  />
+                </ListItemButton>
+              );
+            })}
+          </List>
+        </Collapse>
+      </List>
+
+      {/* Footer Profile Section */}
+      <Box sx={{ mt: 'auto', pt: 2 }}>
+        <Divider sx={{ bgcolor: 'rgba(255,255,255,0.05)', mb: 3, borderStyle: 'dashed' }} />
+        
+
+        <ListItemButton
+          onClick={handleLogout}
+          sx={{
+            borderRadius: '16px',
+            py: 1.5,
+            color: '#ef4444',
+            justifyContent: (collapsed && !isMobile) ? 'center' : 'flex-start',
+            '&:hover': { bgcolor: 'rgba(239, 68, 68, 0.1)' }
+          }}
+        >
+          <ListItemIcon sx={{ minWidth: (collapsed && !isMobile) ? 0 : 40, color: 'inherit', justifyContent: 'center' }}>
+            <ExitToAppRoundedIcon />
+          </ListItemIcon>
+          {(!collapsed || isMobile) && (
+            <ListItemText 
+              primary="Sign Out" 
+              slotProps={{ 
+                primary: { sx: { fontSize: '15px', fontWeight: 700 } } 
+              }} 
+            />
+          )}
+        </ListItemButton>
+      </Box>
+      
+      {/* Desktop Collapse Toggle (Bottom) */}
+      {!isMobile && (
         <IconButton 
           onClick={onToggle}
           sx={{ 
-            bgcolor: '#fff', 
-            color: '#1a1d21', 
-            boxShadow: '0 2px 8px rgba(0,0,0,0.15)',
-            '&:hover': { bgcolor: '#f1f5f9' },
-            width: 32, height: 32
+            position: 'absolute', 
+            right: -15, 
+            top: 32, 
+            zIndex: 100,
+            bgcolor: '#6366f1', 
+            color: '#fff', 
+            boxShadow: '0 4px 12px rgba(99,102,241,0.4)',
+            width: 32, height: 32,
+            '&:hover': { bgcolor: '#4f46e5' }
           }}
         >
-          {collapsed ? <MenuIcon sx={{ fontSize: 18 }} /> : <MenuOpenIcon sx={{ fontSize: 18 }} />}
+          {collapsed ? <MenuRoundedIcon sx={{ fontSize: 18 }} /> : <MenuOpenRoundedIcon sx={{ fontSize: 18 }} />}
         </IconButton>
+      )}
+    </Box>
+  );
+
+  return (
+    <>
+      {/* Mobile Drawer */}
+      <Drawer
+        variant="temporary"
+        open={mobileOpen}
+        onClose={onMobileClose}
+        ModalProps={{ keepMounted: true }}
+        sx={{
+          display: { xs: 'block', md: 'none' },
+          '& .MuiDrawer-paper': { boxSizing: 'border-box', width: 280, border: 'none' },
+        }}
+      >
+        {drawerContent}
+      </Drawer>
+
+      {/* Desktop Persistent Sidebar */}
+      <Box
+        component="nav"
+        sx={{
+          display: { xs: 'none', md: 'block' },
+          width: collapsed ? 88 : 280,
+          flexShrink: 0,
+          transition: 'width 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+          h: '100vh',
+          zIndex: 1100,
+        }}
+      >
+        <Box sx={{ 
+          height: '100%', 
+          position: 'fixed', 
+          width: 'inherit',
+          transition: 'inherit'
+        }}>
+          {drawerContent}
+        </Box>
       </Box>
-
-      <div>
-        <div className={`px-6 mb-10 flex items-center ${collapsed ? 'justify-center' : 'gap-3'}`}>
-          <div className="w-8 h-8 min-w-[32px] rounded bg-white text-black flex items-center justify-center font-bold text-xl shadow-inner">P</div>
-          {!collapsed && <span className="text-white text-xl font-semibold tracking-wide truncate">ProfitPulse</span>}
-        </div>
-
-        <nav className="flex flex-col gap-2 px-4">
-          {navItems.map((item) => (
-            <NavLink
-              key={item.name}
-              to={item.path}
-              className={({ isActive }) =>
-                `flex items-center ${collapsed ? 'justify-center' : 'gap-4 px-4'} py-3 rounded-2xl transition-all duration-200 ${
-                  isActive
-                    ? 'bg-white text-black font-semibold shadow-md'
-                    : 'hover:text-white hover:bg-[#2d3136]'
-                }`
-              }
-              title={collapsed ? item.name : ''}
-            >
-              {item.icon}
-              {!collapsed && <span className="text-[15px]">{item.name}</span>}
-            </NavLink>
-          ))}
-
-          {/* Expandable Settings Menu */}
-          <div className="flex flex-col">
-            <button
-              onClick={() => {
-                if (collapsed) onToggle(); // Expand sidebar if collapsed when clicking settings
-                setSettingsExpanded(!settingsExpanded);
-              }}
-              className={`flex items-center ${collapsed ? 'justify-center' : 'justify-between px-4'} py-3 rounded-2xl transition-all duration-200 hover:text-white hover:bg-[#2d3136] ${settingsExpanded && !collapsed ? 'text-white' : ''}`}
-              title="Settings"
-            >
-              <div className="flex items-center gap-4">
-                <SettingsIcon fontSize="small" />
-                {!collapsed && <span className="text-[15px]">Settings</span>}
-              </div>
-              {!collapsed && (settingsExpanded ? <ExpandLessIcon fontSize="small" /> : <ExpandMoreIcon fontSize="small" />)}
-            </button>
-
-            <Collapse in={settingsExpanded && !collapsed} timeout="auto" unmountOnExit>
-              <div className="flex flex-col gap-1 mt-1 ml-4 pl-4 border-l border-gray-700">
-                {[
-                  { name: 'General Settings', path: '/admin/settings/general', icon: <TuneIcon sx={{ fontSize: 16 }} /> },
-                  { name: 'User Settings',    path: '/admin/settings/users',   icon: <GroupIcon sx={{ fontSize: 16 }} /> },
-                  { name: 'Website Settings', path: '/admin/settings/website', icon: <LanguageIcon sx={{ fontSize: 16 }} /> },
-                  { name: 'Integration',      path: '/admin/settings/integration', icon: <ExtensionIcon sx={{ fontSize: 16 }} /> },
-                ].map((sub) => (
-                  <NavLink
-                    key={sub.name}
-                    to={sub.path}
-                    className={({ isActive }) =>
-                      `flex items-center gap-3 px-3 py-2 rounded-xl transition-all duration-200 text-sm ${
-                        isActive ? 'text-white bg-[#2d3136]' : 'hover:text-white hover:translate-x-1'
-                      }`
-                    }
-                  >
-                    {sub.icon}
-                    <span>{sub.name}</span>
-                  </NavLink>
-                ))}
-              </div>
-            </Collapse>
-          </div>
-        </nav>
-      </div>
-
-      <div className="px-4">
-        <button
-          onClick={handleLogout}
-          className={`flex items-center ${collapsed ? 'justify-center' : 'gap-4 px-4'} py-3 w-full text-left rounded-2xl transition-all duration-200 hover:text-white hover:bg-[#2d3136]`}
-          title={collapsed ? 'Log out' : ''}
-        >
-          <ExitToAppIcon fontSize="small" />
-          {!collapsed && <span className="text-[15px]">Log out</span>}
-        </button>
-      </div>
-    </div>
+    </>
   );
 }
