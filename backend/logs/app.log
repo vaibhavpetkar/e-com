@@ -337,3 +337,30 @@
 [2026-04-30T01:51:50.801Z] [REQUEST] GET /api/users/manage/deleted | status=304 duration=1ms ip=::1
 [2026-04-30T01:52:10.842Z] [REQUEST] GET /api/categories/deleted | status=200 duration=60ms ip=::1
 [2026-04-30T01:52:12.267Z] [REQUEST] GET /api/users/manage/deleted | status=304 duration=2ms ip=::1
+[2026-04-30T01:56:20.629Z] [REQUEST] GET /api/users/settings | status=304 duration=54ms ip=::1
+[2026-04-30T01:56:20.633Z] [REQUEST] GET /api/users/settings | status=304 duration=2ms ip=::1
+[2026-04-30T01:56:25.515Z] [REQUEST] GET /api/users/profile | status=304 duration=5ms ip=::1
+[2026-04-30T01:56:25.519Z] [REQUEST] GET /api/users/profile | status=304 duration=2ms ip=::1
+[2026-04-30T01:56:35.202Z] [REQUEST] GET /api/users/manage/all | status=304 duration=2ms ip=::1
+[2026-04-30T01:56:35.207Z] [REQUEST] GET /api/users/manage/all | status=304 duration=2ms ip=::1
+[2026-04-30T01:58:43.553Z] [REQUEST] GET /api/users/manage/all | status=304 duration=63ms ip=::1
+[2026-04-30T01:58:44.888Z] [WARN   ] 404 Not Found: GET /api/users/manage/user/4 | ip=::1
+[2026-04-30T01:58:44.891Z] [WARN   ] GET /api/users/manage/user/4 | status=404 duration=3ms ip=::1
+[2026-04-30T01:58:44.903Z] [WARN   ] 404 Not Found: GET /api/users/manage/user/4 | ip=::1
+[2026-04-30T01:58:44.907Z] [WARN   ] GET /api/users/manage/user/4 | status=404 duration=5ms ip=::1
+[2026-04-30T01:58:55.841Z] [REQUEST] GET /api/users/manage/all | status=304 duration=69ms ip=::1
+[2026-04-30T01:58:55.844Z] [REQUEST] GET /api/users/manage/all | status=304 duration=1ms ip=::1
+[2026-04-30T01:59:02.059Z] [WARN   ] 404 Not Found: GET /api/users/manage/user/2 | ip=::1
+[2026-04-30T01:59:02.060Z] [WARN   ] GET /api/users/manage/user/2 | status=404 duration=2ms ip=::1
+[2026-04-30T01:59:02.063Z] [WARN   ] 404 Not Found: GET /api/users/manage/user/2 | ip=::1
+[2026-04-30T01:59:02.064Z] [WARN   ] GET /api/users/manage/user/2 | status=404 duration=2ms ip=::1
+[2026-04-30T02:00:54.445Z] [WARN   ] 404 Not Found: GET /api/users/manage/user/2 | ip=::1
+[2026-04-30T02:00:54.447Z] [WARN   ] GET /api/users/manage/user/2 | status=404 duration=2ms ip=::1
+[2026-04-30T02:01:30.404Z] [REQUEST] GET /api/users/settings | status=304 duration=93ms ip=::1
+[2026-04-30T02:01:30.409Z] [REQUEST] GET /api/users/settings | status=304 duration=2ms ip=::1
+[2026-04-30T02:07:35.716Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=2ms ip=::1
+[2026-04-30T02:07:38.889Z] [REQUEST] GET /api/users/settings | status=304 duration=161ms ip=::1
+[2026-04-30T02:07:38.893Z] [REQUEST] GET /api/users/settings | status=304 duration=2ms ip=::1
+[2026-04-30T02:09:02.384Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=0ms ip=::1
+[2026-04-30T02:09:02.497Z] [REQUEST] GET /api/users/settings | status=304 duration=72ms ip=::1
+[2026-04-30T02:09:02.512Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1

@@ -89,6 +89,14 @@ function App() {
                     />
                     <Route path="profile" element={<Profile />} />
                     <Route 
+                        path="profile/:id" 
+                        element={
+                            <ProtectedRoute role="ADMIN">
+                                <Profile />
+                            </ProtectedRoute>
+                        } 
+                    />
+                    <Route 
                         path="audit-logs" 
                         element={
                             <ProtectedRoute role="ADMIN">

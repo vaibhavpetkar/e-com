@@ -16,7 +16,7 @@ import LocationCityIcon from '@mui/icons-material/LocationCity';
 import HomeIcon from '@mui/icons-material/Home';
 import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
 import WarningAmberIcon from '@mui/icons-material/WarningAmber';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { API } from '../../services/api';
 
 const COUNTRIES = [
@@ -27,9 +27,11 @@ const COUNTRIES = [
 
 export default function Profile() {
   const navigate = useNavigate();
+  const { id } = useParams();
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
+  const [resending, setResending] = useState(false);
   const [snack, setSnack] = useState({ open: false, msg: '', severity: 'success' });
   const fileRef = useRef();
 
@@ -52,7 +54,8 @@ export default function Profile() {
   const fetchProfile = async () => {
     setLoading(true);
     try {
-      const res = await API.get('/users/profile');
+      const endpoint = id ? `/users/manage/user/${id}` : '/users/profile';
+      const res = await API.get(endpoint);
       const u = res.data;
       setUser(u);
       setFirstName(u.first_name || '');
@@ -94,6 +97,9 @@ export default function Profile() {
 
     setSaving(true);
     try {
+      const endpoint = id ? `/users/manage/user/${id}` : '/users/profile';
+      const method = id ? 'put' : 'put'; // Both are put now, but good to have logic
+      
       const formData = new FormData();
       formData.append('first_name', firstName);
       formData.append('last_name',  lastName);
@@ -106,16 +112,19 @@ export default function Profile() {
       formData.append('address',  address);
       if (avatarFile) formData.append('avatar', avatarFile);
 
-      const res = await API.put('/users/profile', formData, {
-        headers: { 'Content-Type': 'multipart/form-data' },
+      const res = await API({
+        method: 'put',
+        url: endpoint,
+        data: formData,
+        headers: { 'Content-Type': 'multipart/form-data' }
       });
 
       const updatedUser = { ...user, ...res.data };
-      localStorage.setItem('user', JSON.stringify(updatedUser));
+      if (!id) localStorage.setItem('user', JSON.stringify(updatedUser));
       setUser(updatedUser);
       setAvatarFile(null);
       
-      showSnack('Profile updated successfully!', 'success');
+      showSnack(id ? 'User updated successfully!' : 'Profile updated successfully!', 'success');
       window.dispatchEvent(new Event('userUpdated'));
       
     } catch (err) {
@@ -123,6 +132,19 @@ export default function Profile() {
       showSnack(err.response?.data?.error || 'Failed to update profile', 'error');
     } finally {
       setSaving(false);
+    }
+  };
+
+  const handleResendVerification = async () => {
+    if (!user?.email) return;
+    setResending(true);
+    try {
+      await API.post('/auth/resend-verification', { email: user.email });
+      showSnack('Verification email sent! Please check your inbox.', 'success');
+    } catch (err) {
+      showSnack(err.response?.data?.error || 'Failed to resend verification', 'error');
+    } finally {
+      setResending(false);
     }
   };
 
@@ -291,6 +313,17 @@ export default function Profile() {
                   severity="warning" 
                   icon={<WarningAmberIcon />}
                   sx={{ borderRadius: 4, fontWeight: 600, border: '1px solid #fed7aa' }}
+                  action={
+                    <Button 
+                      color="inherit" 
+                      size="small" 
+                      onClick={handleResendVerification}
+                      disabled={resending}
+                      sx={{ fontWeight: 800, textTransform: 'none' }}
+                    >
+                      {resending ? 'Sending...' : 'Resend link'}
+                    </Button>
+                  }
                 >
                   Your email is not verified. Please check your inbox for the verification link.
                 </Alert>

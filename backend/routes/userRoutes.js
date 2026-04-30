@@ -12,7 +12,10 @@ import {
     updateUserStatus,
     deleteUser,
     getDeletedUsers,
-    restoreUser
+    restoreUser,
+    getUserById,
+    updateUserById,
+    testSmtpConnection
 } from "../controllers/userController.js";
 import { auth } from "../middleware/auth.js";
 import { isAdmin } from "../middleware/role.js";
@@ -40,6 +43,7 @@ router.get("/audit-logs", auth, getAuditLogs);
 // Admin settings routes
 router.get("/settings", auth, isAdmin, getAppSettings);
 router.put("/settings", auth, isAdmin, updateAppSetting);
+router.post("/settings/test-email", auth, isAdmin, testSmtpConnection);
 
 router.get("/ping", (req, res) => res.send("pong"));
 
@@ -50,5 +54,7 @@ router.put("/manage/status/:id", auth, isAdmin, updateUserStatus);
 router.delete("/manage/delete/:id", auth, isAdmin, deleteUser);
 router.get("/manage/deleted", auth, isAdmin, getDeletedUsers);
 router.post("/manage/restore/:id", auth, isAdmin, restoreUser);
+router.get("/manage/user/:id", auth, isAdmin, getUserById);
+router.put("/manage/user/:id", auth, isAdmin, updateUserById);
 
 export default router;

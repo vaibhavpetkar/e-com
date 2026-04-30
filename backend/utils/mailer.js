@@ -1,22 +1,56 @@
 import nodemailer from "nodemailer";
+import { pool } from "../config/db.js";
 import dotenv from "dotenv";
 dotenv.config();
 
-const transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-    },
-});
+/**
+ * Dynamically create transporter based on DB settings or .env fallback
+ */
+const getMailConfig = async () => {
+    const res = await pool.query("SELECT key, value FROM app_settings WHERE key LIKE 'smtp_%' OR key = 'app_domain'");
+    const settings = {};
+    res.rows.forEach(row => { settings[row.key] = row.value; });
+
+    const config = {
+        host: settings.smtp_host || process.env.SMTP_HOST,
+        port: parseInt(settings.smtp_port || process.env.SMTP_PORT || "587"),
+        secure: (settings.smtp_port === "465"),
+        auth: {
+            user: settings.smtp_user || process.env.EMAIL_USER,
+            pass: settings.smtp_pass || process.env.EMAIL_PASS,
+        },
+        from: settings.smtp_from || process.env.EMAIL_USER,
+        domain: settings.app_domain || process.env.FRONTEND_URL || "http://localhost:5173"
+    };
+
+    // If using Gmail as fallback and no host provided
+    if (!config.host && process.env.EMAIL_USER?.includes("gmail")) {
+        config.service = "gmail";
+    }
+
+    return config;
+};
+
+const createTransporter = async (config) => {
+    const transportOptions = config.service ? { service: config.service, auth: config.auth } : {
+        host: config.host,
+        port: config.port,
+        secure: config.secure,
+        auth: config.auth
+    };
+    return nodemailer.createTransport(transportOptions);
+};
 
 /**
  * Send email verification link to new user
  */
 export const sendVerificationEmail = async (to, token) => {
-    const link = `${process.env.FRONTEND_URL}/verify-email?token=${token}`;
+    const config = await getMailConfig();
+    const transporter = await createTransporter(config);
+    const link = `${config.domain}/verify-email?token=${token}`;
+
     await transporter.sendMail({
-        from: `"ProfitPulse" <${process.env.EMAIL_USER}>`,
+        from: `"ProfitPulse" <${config.from}>`,
         to,
         subject: "Verify Your Email — ProfitPulse",
         html: `
@@ -42,10 +76,13 @@ export const sendVerificationEmail = async (to, token) => {
 /**
  * Send invitation email to new user added by admin
  */
-export const sendInvitationEmail = async (to, password, token, username, frontendUrl) => {
-    const link = `${frontendUrl}/verify-email?token=${token}`;
+export const sendInvitationEmail = async (to, password, token, username) => {
+    const config = await getMailConfig();
+    const transporter = await createTransporter(config);
+    const link = `${config.domain}/verify-email?token=${token}`;
+
     await transporter.sendMail({
-        from: `"ProfitPulse" <${process.env.EMAIL_USER}>`,
+        from: `"ProfitPulse" <${config.from}>`,
         to,
         subject: "Welcome to ProfitPulse — Your Account is Ready",
         html: `
@@ -71,7 +108,7 @@ export const sendInvitationEmail = async (to, password, token, username, fronten
             <p style="color:#aaa;font-size:13px;">If the button doesn't work, copy this link: <br/> <a href="${link}" style="color:#1a1d21;">${link}</a></p>
             
             <hr style="border:none;border-top:1px solid #eee;margin:24px 0;" />
-            <p style="color:#bbb;font-size:12px;text-align:center;">ProfitPulse Dashboard &bull; ${frontendUrl}</p>
+            <p style="color:#bbb;font-size:12px;text-align:center;">ProfitPulse Dashboard &bull; ${config.domain}</p>
           </div>
         </div>
         `,
@@ -82,8 +119,11 @@ export const sendInvitationEmail = async (to, password, token, username, fronten
  * Send OTP for password reset
  */
 export const sendOtpEmail = async (to, otp) => {
+    const config = await getMailConfig();
+    const transporter = await createTransporter(config);
+
     await transporter.sendMail({
-        from: `"ProfitPulse" <${process.env.EMAIL_USER}>`,
+        from: `"ProfitPulse" <${config.from}>`,
         to,
         subject: "Your Password Reset OTP — ProfitPulse",
         html: `
@@ -101,5 +141,19 @@ export const sendOtpEmail = async (to, otp) => {
           </div>
         </div>
         `,
+    });
+};
+
+/**
+ * Generic Test Email function
+ */
+export const sendTestEmail = async (to, config) => {
+    const transporter = await createTransporter(config);
+    await transporter.sendMail({
+        from: `"ProfitPulse Test" <${config.auth.user}>`,
+        to,
+        subject: "SMTP Connection Test — ProfitPulse",
+        text: "This is a test email to verify your SMTP configuration in ProfitPulse. If you received this, your settings are correct!",
+        html: "<p>This is a test email to verify your SMTP configuration in <b>ProfitPulse</b>. If you received this, your settings are correct!</p>"
     });
 };

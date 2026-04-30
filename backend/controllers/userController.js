@@ -1,7 +1,31 @@
 import { pool } from "../config/db.js";
 import bcrypt from "bcrypt";
 import crypto from "crypto";
-import { sendInvitationEmail } from "../utils/mailer.js";
+import { sendInvitationEmail, sendVerificationEmail, sendOtpEmail, sendTestEmail } from "../utils/mailer.js";
+
+/* ─────────────────────────────────────────────
+   TEST SMTP CONNECTION (admin only)
+───────────────────────────────────────────── */
+export const testSmtpConnection = async (req, res) => {
+    try {
+        const { host, port, user, pass, from, targetEmail } = req.body;
+        
+        if (!targetEmail) return res.status(400).json({ error: "Target email is required for testing" });
+
+        const config = {
+            host,
+            port: parseInt(port),
+            secure: port === "465",
+            auth: { user, pass }
+        };
+
+        await sendTestEmail(targetEmail, config);
+        res.json({ message: "Test email sent successfully! Please check your inbox." });
+    } catch (error) {
+        console.error("SMTP Test Error:", error);
+        res.status(500).json({ error: "SMTP Connection Failed", details: error.message });
+    }
+};
 
 /* ─────────────────────────────────────────────
    GET PROFILE (logged-in user)
