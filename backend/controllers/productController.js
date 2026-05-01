@@ -48,8 +48,8 @@ export const createProduct = async (req, res) => {
 
 export const getProducts = async (req, res) => {
     try {
-        const settingsRes = await pool.query("SELECT setting_value FROM app_settings WHERE setting_key = 'default_currency'");
-        const currencyCode = settingsRes.rows[0]?.setting_value || 'USD';
+        const settingsRes = await pool.query("SELECT value FROM app_settings WHERE key = 'default_currency'");
+        const currencyCode = settingsRes.rows[0]?.value || 'USD';
         const currencySymbol = getSymbol(currencyCode);
 
         const result = await pool.query(`

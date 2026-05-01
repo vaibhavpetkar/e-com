@@ -15,11 +15,13 @@ import WebsiteSettings from "./admin/pages/WebsiteSettings";
 import IntegrationSettings from "./admin/pages/IntegrationSettings";
 import RecycleBin from "./admin/pages/RecycleBin";
 import StockManagement from "./admin/pages/StockManagement";
+import OrderMaster from "./admin/pages/OrderMaster";
 import NotFound from "./admin/pages/NotFound";
 import AdminLayout from "./admin/layout/AdminLayout";
 
 // Client Pages
 import Products from "./client/pages/Products";
+import WebsiteEngine from "./client/components/WebsiteEngine";
 
 // Protected Route
 const ProtectedRoute = ({ children, role }) => {
@@ -51,11 +53,8 @@ function App() {
     return (
         <BrowserRouter>
             <Routes>
-                {/* Redirect root to dashboard */}
-                <Route path="/" element={<Navigate to="/admin/dashboard" replace />} />
-
                 {/* ===== CLIENT ROUTES ===== */}
-                <Route path="/products" element={<Products />} />
+                <Route path="/" element={<WebsiteEngine><Products /></WebsiteEngine>} />
 
                 {/* ===== PUBLIC AUTH ROUTES ===== */}
                 <Route path="/admin/login" element={<AdminAuth />} />
@@ -71,7 +70,16 @@ function App() {
                         </ProtectedRoute>
                     }
                 >
+                    <Route index element={<Navigate to="dashboard" replace />} />
                     <Route path="dashboard" element={<Dashboard />} />
+                    <Route 
+                        path="orders" 
+                        element={
+                            <ProtectedRoute role="ADMIN">
+                                <OrderMaster />
+                            </ProtectedRoute>
+                        } 
+                    />
                     <Route 
                         path="categories" 
                         element={

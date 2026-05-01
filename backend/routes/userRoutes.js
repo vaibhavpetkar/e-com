@@ -41,7 +41,7 @@ router.put("/profile", auth, upload.single("avatar"), updateProfile);
 router.get("/audit-logs", auth, getAuditLogs);
 
 // Admin settings routes
-router.get("/settings", auth, isAdmin, getAppSettings);
+router.get("/settings", getAppSettings);
 router.put("/settings", auth, isAdmin, updateAppSetting);
 router.post("/settings/test-email", auth, isAdmin, testSmtpConnection);
 

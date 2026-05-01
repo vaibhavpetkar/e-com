@@ -42,6 +42,7 @@ async function migrate() {
             const colsToAdd = [
                 { name: 'brand', type: 'TEXT' },
                 { name: 'discount_price', type: 'NUMERIC' },
+                { name: 'category_id', type: 'INTEGER REFERENCES categories(id)' },
                 { name: 'sub_category_id', type: 'INTEGER REFERENCES categories(id)' },
                 { name: 'stock', type: 'INTEGER DEFAULT 0' },
                 { name: 'attributes', type: 'JSONB' },
@@ -58,6 +59,16 @@ async function migrate() {
                 }
             }
         }
+
+        // 3. Product Images
+        await pool.query(`
+            CREATE TABLE IF NOT EXISTS product_images (
+                id SERIAL PRIMARY KEY,
+                product_id INTEGER REFERENCES products(id) ON DELETE CASCADE,
+                image_url TEXT NOT NULL
+            )
+        `);
+        console.log('Ensured product_images table exists');
 
         console.log('Migration v2 completed successfully.');
     } catch (err) {

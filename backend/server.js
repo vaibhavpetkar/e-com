@@ -7,6 +7,7 @@ import categoryRoutes from "./routes/categoryRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
 import uploadRoutes from "./routes/uploadRoutes.js";
 import stockRoutes from "./routes/stockRoutes.js";
+import orderRoutes from "./routes/orderRoutes.js";
 import path from "path";
 import { fileURLToPath } from "url";
 import { requestLogger } from "./middleware/requestLogger.js";
@@ -34,6 +35,7 @@ app.use("/api/categories", categoryRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/upload", uploadRoutes);
 app.use("/api/stock", stockRoutes);
+app.use("/api/orders", orderRoutes);
 
 // ── 404 Handler ───────────────────────────────────────
 app.use((req, res) => {

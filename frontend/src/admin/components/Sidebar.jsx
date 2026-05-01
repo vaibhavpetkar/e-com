@@ -23,6 +23,7 @@ import ExtensionRoundedIcon from '@mui/icons-material/ExtensionRounded';
 import PersonRoundedIcon from '@mui/icons-material/PersonRounded';
 import DeleteSweepRoundedIcon from '@mui/icons-material/DeleteSweepRounded';
 import InventoryRoundedIcon from '@mui/icons-material/Inventory2Rounded';
+import ShoppingBagRoundedIcon from '@mui/icons-material/ShoppingBagRounded';
 
 export default function Sidebar({ collapsed, onToggle, mobileOpen, onMobileClose, isMobile }) {
   const navigate = useNavigate();
@@ -55,6 +56,8 @@ export default function Sidebar({ collapsed, onToggle, mobileOpen, onMobileClose
 
   const navItems = [
     { name: 'Dashboard', path: '/admin/dashboard', icon: <DashboardRoundedIcon /> },
+    { name: 'Website',   path: '/admin/settings/website', icon: <LanguageRoundedIcon /> },
+    { name: 'Orders',    path: '/admin/orders', icon: <ShoppingBagRoundedIcon /> },
   ];
 
   const productSubItems = [
@@ -67,7 +70,6 @@ export default function Sidebar({ collapsed, onToggle, mobileOpen, onMobileClose
     { name: 'General', path: '/admin/settings/general', icon: <TuneRoundedIcon sx={{ fontSize: 18 }} /> },
     { name: 'Users',   path: '/admin/settings/users',   icon: <GroupRoundedIcon sx={{ fontSize: 18 }} /> },
     { name: 'Archive', path: '/admin/recycle-bin',      icon: <DeleteSweepRoundedIcon sx={{ fontSize: 18 }} /> },
-    { name: 'Website', path: '/admin/settings/website', icon: <LanguageRoundedIcon sx={{ fontSize: 18 }} /> },
     { name: 'Plugins', path: '/admin/settings/integration', icon: <ExtensionRoundedIcon sx={{ fontSize: 18 }} /> },
   ];
 
