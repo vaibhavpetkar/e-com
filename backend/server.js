@@ -8,6 +8,7 @@ import userRoutes from "./routes/userRoutes.js";
 import uploadRoutes from "./routes/uploadRoutes.js";
 import stockRoutes from "./routes/stockRoutes.js";
 import orderRoutes from "./routes/orderRoutes.js";
+import messageRoutes from "./routes/messageRoutes.js";
 import path from "path";
 import { fileURLToPath } from "url";
 import { requestLogger } from "./middleware/requestLogger.js";
@@ -36,6 +37,7 @@ app.use("/api/users", userRoutes);
 app.use("/api/upload", uploadRoutes);
 app.use("/api/stock", stockRoutes);
 app.use("/api/orders", orderRoutes);
+app.use("/api/messages", messageRoutes);
 
 // ── 404 Handler ───────────────────────────────────────
 app.use((req, res) => {

@@ -24,6 +24,7 @@ import PersonRoundedIcon from '@mui/icons-material/PersonRounded';
 import DeleteSweepRoundedIcon from '@mui/icons-material/DeleteSweepRounded';
 import InventoryRoundedIcon from '@mui/icons-material/Inventory2Rounded';
 import ShoppingBagRoundedIcon from '@mui/icons-material/ShoppingBagRounded';
+import ChatRoundedIcon from '@mui/icons-material/ChatRounded';
 
 export default function Sidebar({ collapsed, onToggle, mobileOpen, onMobileClose, isMobile }) {
   const navigate = useNavigate();
@@ -58,6 +59,7 @@ export default function Sidebar({ collapsed, onToggle, mobileOpen, onMobileClose
     { name: 'Dashboard', path: '/admin/dashboard', icon: <DashboardRoundedIcon /> },
     { name: 'Website',   path: '/admin/settings/website', icon: <LanguageRoundedIcon /> },
     { name: 'Orders',    path: '/admin/orders', icon: <ShoppingBagRoundedIcon /> },
+    { name: 'Messages',  path: '/admin/messages', icon: <ChatRoundedIcon /> },
   ];
 
   const productSubItems = [

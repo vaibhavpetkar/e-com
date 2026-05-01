@@ -15,7 +15,9 @@ import {
     restoreUser,
     getUserById,
     updateUserById,
-    testSmtpConnection
+    testSmtpConnection,
+    getUserAddresses,
+    addAddress
 } from "../controllers/userController.js";
 import { auth } from "../middleware/auth.js";
 import { isAdmin } from "../middleware/role.js";
@@ -39,6 +41,10 @@ router.put("/profile", auth, upload.single("avatar"), updateProfile);
 
 // Audit log
 router.get("/audit-logs", auth, getAuditLogs);
+
+// Address routes
+router.get("/addresses", auth, getUserAddresses);
+router.post("/addresses", auth, addAddress);
 
 // Admin settings routes
 router.get("/settings", getAppSettings);

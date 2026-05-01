@@ -435,3 +435,42 @@ export const updateUserById = async (req, res) => {
         res.status(500).json({ error: "Server error" });
     }
 };
+
+/* ─────────────────────────────────────────────
+   USER ADDRESSES
+───────────────────────────────────────────── */
+export const getUserAddresses = async (req, res) => {
+    try {
+        const result = await pool.query(
+            "SELECT * FROM user_addresses WHERE user_id = $1 ORDER BY is_default DESC, created_at DESC",
+            [req.user.id]
+        );
+        res.json(result.rows);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: "Server error" });
+    }
+};
+
+export const addAddress = async (req, res) => {
+    try {
+        const { 
+            label, full_name, phone, secondary_phone, email, 
+            address_line1, address_line2, city, state, pincode 
+        } = req.body;
+
+        const result = await pool.query(
+            `INSERT INTO user_addresses (
+                user_id, label, full_name, phone, secondary_phone, email,
+                address_line1, address_line2, city, state, pincode
+            ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING *`,
+            [req.user.id, label, full_name, phone, secondary_phone, email, address_line1, address_line2, city, state, pincode]
+        );
+
+        res.status(201).json(result.rows[0]);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: "Server error" });
+    }
+};
+

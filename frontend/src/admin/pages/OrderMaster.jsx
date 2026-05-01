@@ -167,6 +167,36 @@ export default function OrderMaster() {
                       <MenuItem value="cancelled">Cancelled</MenuItem>
                     </Select>
                   </FormControl>
+
+                  <Typography variant="overline" fontWeight="900" color="text.secondary" sx={{ display: 'block', mt: 3 }}>Shipping Details</Typography>
+                  <Stack spacing={2} sx={{ mt: 1 }}>
+                    <TextField 
+                        label="Tracking Number" 
+                        size="small" 
+                        value={selectedOrder.tracking_number || ''} 
+                        onChange={(e) => setSelectedOrder({...selectedOrder, tracking_number: e.target.value})}
+                    />
+                    <TextField 
+                        label="Carrier (e.g. BlueDart)" 
+                        size="small" 
+                        value={selectedOrder.carrier || ''} 
+                        onChange={(e) => setSelectedOrder({...selectedOrder, carrier: e.target.value})}
+                    />
+                    <Button 
+                        variant="contained" 
+                        size="small"
+                        onClick={async () => {
+                            await API.put(`/orders/${selectedOrder.id}/status`, { 
+                                tracking_number: selectedOrder.tracking_number,
+                                carrier: selectedOrder.carrier
+                            });
+                            alert('Tracking updated');
+                        }}
+                        sx={{ bgcolor: '#1e293b' }}
+                    >
+                        Update Tracking
+                    </Button>
+                  </Stack>
                 </Grid>
                 <Grid item xs={12}>
                   <Typography variant="overline" fontWeight="900" color="text.secondary">Items Ordered</Typography>

@@ -2,57 +2,63 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import crypto from "crypto";
 import { pool } from "../config/db.js";
-import { sendVerificationEmail, sendOtpEmail } from "../utils/mailer.js";
+import { sendVerificationEmail, sendOtpEmail, sendSignupOtpEmail } from "../utils/mailer.js";
+import { generateOTP, getOTPExpiry } from "../utils/otpGenerator.js";
 import dotenv from "dotenv";
 dotenv.config();
 
 const JWT_SECRET = process.env.JWT_SECRET || "profitpulse_secret";
 
 /* ─────────────────────────────────────────────
-   REGISTER
+   REGISTER (Customer - with OTP verification)
 ───────────────────────────────────────────── */
 export const register = async (req, res) => {
     try {
         const { name, email, password, role } = req.body;
 
+        // Validate input
+        if (!name || !email || !password) {
+            return res.status(400).json({ error: "Name, email, and password are required" });
+        }
+
         // Check duplicate
-        const existing = await pool.query("SELECT id FROM users WHERE email=$1", [email]);
+        const existing = await pool.query("SELECT id FROM users WHERE email=$1 AND is_deleted=false", [email]);
         if (existing.rows.length > 0) {
             return res.status(409).json({ error: "Email already registered" });
         }
 
-        // Check global setting
-        const settingRes = await pool.query(
-            "SELECT value FROM app_settings WHERE key='require_email_verification'"
-        );
-        const requireVerification = settingRes.rows[0]?.value === "true";
-
         const hash = await bcrypt.hash(password, 10);
 
-        if (requireVerification) {
-            // Generate verification token (24h)
-            const token = crypto.randomBytes(32).toString("hex");
-            const expires = new Date(Date.now() + 24 * 60 * 60 * 1000);
+        // Create user with is_verified = false
+        const userResult = await pool.query(
+            `INSERT INTO users (name, email, password, role, is_verified, is_active)
+             VALUES ($1,$2,$3,$4,false,true)
+             RETURNING id, email, name`,
+            [name, email, hash, role || "USER"]
+        );
 
-            await pool.query(
-                `INSERT INTO users (name, email, password, role, is_verified, verification_token, verification_expires)
-                 VALUES ($1,$2,$3,$4,false,$5,$6)`,
-                [name, email, hash, role || "USER", token, expires]
-            );
+        const user = userResult.rows[0];
 
-            await sendVerificationEmail(email, token);
+        // Generate 6-digit OTP (expires in 5 minutes)
+        const otp = generateOTP();
+        const expiresAt = getOTPExpiry(5);
 
-            return res.status(201).json({
-                message: "Registration successful! Please check your email to verify your account.",
-                requiresVerification: true,
-            });
-        } else {
-            await pool.query(
-                "INSERT INTO users (name, email, password, role, is_verified) VALUES ($1,$2,$3,$4,true)",
-                [name, email, hash, role || "USER"]
-            );
-            return res.status(201).json({ message: "User created" });
-        }
+        // Store OTP in password_resets table (reusing for signup too)
+        // Mark it with a flag to distinguish from password reset OTPs
+        await pool.query(
+            `INSERT INTO password_resets (email, otp, expires_at, used) 
+             VALUES ($1, $2, $3, false)`,
+            [email, otp, expiresAt]
+        );
+
+        // Send OTP email
+        await sendSignupOtpEmail(email, otp);
+
+        return res.status(201).json({
+            message: "Registration successful! OTP sent to your email.",
+            email: email,
+            requiresOtpVerification: true,
+        });
     } catch (error) {
         console.error("Register error:", error);
         res.status(500).json({ error: "Server error during registration" });
@@ -123,6 +129,63 @@ export const login = async (req, res) => {
 };
 
 /* ─────────────────────────────────────────────
+   VERIFY EMAIL OTP (Signup)
+───────────────────────────────────────────── */
+export const verifyEmailOtp = async (req, res) => {
+    try {
+        const { email, otp } = req.body;
+        if (!email || !otp) {
+            return res.status(400).json({ error: "Email and OTP are required" });
+        }
+
+        // Find user
+        const userResult = await pool.query(
+            "SELECT id FROM users WHERE email=$1 AND is_deleted=false",
+            [email]
+        );
+
+        if (userResult.rows.length === 0) {
+            return res.status(404).json({ error: "User not found" });
+        }
+
+        const userId = userResult.rows[0].id;
+
+        // Find OTP record
+        const otpResult = await pool.query(
+            `SELECT id, expires_at FROM password_resets
+             WHERE email=$1 AND otp=$2 AND used=false
+             ORDER BY created_at DESC LIMIT 1`,
+            [email, otp]
+        );
+
+        if (otpResult.rows.length === 0) {
+            return res.status(400).json({ error: "Invalid OTP" });
+        }
+
+        const otpRecord = otpResult.rows[0];
+
+        // Check expiry
+        if (new Date(otpRecord.expires_at) < new Date()) {
+            return res.status(400).json({ error: "OTP has expired. Please request a new one." });
+        }
+
+        // Mark OTP as used
+        await pool.query("UPDATE password_resets SET used=true WHERE id=$1", [otpRecord.id]);
+
+        // Mark user as verified
+        await pool.query(
+            "UPDATE users SET is_verified=true WHERE id=$1",
+            [userId]
+        );
+
+        res.json({ message: "Email verified successfully!" });
+    } catch (error) {
+        console.error("Verify email OTP error:", error);
+        res.status(500).json({ error: "Server error" });
+    }
+};
+
+/* ─────────────────────────────────────────────
    VERIFY EMAIL
 ───────────────────────────────────────────── */
 export const verifyEmail = async (req, res) => {
@@ -187,6 +250,60 @@ export const resendVerification = async (req, res) => {
         res.json({ message: "Verification email resent! Please check your inbox." });
     } catch (error) {
         console.error("Resend verification error:", error);
+        res.status(500).json({ error: "Server error" });
+    }
+};
+
+/* ─────────────────────────────────────────────
+   RESEND OTP (Email Verification)
+───────────────────────────────────────────── */
+export const resendOtp = async (req, res) => {
+    try {
+        const { email } = req.body;
+        if (!email) {
+            return res.status(400).json({ error: "Email is required" });
+        }
+
+        // Find user
+        const userResult = await pool.query(
+            "SELECT id, is_verified FROM users WHERE email=$1 AND is_deleted=false",
+            [email]
+        );
+
+        if (userResult.rows.length === 0) {
+            // Security: don't reveal if email exists
+            return res.json({ message: "If this email is registered, a new OTP has been sent." });
+        }
+
+        const user = userResult.rows[0];
+
+        if (user.is_verified) {
+            return res.status(400).json({ error: "This account is already verified" });
+        }
+
+        // Generate new OTP
+        const otp = generateOTP();
+        const expiresAt = getOTPExpiry(5);
+
+        // Invalidate old OTPs for this email
+        await pool.query(
+            "UPDATE password_resets SET used=true WHERE email=$1 AND used=false",
+            [email]
+        );
+
+        // Insert new OTP
+        await pool.query(
+            `INSERT INTO password_resets (email, otp, expires_at, used) 
+             VALUES ($1, $2, $3, false)`,
+            [email, otp, expiresAt]
+        );
+
+        // Send OTP email
+        await sendSignupOtpEmail(email, otp);
+
+        res.json({ message: "OTP resent! Please check your email." });
+    } catch (error) {
+        console.error("Resend OTP error:", error);
         res.status(500).json({ error: "Server error" });
     }
 };

@@ -145,6 +145,44 @@ export const sendOtpEmail = async (to, otp) => {
 };
 
 /**
+ * Send OTP for email verification during signup
+ */
+export const sendSignupOtpEmail = async (to, otp) => {
+    const config = await getMailConfig();
+    const transporter = await createTransporter(config);
+
+    await transporter.sendMail({
+        from: `"ProfitPulse" <${config.from}>`,
+        to,
+        subject: "Verify Your Email — ProfitPulse",
+        html: `
+        <div style="font-family:Arial,sans-serif;max-width:520px;margin:auto;background:#f9f9f9;border-radius:12px;overflow:hidden;">
+          <div style="background:linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);padding:28px 32px;text-align:center;">
+            <h1 style="color:#fff;margin:0;font-size:24px;letter-spacing:1px;">ProfitPulse</h1>
+            <p style="color:#e0e7ff;margin:8px 0 0 0;font-size:14px;">Welcome!</p>
+          </div>
+          <div style="padding:36px 32px;">
+            <h2 style="color:#1a1d21;margin-top:0;font-size:22px;">Verify Your Email Address</h2>
+            <p style="color:#555;line-height:1.7;margin-bottom:24px;">Thank you for signing up! Please use the code below to verify your email address and complete your registration.</p>
+            
+            <div style="text-align:center;margin:32px 0;">
+              <p style="color:#64748b;font-size:14px;margin:0 0 12px 0;font-weight:500;">Your verification code:</p>
+              <div style="display:inline-block;background:#1a1d21;color:#fff;padding:20px 40px;border-radius:12px;font-size:40px;font-weight:bold;letter-spacing:12px;font-family:'Courier New',monospace;">${otp}</div>
+            </div>
+            
+            <p style="color:#64748b;font-size:13px;text-align:center;margin:24px 0;">This code is valid for <strong>5 minutes</strong>. Do not share it with anyone.</p>
+            
+            <hr style="border:none;border-top:1px solid #e2e8f0;margin:24px 0;" />
+            
+            <p style="color:#aaa;font-size:12px;">If you didn't create this account, you can safely ignore this email.</p>
+            <p style="color:#bbb;font-size:11px;margin-top:16px;">© ProfitPulse · All rights reserved</p>
+          </div>
+        </div>
+        `,
+    });
+};
+
+/**
  * Generic Test Email function
  */
 export const sendTestEmail = async (to, config) => {

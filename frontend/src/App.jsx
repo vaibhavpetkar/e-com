@@ -19,9 +19,14 @@ import OrderMaster from "./admin/pages/OrderMaster";
 import NotFound from "./admin/pages/NotFound";
 import AdminLayout from "./admin/layout/AdminLayout";
 
-// Client Pages
+// Customer Pages
 import Products from "./client/pages/Products";
+import Checkout from "./client/pages/Checkout";
+import UserProfile from "./client/pages/UserProfile";
+import CustomerLogin from "./client/pages/CustomerLogin";
+import CustomerSignup from "./client/pages/CustomerSignup";
 import WebsiteEngine from "./client/components/WebsiteEngine";
+import { CartProvider } from "./client/context/CartContext";
 
 // Protected Route
 const ProtectedRoute = ({ children, role }) => {
@@ -52,122 +57,130 @@ const ProtectedRoute = ({ children, role }) => {
 function App() {
     return (
         <BrowserRouter>
-            <Routes>
-                {/* ===== CLIENT ROUTES ===== */}
-                <Route path="/" element={<WebsiteEngine><Products /></WebsiteEngine>} />
+            <CartProvider>
+                <Routes>
+                    {/* ===== CLIENT ROUTES ===== */}
+                    <Route path="/" element={<WebsiteEngine><Products /></WebsiteEngine>} />
+                    <Route path="/checkout" element={<WebsiteEngine><Checkout /></WebsiteEngine>} />
+                    <Route path="/profile" element={<WebsiteEngine><UserProfile /></WebsiteEngine>} />
 
-                {/* ===== PUBLIC AUTH ROUTES ===== */}
-                <Route path="/admin/login" element={<AdminAuth />} />
-                <Route path="/verify-email" element={<VerifyEmail />} />
-                <Route path="/forgot-password" element={<ForgotPassword />} />
+                    {/* ===== CUSTOMER AUTH ROUTES ===== */}
+                    <Route path="/login" element={<CustomerLogin />} />
+                    <Route path="/signup" element={<CustomerSignup />} />
 
-                {/* ===== ADMIN ROUTES ===== */}
-                <Route
-                    path="/admin"
-                    element={
-                        <ProtectedRoute>
-                            <AdminLayout />
-                        </ProtectedRoute>
-                    }
-                >
-                    <Route index element={<Navigate to="dashboard" replace />} />
-                    <Route path="dashboard" element={<Dashboard />} />
-                    <Route 
-                        path="orders" 
-                        element={
-                            <ProtectedRoute role="ADMIN">
-                                <OrderMaster />
-                            </ProtectedRoute>
-                        } 
-                    />
-                    <Route 
-                        path="categories" 
-                        element={
-                            <ProtectedRoute role="ADMIN">
-                                <CategoryMaster />
-                            </ProtectedRoute>
-                        } 
-                    />
-                    <Route 
-                        path="products" 
-                        element={
-                            <ProtectedRoute role="ADMIN">
-                                <ProductMaster />
-                            </ProtectedRoute>
-                        } 
-                    />
-                    <Route 
-                        path="products/stocks" 
-                        element={
-                            <ProtectedRoute role="ADMIN">
-                                <StockManagement />
-                            </ProtectedRoute>
-                        } 
-                    />
-                    <Route path="profile" element={<Profile />} />
-                    <Route 
-                        path="profile/:id" 
-                        element={
-                            <ProtectedRoute role="ADMIN">
-                                <Profile />
-                            </ProtectedRoute>
-                        } 
-                    />
-                    <Route 
-                        path="audit-logs" 
-                        element={
-                            <ProtectedRoute role="ADMIN">
-                                <AuditLogs />
-                            </ProtectedRoute>
-                        } 
-                    />
-                    
-                    {/* Settings Sub-routes (Admin Only) */}
-                    <Route 
-                        path="settings/general" 
-                        element={
-                            <ProtectedRoute role="ADMIN">
-                                <GeneralSettings />
-                            </ProtectedRoute>
-                        } 
-                    />
-                    <Route 
-                        path="settings/users" 
+                    {/* ===== PUBLIC AUTH ROUTES (ADMIN) ===== */}
+                    <Route path="/admin/login" element={<AdminAuth />} />
+                    <Route path="/verify-email" element={<VerifyEmail />} />
+                    <Route path="/forgot-password" element={<ForgotPassword />} />
+
+                    {/* ===== ADMIN ROUTES ===== */}
+                    <Route
+                        path="/admin"
                         element={
                             <ProtectedRoute>
-                                <UserSettings />
+                                <AdminLayout />
                             </ProtectedRoute>
-                        } 
-                    />
-                    <Route 
-                        path="settings/website" 
-                        element={
-                            <ProtectedRoute role="ADMIN">
-                                <WebsiteSettings />
-                            </ProtectedRoute>
-                        } 
-                    />
-                    <Route 
-                        path="settings/integration" 
-                        element={
-                            <ProtectedRoute role="ADMIN">
-                                <IntegrationSettings />
-                            </ProtectedRoute>
-                        } 
-                    />
-                    <Route 
-                        path="recycle-bin" 
-                        element={
-                            <ProtectedRoute role="ADMIN">
-                                <RecycleBin />
-                            </ProtectedRoute>
-                        } 
-                    />
-                </Route>
+                        }
+                    >
+                        <Route index element={<Navigate to="dashboard" replace />} />
+                        <Route path="dashboard" element={<Dashboard />} />
+                        <Route 
+                            path="orders" 
+                            element={
+                                <ProtectedRoute role="ADMIN">
+                                    <OrderMaster />
+                                </ProtectedRoute>
+                            } 
+                        />
+                        <Route 
+                            path="categories" 
+                            element={
+                                <ProtectedRoute role="ADMIN">
+                                    <CategoryMaster />
+                                </ProtectedRoute>
+                            } 
+                        />
+                        <Route 
+                            path="products" 
+                            element={
+                                <ProtectedRoute role="ADMIN">
+                                    <ProductMaster />
+                                </ProtectedRoute>
+                            } 
+                        />
+                        <Route 
+                            path="products/stocks" 
+                            element={
+                                <ProtectedRoute role="ADMIN">
+                                    <StockManagement />
+                                </ProtectedRoute>
+                            } 
+                        />
+                        <Route path="profile" element={<Profile />} />
+                        <Route 
+                            path="profile/:id" 
+                            element={
+                                <ProtectedRoute role="ADMIN">
+                                    <Profile />
+                                </ProtectedRoute>
+                            } 
+                        />
+                        <Route 
+                            path="audit-logs" 
+                            element={
+                                <ProtectedRoute role="ADMIN">
+                                    <AuditLogs />
+                                </ProtectedRoute>
+                            } 
+                        />
+                        
+                        {/* Settings Sub-routes (Admin Only) */}
+                        <Route 
+                            path="settings/general" 
+                            element={
+                                <ProtectedRoute role="ADMIN">
+                                    <GeneralSettings />
+                                </ProtectedRoute>
+                            } 
+                        />
+                        <Route 
+                            path="settings/users" 
+                            element={
+                                <ProtectedRoute>
+                                    <UserSettings />
+                                </ProtectedRoute>
+                            } 
+                        />
+                        <Route 
+                            path="settings/website" 
+                            element={
+                                <ProtectedRoute role="ADMIN">
+                                    <WebsiteSettings />
+                                </ProtectedRoute>
+                            } 
+                        />
+                        <Route 
+                            path="settings/integration" 
+                            element={
+                                <ProtectedRoute role="ADMIN">
+                                    <IntegrationSettings />
+                                </ProtectedRoute>
+                            } 
+                        />
+                        <Route 
+                            path="recycle-bin" 
+                            element={
+                                <ProtectedRoute role="ADMIN">
+                                    <RecycleBin />
+                                </ProtectedRoute>
+                            } 
+                        />
+                    </Route>
 
-                {/* ===== FALLBACK ===== */}
-                <Route path="*" element={<NotFound />} />
-            </Routes>
+                    {/* ===== FALLBACK ===== */}
+                    <Route path="*" element={<NotFound />} />
+                </Routes>
+            </CartProvider>
         </BrowserRouter>
     );
 }
