@@ -18,6 +18,8 @@ import StockManagement from "./admin/pages/StockManagement";
 import OrderMaster from "./admin/pages/OrderMaster";
 import NotFound from "./admin/pages/NotFound";
 import AdminLayout from "./admin/layout/AdminLayout";
+import MessageMaster from "./admin/pages/MessageMaster";
+import CustomerManagement from "./admin/pages/CustomerManagement";
 
 // Customer Pages
 import Products from "./client/pages/Products";
@@ -25,6 +27,8 @@ import Checkout from "./client/pages/Checkout";
 import UserProfile from "./client/pages/UserProfile";
 import CustomerLogin from "./client/pages/CustomerLogin";
 import CustomerSignup from "./client/pages/CustomerSignup";
+import Cart from "./client/pages/Cart";
+import ProductDetails from "./client/pages/ProductDetails";
 import WebsiteEngine from "./client/components/WebsiteEngine";
 import { CartProvider } from "./client/context/CartContext";
 
@@ -61,6 +65,8 @@ function App() {
                 <Routes>
                     {/* ===== CLIENT ROUTES ===== */}
                     <Route path="/" element={<WebsiteEngine><Products /></WebsiteEngine>} />
+                    <Route path="/product/:id" element={<WebsiteEngine><ProductDetails /></WebsiteEngine>} />
+                    <Route path="/cart" element={<WebsiteEngine><Cart /></WebsiteEngine>} />
                     <Route path="/checkout" element={<WebsiteEngine><Checkout /></WebsiteEngine>} />
                     <Route path="/profile" element={<WebsiteEngine><UserProfile /></WebsiteEngine>} />
 
@@ -89,6 +95,22 @@ function App() {
                             element={
                                 <ProtectedRoute role="ADMIN">
                                     <OrderMaster />
+                                </ProtectedRoute>
+                            } 
+                        />
+                        <Route 
+                            path="customers" 
+                            element={
+                                <ProtectedRoute role="ADMIN">
+                                    <CustomerManagement />
+                                </ProtectedRoute>
+                            } 
+                        />
+                        <Route 
+                            path="messages" 
+                            element={
+                                <ProtectedRoute role="ADMIN">
+                                    <MessageMaster />
                                 </ProtectedRoute>
                             } 
                         />

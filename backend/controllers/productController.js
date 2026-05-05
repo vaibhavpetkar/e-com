@@ -53,12 +53,13 @@ export const getProducts = async (req, res) => {
         const currencySymbol = getSymbol(currencyCode);
 
         const result = await pool.query(`
-            SELECT p.*, 
+            SELECT p.*, c.name as category_name,
             ARRAY_AGG(pi.image_url) FILTER (WHERE pi.image_url IS NOT NULL) as images
             FROM products p
+            LEFT JOIN categories c ON p.category_id = c.id
             LEFT JOIN product_images pi ON p.id = pi.product_id
             WHERE p.is_deleted = false
-            GROUP BY p.id
+            GROUP BY p.id, c.name
             ORDER BY p.created_at DESC
         `);
 
@@ -126,6 +127,38 @@ export const restoreProduct = async (req, res) => {
         );
 
         res.json({ message: "Product restored successfully" });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: "Server error" });
+    }
+};
+
+export const getProductById = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const settingsRes = await pool.query("SELECT value FROM app_settings WHERE key = 'default_currency'");
+        const currencyCode = settingsRes.rows[0]?.value || 'USD';
+        const currencySymbol = getSymbol(currencyCode);
+
+        const result = await pool.query(`
+            SELECT p.*, 
+            ARRAY_AGG(pi.image_url) FILTER (WHERE pi.image_url IS NOT NULL) as images
+            FROM products p
+            LEFT JOIN product_images pi ON p.id = pi.product_id
+            WHERE p.id = $1 AND p.is_deleted = false
+            GROUP BY p.id
+        `, [id]);
+
+        if (result.rows.length === 0) {
+            return res.status(404).json({ error: "Product not found" });
+        }
+
+        const product = {
+            ...result.rows[0],
+            currency_symbol: currencySymbol
+        };
+
+        res.json(product);
     } catch (error) {
         console.error(error);
         res.status(500).json({ error: "Server error" });

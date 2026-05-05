@@ -59,6 +59,7 @@ export default function Sidebar({ collapsed, onToggle, mobileOpen, onMobileClose
     { name: 'Dashboard', path: '/admin/dashboard', icon: <DashboardRoundedIcon /> },
     { name: 'Website',   path: '/admin/settings/website', icon: <LanguageRoundedIcon /> },
     { name: 'Orders',    path: '/admin/orders', icon: <ShoppingBagRoundedIcon /> },
+    { name: 'Customers', path: '/admin/customers', icon: <GroupRoundedIcon /> },
     { name: 'Messages',  path: '/admin/messages', icon: <ChatRoundedIcon /> },
   ];
 

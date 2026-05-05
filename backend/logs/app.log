@@ -473,3 +473,664 @@
 [2026-05-01T02:18:18.497Z] [REQUEST] GET /uploads/images-1777596862448-902446751.webp | status=304 duration=1ms ip=::1
 [2026-05-01T02:18:24.475Z] [REQUEST] POST /api/auth/login | status=200 duration=108ms ip=::1 body={"email":"vaibhavprakashpetkar@gmail.com","password":"******"}
 [2026-05-01T02:18:25.517Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=2ms ip=::1
+[2026-05-05T01:00:46.320Z] [SUCCESS] Server started | port=5000 frontend=undefined env=development
+[2026-05-05T01:01:25.163Z] [REQUEST] GET /api/users/settings | status=200 duration=316ms ip=::1
+[2026-05-05T01:01:25.176Z] [REQUEST] GET /api/users/settings | status=304 duration=4ms ip=::1
+[2026-05-05T01:01:25.664Z] [REQUEST] GET /api/products | status=200 duration=163ms ip=::1
+[2026-05-05T01:01:25.676Z] [REQUEST] GET /api/products | status=304 duration=4ms ip=::1
+[2026-05-05T01:01:25.811Z] [REQUEST] GET /api/users/settings | status=304 duration=306ms ip=::1
+[2026-05-05T01:01:25.829Z] [REQUEST] GET /api/categories | status=200 duration=320ms ip=::1
+[2026-05-05T01:01:25.835Z] [REQUEST] GET /api/users/settings | status=304 duration=3ms ip=::1
+[2026-05-05T01:01:25.841Z] [REQUEST] GET /api/categories | status=304 duration=8ms ip=::1
+[2026-05-05T01:01:26.062Z] [REQUEST] GET /uploads/images-1777596862448-902446751.webp | status=200 duration=28ms ip=::1
+[2026-05-05T01:01:44.828Z] [REQUEST] GET /uploads/images-1777596862448-902446751.webp | status=304 duration=1ms ip=::1
+[2026-05-05T01:02:15.347Z] [REQUEST] POST /api/auth/login | status=200 duration=309ms ip=::1 body={"email":"rajvaibhavpetkar007@gmail.com","password":"******"}
+[2026-05-05T01:02:16.560Z] [REQUEST] GET /api/users/addresses | status=200 duration=14ms ip=::1
+[2026-05-05T01:02:16.572Z] [REQUEST] GET /api/users/addresses | status=304 duration=2ms ip=::1
+[2026-05-05T01:02:16.634Z] [REQUEST] GET /api/users/settings | status=304 duration=80ms ip=::1
+[2026-05-05T01:02:16.651Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:02:25.758Z] [REQUEST] POST /api/users/addresses | status=201 duration=10ms ip=::1 body={"label":"Home","full_name":"Rajvaibhav Petkar","phone":"09922565938","secondary_phone":"","email":"rajvaibhavpetkar007@gmail.com","address_line1":"ATP Kodoli","address_line2":"","city":"kolhapur","state":"Maharashtra","pincode":"416114"}
+[2026-05-05T01:02:42.161Z] [WARN   ] POST /api/orders | status=401 duration=60ms ip=::1
+[2026-05-05T01:02:58.012Z] [REQUEST] POST /api/auth/login | status=200 duration=182ms ip=::1 body={"email":"vaibhavprakashpetkar@gmail.com","password":"******"}
+[2026-05-05T01:02:59.059Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=200 duration=20ms ip=::1
+[2026-05-05T01:03:03.059Z] [REQUEST] GET /api/orders | status=200 duration=20ms ip=::1
+[2026-05-05T01:03:03.065Z] [REQUEST] GET /api/orders | status=304 duration=4ms ip=::1
+[2026-05-05T01:03:12.680Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=1ms ip=::1
+[2026-05-05T01:03:12.720Z] [REQUEST] GET /api/orders | status=304 duration=2ms ip=::1
+[2026-05-05T01:03:12.732Z] [REQUEST] GET /api/orders | status=304 duration=4ms ip=::1
+[2026-05-05T01:03:14.254Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=1ms ip=::1
+[2026-05-05T01:03:14.300Z] [REQUEST] GET /api/orders | status=304 duration=4ms ip=::1
+[2026-05-05T01:03:14.308Z] [REQUEST] GET /api/orders | status=304 duration=3ms ip=::1
+[2026-05-05T01:03:15.026Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=1ms ip=::1
+[2026-05-05T01:03:15.062Z] [REQUEST] GET /api/orders | status=304 duration=2ms ip=::1
+[2026-05-05T01:03:15.072Z] [REQUEST] GET /api/orders | status=304 duration=3ms ip=::1
+[2026-05-05T01:03:16.351Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=1ms ip=::1
+[2026-05-05T01:03:16.386Z] [REQUEST] GET /api/orders | status=304 duration=2ms ip=::1
+[2026-05-05T01:03:16.391Z] [REQUEST] GET /api/orders | status=304 duration=2ms ip=::1
+[2026-05-05T01:03:17.002Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=1ms ip=::1
+[2026-05-05T01:03:17.061Z] [REQUEST] GET /api/orders | status=304 duration=3ms ip=::1
+[2026-05-05T01:03:17.089Z] [REQUEST] GET /api/orders | status=304 duration=2ms ip=::1
+[2026-05-05T01:03:17.589Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=1ms ip=::1
+[2026-05-05T01:03:17.622Z] [REQUEST] GET /api/orders | status=304 duration=2ms ip=::1
+[2026-05-05T01:03:17.627Z] [REQUEST] GET /api/orders | status=304 duration=2ms ip=::1
+[2026-05-05T01:03:21.422Z] [REQUEST] GET /api/products | status=304 duration=6ms ip=::1
+[2026-05-05T01:03:21.428Z] [REQUEST] GET /api/products | status=304 duration=2ms ip=::1
+[2026-05-05T01:03:21.497Z] [REQUEST] GET /api/categories | status=304 duration=78ms ip=::1
+[2026-05-05T01:03:21.531Z] [REQUEST] GET /api/categories | status=304 duration=2ms ip=::1
+[2026-05-05T01:03:21.560Z] [REQUEST] GET /api/users/settings | status=304 duration=142ms ip=::1
+[2026-05-05T01:03:21.563Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:03:21.570Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:03:21.575Z] [REQUEST] GET /api/users/settings | status=304 duration=2ms ip=::1
+[2026-05-05T01:03:21.653Z] [REQUEST] GET /uploads/images-1777596862448-902446751.webp | status=304 duration=1ms ip=::1
+[2026-05-05T01:03:25.717Z] [REQUEST] GET /api/users/addresses | status=200 duration=6ms ip=::1
+[2026-05-05T01:03:25.723Z] [REQUEST] GET /api/users/addresses | status=304 duration=2ms ip=::1
+[2026-05-05T01:05:58.595Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=1ms ip=::1
+[2026-05-05T01:05:58.671Z] [REQUEST] GET /api/orders | status=304 duration=75ms ip=::1
+[2026-05-05T01:05:58.676Z] [REQUEST] GET /api/orders | status=304 duration=3ms ip=::1
+[2026-05-05T01:06:13.312Z] [REQUEST] GET /api/users/settings | status=304 duration=54ms ip=::1
+[2026-05-05T01:06:13.315Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:06:25.337Z] [REQUEST] GET /api/users/settings | status=304 duration=157ms ip=::1
+[2026-05-05T01:06:25.340Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:06:30.249Z] [REQUEST] PUT /api/users/settings | status=200 duration=14ms ip=::1 body={"key":"site_name","value":"Vaibhav E-Com"}
+[2026-05-05T01:06:30.254Z] [REQUEST] PUT /api/users/settings | status=200 duration=3ms ip=::1 body={"key":"site_description","value":"Premium Multi-vendor E-commerce Platform"}
+[2026-05-05T01:06:30.261Z] [REQUEST] PUT /api/users/settings | status=200 duration=3ms ip=::1 body={"key":"secondary_color","value":"#1e293b"}
+[2026-05-05T01:06:30.266Z] [REQUEST] PUT /api/users/settings | status=200 duration=2ms ip=::1 body={"key":"font_family","value":"'Inter', sans-serif"}
+[2026-05-05T01:06:30.271Z] [REQUEST] PUT /api/users/settings | status=200 duration=2ms ip=::1 body={"key":"primary_color","value":"#4f46e5"}
+[2026-05-05T01:06:30.275Z] [REQUEST] PUT /api/users/settings | status=200 duration=2ms ip=::1 body={"key":"items_per_page","value":"12"}
+[2026-05-05T01:06:30.281Z] [REQUEST] PUT /api/users/settings | status=200 duration=3ms ip=::1 body={"key":"homepage_banner_text","value":"Discover Premium Quality Products"}
+[2026-05-05T01:06:30.285Z] [REQUEST] PUT /api/users/settings | status=200 duration=2ms ip=::1 body={"key":"custom_css","value":"/* Custom CSS here */"}
+[2026-05-05T01:06:30.288Z] [REQUEST] PUT /api/users/settings | status=200 duration=2ms ip=::1 body={"key":"custom_html_head","value":"<!-- Head injection -->"}
+[2026-05-05T01:06:30.292Z] [REQUEST] PUT /api/users/settings | status=200 duration=2ms ip=::1 body={"key":"custom_html_footer","value":"<!-- Footer injection -->"}
+[2026-05-05T01:06:30.300Z] [REQUEST] PUT /api/users/settings | status=200 duration=2ms ip=::1 body={"key":"enable_dark_mode","value":"false"}
+[2026-05-05T01:06:30.304Z] [REQUEST] PUT /api/users/settings | status=200 duration=2ms ip=::1 body={"key":"require_email_verification","value":"true"}
+[2026-05-05T01:06:30.308Z] [REQUEST] PUT /api/users/settings | status=200 duration=2ms ip=::1 body={"key":"app_domain","value":""}
+[2026-05-05T01:06:30.313Z] [REQUEST] PUT /api/users/settings | status=200 duration=4ms ip=::1 body={"key":"default_currency","value":"INR"}
+[2026-05-05T01:06:30.316Z] [REQUEST] PUT /api/users/settings | status=200 duration=2ms ip=::1 body={"key":"smtp_port","value":"587"}
+[2026-05-05T01:06:30.320Z] [REQUEST] PUT /api/users/settings | status=200 duration=2ms ip=::1 body={"key":"smtp_user","value":""}
+[2026-05-05T01:06:30.323Z] [REQUEST] PUT /api/users/settings | status=200 duration=1ms ip=::1 body={"key":"smtp_host","value":""}
+[2026-05-05T01:06:30.329Z] [REQUEST] PUT /api/users/settings | status=200 duration=3ms ip=::1 body={"key":"smtp_pass","value":""}
+[2026-05-05T01:06:30.333Z] [REQUEST] PUT /api/users/settings | status=200 duration=2ms ip=::1 body={"key":"smtp_from","value":""}
+[2026-05-05T01:07:05.446Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=1ms ip=::1
+[2026-05-05T01:07:05.502Z] [REQUEST] GET /api/users/settings | status=200 duration=51ms ip=::1
+[2026-05-05T01:07:05.505Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:07:17.811Z] [REQUEST] GET /api/products | status=304 duration=84ms ip=::1
+[2026-05-05T01:07:17.824Z] [REQUEST] GET /api/products | status=304 duration=2ms ip=::1
+[2026-05-05T01:07:17.834Z] [REQUEST] GET /api/categories | status=304 duration=106ms ip=::1
+[2026-05-05T01:07:17.855Z] [REQUEST] GET /api/users/settings | status=304 duration=128ms ip=::1
+[2026-05-05T01:07:17.856Z] [REQUEST] GET /api/categories | status=304 duration=2ms ip=::1
+[2026-05-05T01:07:17.860Z] [REQUEST] GET /api/users/settings | status=304 duration=2ms ip=::1
+[2026-05-05T01:07:17.866Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:07:17.870Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:07:17.916Z] [REQUEST] GET /uploads/images-1777596862448-902446751.webp | status=304 duration=1ms ip=::1
+[2026-05-05T01:07:21.330Z] [REQUEST] GET /api/users/settings | status=200 duration=1ms ip=::1
+[2026-05-05T01:07:21.333Z] [REQUEST] GET /api/categories | status=200 duration=4ms ip=::1
+[2026-05-05T01:07:21.335Z] [REQUEST] GET /api/users/settings | status=200 duration=4ms ip=::1
+[2026-05-05T01:07:21.338Z] [REQUEST] GET /api/products | status=200 duration=10ms ip=::1
+[2026-05-05T01:07:21.339Z] [REQUEST] GET /api/users/settings | status=200 duration=2ms ip=::1
+[2026-05-05T01:07:21.341Z] [REQUEST] GET /api/categories | status=200 duration=1ms ip=::1
+[2026-05-05T01:07:21.344Z] [REQUEST] GET /api/users/settings | status=200 duration=4ms ip=::1
+[2026-05-05T01:07:21.348Z] [REQUEST] GET /api/products | status=200 duration=11ms ip=::1
+[2026-05-05T01:07:21.414Z] [REQUEST] GET /uploads/images-1777596862448-902446751.webp | status=200 duration=2ms ip=::1
+[2026-05-05T01:07:51.895Z] [REQUEST] GET /api/products | status=304 duration=71ms ip=::1
+[2026-05-05T01:07:51.899Z] [REQUEST] GET /api/users/settings | status=304 duration=74ms ip=::1
+[2026-05-05T01:07:51.900Z] [REQUEST] GET /api/categories | status=304 duration=75ms ip=::1
+[2026-05-05T01:07:51.910Z] [REQUEST] GET /api/users/settings | status=304 duration=0ms ip=::1
+[2026-05-05T01:07:51.919Z] [REQUEST] GET /api/products | status=304 duration=14ms ip=::1
+[2026-05-05T01:07:51.922Z] [REQUEST] GET /api/categories | status=304 duration=4ms ip=::1
+[2026-05-05T01:08:10.865Z] [REQUEST] GET /api/users/profile | status=200 duration=59ms ip=::1
+[2026-05-05T01:08:10.880Z] [REQUEST] GET /api/users/profile | status=304 duration=1ms ip=::1
+[2026-05-05T01:08:10.889Z] [REQUEST] GET /api/users/addresses | status=304 duration=81ms ip=::1
+[2026-05-05T01:08:10.894Z] [REQUEST] GET /api/users/addresses | status=304 duration=1ms ip=::1
+[2026-05-05T01:08:10.903Z] [REQUEST] GET /api/orders | status=304 duration=95ms ip=::1
+[2026-05-05T01:08:10.907Z] [REQUEST] GET /api/orders | status=304 duration=3ms ip=::1
+[2026-05-05T01:08:17.649Z] [REQUEST] GET /api/users/settings | status=304 duration=3ms ip=::1
+[2026-05-05T01:08:17.653Z] [REQUEST] GET /api/categories | status=304 duration=7ms ip=::1
+[2026-05-05T01:08:17.656Z] [REQUEST] GET /api/products | status=304 duration=11ms ip=::1
+[2026-05-05T01:08:17.670Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:08:17.675Z] [REQUEST] GET /api/categories | status=304 duration=3ms ip=::1
+[2026-05-05T01:08:17.679Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:08:17.681Z] [REQUEST] GET /api/products | status=304 duration=9ms ip=::1
+[2026-05-05T01:08:17.688Z] [REQUEST] GET /api/users/settings | status=304 duration=2ms ip=::1
+[2026-05-05T01:08:17.712Z] [REQUEST] GET /uploads/images-1777596862448-902446751.webp | status=304 duration=0ms ip=::1
+[2026-05-05T01:08:29.517Z] [REQUEST] POST /api/messages | status=201 duration=54ms ip=::1 body={"message":"asdasdasd","customer_name":"Guest User","customer_email":"guest@example.com"}
+[2026-05-05T01:08:41.093Z] [REQUEST] GET /api/users/profile | status=304 duration=55ms ip=::1
+[2026-05-05T01:08:41.101Z] [REQUEST] GET /api/users/profile | status=304 duration=2ms ip=::1
+[2026-05-05T01:08:41.113Z] [REQUEST] GET /api/orders | status=304 duration=73ms ip=::1
+[2026-05-05T01:08:41.115Z] [REQUEST] GET /api/users/addresses | status=304 duration=74ms ip=::1
+[2026-05-05T01:08:41.121Z] [REQUEST] GET /api/users/addresses | status=304 duration=3ms ip=::1
+[2026-05-05T01:08:41.124Z] [REQUEST] GET /api/orders | status=304 duration=8ms ip=::1
+[2026-05-05T01:08:57.993Z] [REQUEST] GET /api/users/settings | status=304 duration=94ms ip=::1
+[2026-05-05T01:08:58.011Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:08:58.017Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:08:58.021Z] [REQUEST] GET /api/categories | status=304 duration=121ms ip=::1
+[2026-05-05T01:08:58.038Z] [REQUEST] GET /api/users/settings | status=304 duration=4ms ip=::1
+[2026-05-05T01:08:58.039Z] [REQUEST] GET /api/categories | status=304 duration=5ms ip=::1
+[2026-05-05T01:08:58.040Z] [REQUEST] GET /api/products | status=304 duration=141ms ip=::1
+[2026-05-05T01:08:58.048Z] [REQUEST] GET /api/products | status=304 duration=3ms ip=::1
+[2026-05-05T01:08:58.075Z] [REQUEST] GET /uploads/images-1777596862448-902446751.webp | status=304 duration=2ms ip=::1
+[2026-05-05T01:09:00.830Z] [REQUEST] GET /api/users/addresses | status=304 duration=3ms ip=::1
+[2026-05-05T01:09:00.837Z] [REQUEST] GET /api/users/addresses | status=304 duration=3ms ip=::1
+[2026-05-05T01:09:06.382Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:09:06.383Z] [REQUEST] GET /api/categories | status=304 duration=2ms ip=::1
+[2026-05-05T01:09:06.388Z] [REQUEST] GET /api/products | status=304 duration=8ms ip=::1
+[2026-05-05T01:09:06.389Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:09:06.392Z] [REQUEST] GET /api/categories | status=304 duration=3ms ip=::1
+[2026-05-05T01:09:06.403Z] [REQUEST] GET /api/products | status=304 duration=7ms ip=::1
+[2026-05-05T01:09:33.113Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=1ms ip=::1
+[2026-05-05T01:09:33.200Z] [REQUEST] GET /api/orders | status=304 duration=83ms ip=::1
+[2026-05-05T01:09:33.209Z] [REQUEST] GET /api/orders | status=304 duration=3ms ip=::1
+[2026-05-05T01:09:38.150Z] [REQUEST] GET /api/users/settings | status=304 duration=2ms ip=::1
+[2026-05-05T01:09:38.153Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:10:34.873Z] [REQUEST] GET /api/products | status=304 duration=68ms ip=::1
+[2026-05-05T01:10:34.879Z] [REQUEST] GET /api/products | status=304 duration=2ms ip=::1
+[2026-05-05T01:10:34.973Z] [REQUEST] GET /api/stock | status=200 duration=169ms ip=::1
+[2026-05-05T01:10:34.978Z] [REQUEST] GET /api/stock | status=304 duration=3ms ip=::1
+[2026-05-05T01:10:49.671Z] [REQUEST] GET /api/users/manage/all | status=200 duration=191ms ip=::1
+[2026-05-05T01:10:49.675Z] [REQUEST] GET /api/users/manage/all | status=304 duration=2ms ip=::1
+[2026-05-05T01:10:51.602Z] [REQUEST] GET /api/users/manage/deleted | status=200 duration=2ms ip=::1
+[2026-05-05T01:10:51.607Z] [REQUEST] GET /api/users/manage/deleted | status=304 duration=2ms ip=::1
+[2026-05-05T01:10:54.292Z] [REQUEST] GET /api/users/settings | status=304 duration=2ms ip=::1
+[2026-05-05T01:10:54.296Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:11:01.591Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:11:01.595Z] [REQUEST] GET /api/users/settings | status=304 duration=2ms ip=::1
+[2026-05-05T01:12:24.023Z] [REQUEST] GET /api/users/settings | status=200 duration=54ms ip=::1
+[2026-05-05T01:12:24.026Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:12:24.171Z] [REQUEST] GET /api/products | status=200 duration=9ms ip=::1
+[2026-05-05T01:12:24.179Z] [REQUEST] GET /api/products | status=304 duration=2ms ip=::1
+[2026-05-05T01:12:24.268Z] [REQUEST] GET /api/users/settings | status=304 duration=103ms ip=::1
+[2026-05-05T01:12:24.269Z] [REQUEST] GET /api/categories | status=200 duration=105ms ip=::1
+[2026-05-05T01:12:24.273Z] [REQUEST] GET /api/users/settings | status=304 duration=2ms ip=::1
+[2026-05-05T01:12:24.275Z] [REQUEST] GET /api/categories | status=304 duration=4ms ip=::1
+[2026-05-05T01:12:24.340Z] [REQUEST] GET /uploads/images-1777596862448-902446751.webp | status=200 duration=2ms ip=::1
+[2026-05-05T01:13:05.348Z] [ERROR  ] POST /api/auth/register | status=500 duration=203ms ip=::1
+[2026-05-05T01:13:38.375Z] [REQUEST] GET /api/categories | status=304 duration=70ms ip=::1
+[2026-05-05T01:13:38.380Z] [REQUEST] GET /api/categories | status=304 duration=1ms ip=::1
+[2026-05-05T01:13:38.400Z] [REQUEST] GET /api/users/settings | status=304 duration=96ms ip=::1
+[2026-05-05T01:13:38.402Z] [REQUEST] GET /api/products | status=304 duration=99ms ip=::1
+[2026-05-05T01:13:38.405Z] [REQUEST] GET /api/users/settings | status=304 duration=2ms ip=::1
+[2026-05-05T01:13:38.408Z] [REQUEST] GET /api/products | status=304 duration=2ms ip=::1
+[2026-05-05T01:13:38.410Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:13:38.412Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:13:38.483Z] [REQUEST] GET /uploads/images-1777596862448-902446751.webp | status=304 duration=1ms ip=::1
+[2026-05-05T01:13:41.227Z] [REQUEST] GET /api/users/settings | status=304 duration=2ms ip=::1
+[2026-05-05T01:13:41.229Z] [REQUEST] GET /api/categories | status=304 duration=3ms ip=::1
+[2026-05-05T01:13:41.232Z] [REQUEST] GET /api/products | status=304 duration=7ms ip=::1
+[2026-05-05T01:13:41.239Z] [REQUEST] GET /api/users/settings | status=304 duration=3ms ip=::1
+[2026-05-05T01:13:41.241Z] [REQUEST] GET /api/categories | status=304 duration=4ms ip=::1
+[2026-05-05T01:13:41.248Z] [REQUEST] GET /api/users/settings | status=304 duration=2ms ip=::1
+[2026-05-05T01:13:41.249Z] [REQUEST] GET /api/products | status=304 duration=12ms ip=::1
+[2026-05-05T01:13:41.253Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:13:41.259Z] [REQUEST] GET /uploads/images-1777596862448-902446751.webp | status=304 duration=0ms ip=::1
+[2026-05-05T01:13:47.224Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=200 duration=2ms ip=::1
+[2026-05-05T01:13:47.228Z] [REQUEST] GET /api/users/settings | status=200 duration=2ms ip=::1
+[2026-05-05T01:13:47.231Z] [REQUEST] GET /api/users/settings | status=200 duration=1ms ip=::1
+[2026-05-05T01:13:57.395Z] [REQUEST] GET /api/messages | status=200 duration=63ms ip=::1
+[2026-05-05T01:13:57.398Z] [REQUEST] GET /api/messages | status=304 duration=1ms ip=::1
+[2026-05-05T01:14:35.578Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=200 duration=2ms ip=::1
+[2026-05-05T01:14:35.697Z] [REQUEST] GET /api/messages | status=200 duration=70ms ip=::1
+[2026-05-05T01:14:35.710Z] [REQUEST] GET /api/messages | status=200 duration=82ms ip=::1
+[2026-05-05T01:14:40.717Z] [REQUEST] GET /api/users/manage/all | status=200 duration=166ms ip=::1
+[2026-05-05T01:14:40.720Z] [REQUEST] GET /api/users/manage/all | status=304 duration=2ms ip=::1
+[2026-05-05T01:16:17.672Z] [WARN   ] POST /api/auth/login | status=403 duration=291ms ip=::1
+[2026-05-05T01:16:33.396Z] [REQUEST] GET /api/users/settings | status=304 duration=79ms ip=::1
+[2026-05-05T01:16:33.400Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:16:33.411Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:16:33.416Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:16:33.421Z] [REQUEST] GET /api/categories | status=304 duration=103ms ip=::1
+[2026-05-05T01:16:33.425Z] [REQUEST] GET /api/categories | status=304 duration=1ms ip=::1
+[2026-05-05T01:16:33.441Z] [REQUEST] GET /api/products | status=304 duration=124ms ip=::1
+[2026-05-05T01:16:33.444Z] [REQUEST] GET /api/products | status=304 duration=2ms ip=::1
+[2026-05-05T01:16:33.499Z] [REQUEST] GET /uploads/images-1777596862448-902446751.webp | status=304 duration=0ms ip=::1
+[2026-05-05T01:16:34.855Z] [WARN   ] 404 Not Found: GET /api/products/1 | ip=::1
+[2026-05-05T01:16:34.857Z] [WARN   ] GET /api/products/1 | status=404 duration=3ms ip=::1
+[2026-05-05T01:16:34.860Z] [WARN   ] 404 Not Found: GET /api/products/1 | ip=::1
+[2026-05-05T01:16:34.864Z] [WARN   ] GET /api/products/1 | status=404 duration=5ms ip=::1
+[2026-05-05T01:16:55.375Z] [REQUEST] GET /api/products | status=304 duration=71ms ip=::1
+[2026-05-05T01:16:55.379Z] [REQUEST] GET /api/products | status=304 duration=1ms ip=::1
+[2026-05-05T01:16:55.381Z] [REQUEST] GET /api/users/settings | status=304 duration=76ms ip=::1
+[2026-05-05T01:16:55.385Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:16:55.392Z] [REQUEST] GET /api/categories | status=304 duration=86ms ip=::1
+[2026-05-05T01:16:55.395Z] [REQUEST] GET /api/categories | status=304 duration=1ms ip=::1
+[2026-05-05T01:17:34.288Z] [WARN   ] POST /api/auth/register | status=409 duration=53ms ip=::1
+[2026-05-05T01:18:11.951Z] [REQUEST] GET /api/users/settings | status=200 duration=154ms ip=::1
+[2026-05-05T01:18:11.954Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:18:12.097Z] [REQUEST] GET /api/products | status=200 duration=8ms ip=::1
+[2026-05-05T01:18:12.103Z] [REQUEST] GET /api/products | status=304 duration=3ms ip=::1
+[2026-05-05T01:18:12.173Z] [REQUEST] GET /api/users/settings | status=304 duration=83ms ip=::1
+[2026-05-05T01:18:12.176Z] [REQUEST] GET /api/users/settings | status=304 duration=2ms ip=::1
+[2026-05-05T01:18:12.190Z] [REQUEST] GET /api/categories | status=200 duration=97ms ip=::1
+[2026-05-05T01:18:12.193Z] [REQUEST] GET /api/categories | status=304 duration=1ms ip=::1
+[2026-05-05T01:18:12.258Z] [REQUEST] GET /uploads/images-1777596862448-902446751.webp | status=200 duration=2ms ip=::1
+[2026-05-05T01:18:17.979Z] [WARN   ] 404 Not Found: GET /api/products/1 | ip=::1
+[2026-05-05T01:18:17.982Z] [WARN   ] GET /api/products/1 | status=404 duration=3ms ip=::1
+[2026-05-05T01:18:17.984Z] [WARN   ] 404 Not Found: GET /api/products/1 | ip=::1
+[2026-05-05T01:18:17.985Z] [WARN   ] GET /api/products/1 | status=404 duration=2ms ip=::1
+[2026-05-05T01:20:45.824Z] [WARN   ] 404 Not Found: GET /api/products/1 | ip=::1
+[2026-05-05T01:20:45.825Z] [WARN   ] GET /api/products/1 | status=404 duration=1ms ip=::1
+[2026-05-05T01:21:07.872Z] [WARN   ] 404 Not Found: GET /api/products/1 | ip=::1
+[2026-05-05T01:21:07.873Z] [WARN   ] GET /api/products/1 | status=404 duration=1ms ip=::1
+[2026-05-05T01:21:07.879Z] [WARN   ] 404 Not Found: GET /api/products/1 | ip=::1
+[2026-05-05T01:21:07.879Z] [WARN   ] GET /api/products/1 | status=404 duration=1ms ip=::1
+[2026-05-05T01:21:07.939Z] [REQUEST] GET /api/users/settings | status=304 duration=56ms ip=::1
+[2026-05-05T01:21:07.941Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:21:09.722Z] [REQUEST] GET /api/products | status=304 duration=9ms ip=::1
+[2026-05-05T01:21:09.729Z] [REQUEST] GET /api/products | status=304 duration=2ms ip=::1
+[2026-05-05T01:21:09.778Z] [REQUEST] GET /api/users/settings | status=304 duration=65ms ip=::1
+[2026-05-05T01:21:09.781Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:21:09.789Z] [REQUEST] GET /api/categories | status=304 duration=75ms ip=::1
+[2026-05-05T01:21:09.791Z] [REQUEST] GET /api/categories | status=304 duration=1ms ip=::1
+[2026-05-05T01:21:09.846Z] [REQUEST] GET /uploads/images-1777596862448-902446751.webp | status=304 duration=0ms ip=::1
+[2026-05-05T01:21:11.183Z] [WARN   ] 404 Not Found: GET /api/products/1 | ip=::1
+[2026-05-05T01:21:11.186Z] [WARN   ] GET /api/products/1 | status=404 duration=3ms ip=::1
+[2026-05-05T01:21:11.188Z] [WARN   ] 404 Not Found: GET /api/products/1 | ip=::1
+[2026-05-05T01:21:11.189Z] [WARN   ] GET /api/products/1 | status=404 duration=1ms ip=::1
+[2026-05-05T01:22:45.373Z] [WARN   ] 404 Not Found: GET /api/products/1 | ip=::1
+[2026-05-05T01:22:45.374Z] [WARN   ] GET /api/products/1 | status=404 duration=1ms ip=::1
+[2026-05-05T01:22:59.821Z] [REQUEST] GET /api/products | status=200 duration=156ms ip=::1
+[2026-05-05T01:23:24.694Z] [WARN   ] 404 Not Found: GET /api/products/1 | ip=::1
+[2026-05-05T01:23:24.697Z] [WARN   ] GET /api/products/1 | status=404 duration=4ms ip=::1
+[2026-05-05T01:23:24.702Z] [WARN   ] 404 Not Found: GET /api/products/1 | ip=::1
+[2026-05-05T01:23:24.704Z] [WARN   ] GET /api/products/1 | status=404 duration=2ms ip=::1
+[2026-05-05T01:23:24.897Z] [REQUEST] GET /api/users/settings | status=304 duration=190ms ip=::1
+[2026-05-05T01:23:24.980Z] [REQUEST] GET /api/users/settings | status=304 duration=5ms ip=::1
+[2026-05-05T01:24:05.902Z] [WARN   ] 404 Not Found: GET /api/products/1 | ip=::1
+[2026-05-05T01:24:05.903Z] [WARN   ] GET /api/products/1 | status=404 duration=1ms ip=::1
+[2026-05-05T01:24:05.910Z] [WARN   ] 404 Not Found: GET /api/products/1 | ip=::1
+[2026-05-05T01:24:05.911Z] [WARN   ] GET /api/products/1 | status=404 duration=1ms ip=::1
+[2026-05-05T01:24:05.976Z] [REQUEST] GET /api/users/settings | status=304 duration=67ms ip=::1
+[2026-05-05T01:24:05.980Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:24:17.524Z] [REQUEST] GET /api/products | status=304 duration=103ms ip=::1
+[2026-05-05T01:24:17.533Z] [REQUEST] GET /api/products | status=304 duration=3ms ip=::1
+[2026-05-05T01:24:17.542Z] [REQUEST] GET /api/users/settings | status=304 duration=120ms ip=::1
+[2026-05-05T01:24:17.552Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:24:17.569Z] [REQUEST] GET /api/categories | status=304 duration=146ms ip=::1
+[2026-05-05T01:24:17.572Z] [REQUEST] GET /api/categories | status=304 duration=1ms ip=::1
+[2026-05-05T01:24:17.711Z] [REQUEST] GET /uploads/images-1777596862448-902446751.webp | status=304 duration=1ms ip=::1
+[2026-05-05T01:24:21.620Z] [WARN   ] 404 Not Found: GET /api/products/1 | ip=::1
+[2026-05-05T01:24:21.621Z] [WARN   ] GET /api/products/1 | status=404 duration=1ms ip=::1
+[2026-05-05T01:24:21.623Z] [WARN   ] 404 Not Found: GET /api/products/1 | ip=::1
+[2026-05-05T01:24:21.623Z] [WARN   ] GET /api/products/1 | status=404 duration=1ms ip=::1
+[2026-05-05T01:26:29.364Z] [SUCCESS] Server started | port=5000 frontend=undefined env=development
+[2026-05-05T01:26:41.375Z] [REQUEST] GET /api/products | status=200 duration=93ms ip=::1
+[2026-05-05T01:26:49.653Z] [SUCCESS] Server started | port=5000 frontend=undefined env=development
+[2026-05-05T01:26:54.281Z] [REQUEST] GET /api/products/1 | status=200 duration=97ms ip=::1
+[2026-05-05T01:27:32.835Z] [REQUEST] GET /api/users/settings | status=304 duration=69ms ip=::1
+[2026-05-05T01:27:32.848Z] [REQUEST] GET /api/users/settings | status=304 duration=2ms ip=::1
+[2026-05-05T01:27:33.109Z] [REQUEST] GET /api/users/settings | status=304 duration=4ms ip=::1
+[2026-05-05T01:27:33.114Z] [REQUEST] GET /api/users/settings | status=304 duration=2ms ip=::1
+[2026-05-05T01:27:33.246Z] [REQUEST] GET /api/categories | status=304 duration=139ms ip=::1
+[2026-05-05T01:27:33.265Z] [REQUEST] GET /api/products | status=304 duration=159ms ip=::1
+[2026-05-05T01:27:33.372Z] [REQUEST] GET /api/categories | status=304 duration=3ms ip=::1
+[2026-05-05T01:27:33.380Z] [REQUEST] GET /api/products | status=304 duration=10ms ip=::1
+[2026-05-05T01:27:33.484Z] [REQUEST] GET /uploads/images-1777596862448-902446751.webp | status=304 duration=3ms ip=::1
+[2026-05-05T01:27:34.211Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=1ms ip=::1
+[2026-05-05T01:27:34.222Z] [REQUEST] GET /api/users/manage/all | status=304 duration=8ms ip=::1
+[2026-05-05T01:27:34.226Z] [REQUEST] GET /api/users/manage/all | status=304 duration=3ms ip=::1
+[2026-05-05T01:27:37.206Z] [REQUEST] GET /uploads/images-1777596862448-902446751.webp | status=304 duration=1ms ip=::1
+[2026-05-05T01:27:38.364Z] [REQUEST] GET /api/products/1 | status=200 duration=4ms ip=::1
+[2026-05-05T01:27:38.370Z] [REQUEST] GET /api/products/1 | status=304 duration=3ms ip=::1
+[2026-05-05T01:27:38.502Z] [REQUEST] GET /uploads/images-1777596862451-754417098.webp | status=200 duration=25ms ip=::1
+[2026-05-05T01:27:38.504Z] [REQUEST] GET /uploads/images-1777596862450-408331888.webp | status=200 duration=27ms ip=::1
+[2026-05-05T01:27:38.505Z] [REQUEST] GET /uploads/images-1777596862475-799902129.webp | status=200 duration=27ms ip=::1
+[2026-05-05T01:27:38.509Z] [REQUEST] GET /uploads/images-1777596862476-487316542.webp | status=200 duration=27ms ip=::1
+[2026-05-05T01:27:38.521Z] [REQUEST] GET /uploads/images-1777596862477-122406803.webp | status=200 duration=39ms ip=::1
+[2026-05-05T01:27:49.820Z] [REQUEST] GET /api/products | status=304 duration=57ms ip=::1
+[2026-05-05T01:27:49.824Z] [REQUEST] GET /api/categories | status=304 duration=3ms ip=::1
+[2026-05-05T01:27:49.830Z] [REQUEST] GET /api/products | status=304 duration=2ms ip=::1
+[2026-05-05T01:27:49.836Z] [REQUEST] GET /api/categories | status=304 duration=1ms ip=::1
+[2026-05-05T01:27:49.971Z] [REQUEST] GET /api/users/settings | status=304 duration=169ms ip=::1
+[2026-05-05T01:27:49.975Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:27:49.977Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:27:49.979Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:27:50.328Z] [REQUEST] GET /uploads/images-1777596862448-902446751.webp | status=304 duration=0ms ip=::1
+[2026-05-05T01:28:13.151Z] [REQUEST] GET /api/products | status=304 duration=67ms ip=::1
+[2026-05-05T01:28:13.154Z] [REQUEST] GET /api/users/settings | status=304 duration=69ms ip=::1
+[2026-05-05T01:28:13.158Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:28:13.165Z] [REQUEST] GET /api/products | status=304 duration=9ms ip=::1
+[2026-05-05T01:28:13.189Z] [REQUEST] GET /api/categories | status=304 duration=103ms ip=::1
+[2026-05-05T01:28:13.195Z] [REQUEST] GET /api/categories | status=304 duration=2ms ip=::1
+[2026-05-05T01:28:44.537Z] [REQUEST] GET /api/products/1 | status=304 duration=56ms ip=::1
+[2026-05-05T01:28:44.540Z] [REQUEST] GET /api/products/1 | status=304 duration=2ms ip=::1
+[2026-05-05T01:28:44.627Z] [REQUEST] GET /uploads/images-1777596862451-754417098.webp | status=304 duration=11ms ip=::1
+[2026-05-05T01:28:44.642Z] [REQUEST] GET /uploads/images-1777596862475-799902129.webp | status=304 duration=1ms ip=::1
+[2026-05-05T01:28:44.643Z] [REQUEST] GET /uploads/images-1777596862476-487316542.webp | status=304 duration=1ms ip=::1
+[2026-05-05T01:28:44.644Z] [REQUEST] GET /uploads/images-1777596862477-122406803.webp | status=304 duration=2ms ip=::1
+[2026-05-05T01:29:15.429Z] [REQUEST] GET /api/users/settings | status=304 duration=59ms ip=::1
+[2026-05-05T01:29:15.436Z] [REQUEST] GET /api/products | status=304 duration=66ms ip=::1
+[2026-05-05T01:29:15.443Z] [REQUEST] GET /api/users/settings | status=304 duration=2ms ip=::1
+[2026-05-05T01:29:15.445Z] [REQUEST] GET /api/products | status=304 duration=2ms ip=::1
+[2026-05-05T01:29:15.453Z] [REQUEST] GET /api/categories | status=304 duration=82ms ip=::1
+[2026-05-05T01:29:15.462Z] [REQUEST] GET /api/categories | status=304 duration=1ms ip=::1
+[2026-05-05T01:30:37.075Z] [REQUEST] GET /api/categories | status=200 duration=97ms ip=::1
+[2026-05-05T01:30:37.079Z] [REQUEST] GET /api/users/settings | status=200 duration=105ms ip=::1
+[2026-05-05T01:30:37.093Z] [REQUEST] GET /api/users/settings | status=200 duration=1ms ip=::1
+[2026-05-05T01:30:37.094Z] [REQUEST] GET /api/users/settings | status=200 duration=0ms ip=::1
+[2026-05-05T01:30:37.164Z] [REQUEST] GET /api/products | status=200 duration=188ms ip=::1
+[2026-05-05T01:30:37.193Z] [REQUEST] GET /api/products | status=200 duration=220ms ip=::1
+[2026-05-05T01:30:37.232Z] [REQUEST] GET /api/categories | status=200 duration=259ms ip=::1
+[2026-05-05T01:30:37.251Z] [REQUEST] GET /api/users/settings | status=200 duration=272ms ip=::1
+[2026-05-05T01:30:37.339Z] [REQUEST] GET /uploads/images-1777596862448-902446751.webp | status=304 duration=1ms ip=::1
+[2026-05-05T01:30:38.974Z] [REQUEST] GET /api/products/1 | status=304 duration=7ms ip=::1
+[2026-05-05T01:30:38.978Z] [REQUEST] GET /api/products/1 | status=304 duration=2ms ip=::1
+[2026-05-05T01:30:39.080Z] [REQUEST] GET /uploads/images-1777596862450-408331888.webp | status=304 duration=1ms ip=::1
+[2026-05-05T01:30:39.086Z] [REQUEST] GET /uploads/images-1777596862451-754417098.webp | status=304 duration=5ms ip=::1
+[2026-05-05T01:30:39.087Z] [REQUEST] GET /uploads/images-1777596862475-799902129.webp | status=304 duration=6ms ip=::1
+[2026-05-05T01:30:39.087Z] [REQUEST] GET /uploads/images-1777596862476-487316542.webp | status=304 duration=6ms ip=::1
+[2026-05-05T01:30:39.088Z] [REQUEST] GET /uploads/images-1777596862477-122406803.webp | status=304 duration=6ms ip=::1
+[2026-05-05T01:32:37.340Z] [REQUEST] GET /api/products | status=304 duration=88ms ip=::1
+[2026-05-05T01:32:37.345Z] [REQUEST] GET /api/products | status=304 duration=4ms ip=::1
+[2026-05-05T01:32:37.348Z] [REQUEST] GET /api/categories | status=304 duration=95ms ip=::1
+[2026-05-05T01:32:37.350Z] [REQUEST] GET /api/categories | status=304 duration=1ms ip=::1
+[2026-05-05T01:32:37.419Z] [REQUEST] GET /api/users/settings | status=304 duration=166ms ip=::1
+[2026-05-05T01:32:37.435Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:32:37.438Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:32:37.441Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:32:37.513Z] [REQUEST] GET /uploads/images-1777596862448-902446751.webp | status=304 duration=3ms ip=::1
+[2026-05-05T01:32:38.647Z] [REQUEST] GET /api/products/1 | status=200 duration=8ms ip=::1
+[2026-05-05T01:32:38.651Z] [REQUEST] GET /api/products/1 | status=304 duration=3ms ip=::1
+[2026-05-05T01:32:38.734Z] [REQUEST] GET /uploads/images-1777596862450-408331888.webp | status=200 duration=3ms ip=::1
+[2026-05-05T01:32:38.737Z] [REQUEST] GET /uploads/images-1777596862476-487316542.webp | status=200 duration=2ms ip=::1
+[2026-05-05T01:32:38.738Z] [REQUEST] GET /uploads/images-1777596862451-754417098.webp | status=200 duration=4ms ip=::1
+[2026-05-05T01:32:38.739Z] [REQUEST] GET /uploads/images-1777596862475-799902129.webp | status=200 duration=5ms ip=::1
+[2026-05-05T01:32:38.744Z] [REQUEST] GET /uploads/images-1777596862477-122406803.webp | status=200 duration=2ms ip=::1
+[2026-05-05T01:33:23.823Z] [REQUEST] POST /api/auth/register | status=201 duration=328ms ip=::1 body={"name":"sisowid","email":"sisowid595@inraud.com","password":"******"}
+[2026-05-05T01:33:51.142Z] [SUCCESS] Server started | port=5000 frontend=undefined env=development
+[2026-05-05T01:34:10.603Z] [WARN   ] POST /api/auth/verify-email-otp | status=400 duration=57ms ip=::1
+[2026-05-05T01:34:20.598Z] [REQUEST] GET /api/products/1 | status=200 duration=8ms ip=::1
+[2026-05-05T01:34:20.697Z] [REQUEST] GET /api/products/1 | status=200 duration=105ms ip=::1
+[2026-05-05T01:34:20.732Z] [REQUEST] GET /api/users/settings | status=200 duration=142ms ip=::1
+[2026-05-05T01:34:20.743Z] [REQUEST] GET /api/users/settings | status=200 duration=150ms ip=::1
+[2026-05-05T01:34:20.822Z] [REQUEST] GET /uploads/images-1777596862451-754417098.webp | status=200 duration=6ms ip=::1
+[2026-05-05T01:34:20.823Z] [REQUEST] GET /uploads/images-1777596862448-902446751.webp | status=200 duration=8ms ip=::1
+[2026-05-05T01:34:20.823Z] [REQUEST] GET /uploads/images-1777596862450-408331888.webp | status=200 duration=7ms ip=::1
+[2026-05-05T01:34:20.826Z] [REQUEST] GET /uploads/images-1777596862475-799902129.webp | status=200 duration=2ms ip=::1
+[2026-05-05T01:34:20.831Z] [REQUEST] GET /uploads/images-1777596862476-487316542.webp | status=200 duration=3ms ip=::1
+[2026-05-05T01:34:20.836Z] [REQUEST] GET /uploads/images-1777596862477-122406803.webp | status=200 duration=4ms ip=::1
+[2026-05-05T01:38:00.580Z] [REQUEST] POST /api/auth/resend-otp | status=200 duration=172ms ip=::1 body={"email":"sisowid595@inraud.com"}
+[2026-05-05T01:38:44.360Z] [REQUEST] POST /api/auth/register | status=201 duration=174ms ip=::1 body={"name":"sisowid","email":"sisowid595@inraud.com","password":"******"}
+[2026-05-05T01:39:13.694Z] [REQUEST] GET /uploads/images-1777596862448-902446751.webp | status=304 duration=1ms ip=::1
+[2026-05-05T01:39:13.793Z] [REQUEST] GET /api/users/settings | status=304 duration=98ms ip=::1
+[2026-05-05T01:39:13.795Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:39:14.816Z] [REQUEST] GET /api/products/1 | status=304 duration=9ms ip=::1
+[2026-05-05T01:39:14.819Z] [REQUEST] GET /api/products/1 | status=304 duration=2ms ip=::1
+[2026-05-05T01:39:14.909Z] [REQUEST] GET /uploads/images-1777596862450-408331888.webp | status=304 duration=1ms ip=::1
+[2026-05-05T01:39:14.911Z] [REQUEST] GET /uploads/images-1777596862451-754417098.webp | status=304 duration=2ms ip=::1
+[2026-05-05T01:39:14.912Z] [REQUEST] GET /uploads/images-1777596862475-799902129.webp | status=304 duration=2ms ip=::1
+[2026-05-05T01:39:14.914Z] [REQUEST] GET /uploads/images-1777596862476-487316542.webp | status=304 duration=2ms ip=::1
+[2026-05-05T01:39:14.914Z] [REQUEST] GET /uploads/images-1777596862477-122406803.webp | status=304 duration=2ms ip=::1
+[2026-05-05T01:39:19.154Z] [REQUEST] GET /api/products | status=304 duration=4ms ip=::1
+[2026-05-05T01:39:19.158Z] [REQUEST] GET /api/users/settings | status=304 duration=2ms ip=::1
+[2026-05-05T01:39:19.161Z] [REQUEST] GET /api/products | status=304 duration=2ms ip=::1
+[2026-05-05T01:39:19.220Z] [REQUEST] GET /api/users/settings | status=304 duration=60ms ip=::1
+[2026-05-05T01:39:19.221Z] [REQUEST] GET /api/categories | status=304 duration=65ms ip=::1
+[2026-05-05T01:39:19.223Z] [REQUEST] GET /api/categories | status=304 duration=1ms ip=::1
+[2026-05-05T01:39:36.660Z] [REQUEST] GET /api/users/settings | status=304 duration=59ms ip=::1
+[2026-05-05T01:39:36.668Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:39:36.689Z] [REQUEST] GET /api/categories | status=304 duration=87ms ip=::1
+[2026-05-05T01:39:36.690Z] [REQUEST] GET /api/products | status=304 duration=88ms ip=::1
+[2026-05-05T01:39:36.708Z] [REQUEST] GET /api/categories | status=304 duration=4ms ip=::1
+[2026-05-05T01:39:36.713Z] [REQUEST] GET /api/products | status=304 duration=8ms ip=::1
+[2026-05-05T01:44:23.862Z] [REQUEST] GET /api/products | status=200 duration=96ms ip=::1
+[2026-05-05T01:44:23.863Z] [REQUEST] GET /api/products | status=200 duration=93ms ip=::1
+[2026-05-05T01:44:23.927Z] [REQUEST] GET /api/users/settings | status=200 duration=1ms ip=::1
+[2026-05-05T01:44:23.927Z] [REQUEST] GET /api/users/settings | status=200 duration=1ms ip=::1
+[2026-05-05T01:44:23.986Z] [REQUEST] GET /api/categories | status=200 duration=208ms ip=::1
+[2026-05-05T01:44:24.025Z] [REQUEST] GET /api/categories | status=200 duration=258ms ip=::1
+[2026-05-05T01:44:24.026Z] [REQUEST] GET /api/users/settings | status=200 duration=260ms ip=::1
+[2026-05-05T01:44:24.029Z] [REQUEST] GET /api/users/settings | status=200 duration=258ms ip=::1
+[2026-05-05T01:44:24.148Z] [REQUEST] GET /uploads/images-1777596862448-902446751.webp | status=304 duration=1ms ip=::1
+[2026-05-05T01:44:33.863Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:44:33.864Z] [REQUEST] GET /api/categories | status=304 duration=2ms ip=::1
+[2026-05-05T01:44:33.869Z] [REQUEST] GET /api/products | status=304 duration=8ms ip=::1
+[2026-05-05T01:44:33.886Z] [REQUEST] GET /api/products | status=304 duration=2ms ip=::1
+[2026-05-05T01:44:33.899Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:44:33.902Z] [REQUEST] GET /api/categories | status=304 duration=3ms ip=::1
+[2026-05-05T01:46:40.097Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=1ms ip=::1
+[2026-05-05T01:46:40.183Z] [REQUEST] GET /api/orders | status=304 duration=81ms ip=::1
+[2026-05-05T01:46:40.207Z] [REQUEST] GET /api/orders | status=304 duration=3ms ip=::1
+[2026-05-05T01:46:46.022Z] [REQUEST] GET /api/products | status=304 duration=9ms ip=::1
+[2026-05-05T01:46:46.025Z] [REQUEST] GET /api/products | status=304 duration=2ms ip=::1
+[2026-05-05T01:46:46.079Z] [REQUEST] GET /api/categories | status=304 duration=65ms ip=::1
+[2026-05-05T01:46:46.086Z] [REQUEST] GET /api/categories | status=304 duration=1ms ip=::1
+[2026-05-05T01:46:46.136Z] [REQUEST] GET /uploads/images-1777596862448-902446751.webp | status=304 duration=3ms ip=::1
+[2026-05-05T01:47:22.618Z] [REQUEST] GET /api/products/1 | status=304 duration=55ms ip=::1
+[2026-05-05T01:47:22.621Z] [REQUEST] GET /api/products/1 | status=304 duration=2ms ip=::1
+[2026-05-05T01:47:22.695Z] [REQUEST] GET /uploads/images-1777596862450-408331888.webp | status=304 duration=0ms ip=::1
+[2026-05-05T01:47:22.698Z] [REQUEST] GET /uploads/images-1777596862451-754417098.webp | status=304 duration=1ms ip=::1
+[2026-05-05T01:47:22.699Z] [REQUEST] GET /uploads/images-1777596862475-799902129.webp | status=304 duration=2ms ip=::1
+[2026-05-05T01:47:22.699Z] [REQUEST] GET /uploads/images-1777596862476-487316542.webp | status=304 duration=2ms ip=::1
+[2026-05-05T01:47:22.700Z] [REQUEST] GET /uploads/images-1777596862477-122406803.webp | status=304 duration=3ms ip=::1
+[2026-05-05T01:48:09.922Z] [REQUEST] GET /api/users/settings | status=304 duration=71ms ip=::1
+[2026-05-05T01:48:09.926Z] [REQUEST] GET /api/users/settings | status=304 duration=2ms ip=::1
+[2026-05-05T01:48:09.928Z] [REQUEST] GET /api/categories | status=304 duration=76ms ip=::1
+[2026-05-05T01:48:09.931Z] [REQUEST] GET /api/categories | status=304 duration=1ms ip=::1
+[2026-05-05T01:48:09.945Z] [REQUEST] GET /api/products | status=304 duration=95ms ip=::1
+[2026-05-05T01:48:09.948Z] [REQUEST] GET /api/products | status=304 duration=2ms ip=::1
+[2026-05-05T01:49:05.690Z] [REQUEST] GET /api/users/settings | status=304 duration=56ms ip=::1
+[2026-05-05T01:49:05.693Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:49:05.695Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:49:05.696Z] [REQUEST] GET /api/categories | status=304 duration=62ms ip=::1
+[2026-05-05T01:49:05.698Z] [REQUEST] GET /api/categories | status=304 duration=1ms ip=::1
+[2026-05-05T01:49:05.709Z] [REQUEST] GET /api/products | status=304 duration=77ms ip=::1
+[2026-05-05T01:49:05.712Z] [REQUEST] GET /api/products | status=304 duration=1ms ip=::1
+[2026-05-05T01:49:05.736Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:49:05.919Z] [REQUEST] GET /uploads/images-1777596862448-902446751.webp | status=304 duration=1ms ip=::1
+[2026-05-05T01:49:06.092Z] [REQUEST] GET /uploads/1-1777427048243.jpg | status=304 duration=0ms ip=::1
+[2026-05-05T01:49:06.324Z] [REQUEST] GET /api/categories | status=304 duration=1ms ip=::1
+[2026-05-05T01:49:06.325Z] [REQUEST] GET /api/products | status=304 duration=3ms ip=::1
+[2026-05-05T01:49:06.329Z] [REQUEST] GET /api/categories | status=304 duration=3ms ip=::1
+[2026-05-05T01:49:06.335Z] [REQUEST] GET /api/products | status=304 duration=7ms ip=::1
+[2026-05-05T01:49:06.379Z] [REQUEST] GET /uploads/images-1777596862448-902446751.webp | status=304 duration=0ms ip=::1
+[2026-05-05T01:49:10.972Z] [REQUEST] GET /api/products/1 | status=304 duration=2ms ip=::1
+[2026-05-05T01:49:10.976Z] [REQUEST] GET /api/products/1 | status=304 duration=2ms ip=::1
+[2026-05-05T01:49:11.137Z] [REQUEST] GET /uploads/images-1777596862450-408331888.webp | status=304 duration=3ms ip=::1
+[2026-05-05T01:49:11.141Z] [REQUEST] GET /uploads/images-1777596862451-754417098.webp | status=304 duration=2ms ip=::1
+[2026-05-05T01:49:11.142Z] [REQUEST] GET /uploads/images-1777596862475-799902129.webp | status=304 duration=3ms ip=::1
+[2026-05-05T01:49:11.142Z] [REQUEST] GET /uploads/images-1777596862476-487316542.webp | status=304 duration=2ms ip=::1
+[2026-05-05T01:49:11.143Z] [REQUEST] GET /uploads/images-1777596862477-122406803.webp | status=304 duration=3ms ip=::1
+[2026-05-05T01:50:44.015Z] [REQUEST] GET /api/products | status=304 duration=60ms ip=::1
+[2026-05-05T01:50:44.018Z] [REQUEST] GET /api/products | status=304 duration=2ms ip=::1
+[2026-05-05T01:50:44.019Z] [REQUEST] GET /api/users/settings | status=304 duration=62ms ip=::1
+[2026-05-05T01:50:44.021Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:50:44.034Z] [REQUEST] GET /api/categories | status=304 duration=76ms ip=::1
+[2026-05-05T01:50:44.037Z] [REQUEST] GET /api/categories | status=304 duration=1ms ip=::1
+[2026-05-05T01:51:16.214Z] [REQUEST] GET /api/products/1 | status=304 duration=83ms ip=::1
+[2026-05-05T01:51:16.217Z] [REQUEST] GET /api/products/1 | status=304 duration=2ms ip=::1
+[2026-05-05T01:51:16.335Z] [REQUEST] GET /uploads/images-1777596862475-799902129.webp | status=304 duration=1ms ip=::1
+[2026-05-05T01:51:16.337Z] [REQUEST] GET /uploads/images-1777596862476-487316542.webp | status=304 duration=2ms ip=::1
+[2026-05-05T01:51:16.338Z] [REQUEST] GET /uploads/images-1777596862477-122406803.webp | status=304 duration=2ms ip=::1
+[2026-05-05T01:53:19.024Z] [REQUEST] GET /api/products/1 | status=304 duration=58ms ip=::1
+[2026-05-05T01:53:19.027Z] [REQUEST] GET /api/products/1 | status=304 duration=2ms ip=::1
+[2026-05-05T01:53:22.048Z] [REQUEST] GET /api/products/1 | status=304 duration=3ms ip=::1
+[2026-05-05T01:53:22.051Z] [REQUEST] GET /api/products/1 | status=304 duration=2ms ip=::1
+[2026-05-05T01:53:22.130Z] [REQUEST] GET /api/users/settings | status=304 duration=83ms ip=::1
+[2026-05-05T01:53:22.140Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:53:22.159Z] [REQUEST] GET /uploads/images-1777596862448-902446751.webp | status=304 duration=4ms ip=::1
+[2026-05-05T01:53:22.160Z] [REQUEST] GET /uploads/images-1777596862450-408331888.webp | status=304 duration=5ms ip=::1
+[2026-05-05T01:53:22.160Z] [REQUEST] GET /uploads/images-1777596862451-754417098.webp | status=304 duration=5ms ip=::1
+[2026-05-05T01:53:22.161Z] [REQUEST] GET /uploads/images-1777596862475-799902129.webp | status=304 duration=5ms ip=::1
+[2026-05-05T01:53:22.161Z] [REQUEST] GET /uploads/images-1777596862476-487316542.webp | status=304 duration=5ms ip=::1
+[2026-05-05T01:53:22.162Z] [REQUEST] GET /uploads/images-1777596862477-122406803.webp | status=304 duration=5ms ip=::1
+[2026-05-05T01:53:44.550Z] [REQUEST] GET /api/users/settings | status=304 duration=72ms ip=::1
+[2026-05-05T01:53:44.552Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:53:44.601Z] [REQUEST] GET /api/products/1 | status=304 duration=124ms ip=::1
+[2026-05-05T01:53:44.604Z] [REQUEST] GET /api/products/1 | status=304 duration=2ms ip=::1
+[2026-05-05T01:53:44.627Z] [REQUEST] GET /uploads/images-1777596862448-902446751.webp | status=304 duration=7ms ip=::1
+[2026-05-05T01:53:44.627Z] [REQUEST] GET /uploads/images-1777596862450-408331888.webp | status=304 duration=4ms ip=::1
+[2026-05-05T01:53:44.628Z] [REQUEST] GET /uploads/images-1777596862451-754417098.webp | status=304 duration=5ms ip=::1
+[2026-05-05T01:53:44.637Z] [REQUEST] GET /uploads/images-1777596862475-799902129.webp | status=304 duration=9ms ip=::1
+[2026-05-05T01:53:44.638Z] [REQUEST] GET /uploads/images-1777596862476-487316542.webp | status=304 duration=10ms ip=::1
+[2026-05-05T01:53:44.638Z] [REQUEST] GET /uploads/images-1777596862477-122406803.webp | status=304 duration=9ms ip=::1
+[2026-05-05T01:53:59.319Z] [REQUEST] GET /api/users/settings | status=304 duration=65ms ip=::1
+[2026-05-05T01:53:59.321Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:53:59.326Z] [REQUEST] GET /api/products/1 | status=304 duration=73ms ip=::1
+[2026-05-05T01:53:59.330Z] [REQUEST] GET /api/products/1 | status=304 duration=2ms ip=::1
+[2026-05-05T01:53:59.362Z] [REQUEST] GET /uploads/images-1777596862448-902446751.webp | status=304 duration=5ms ip=::1
+[2026-05-05T01:53:59.363Z] [REQUEST] GET /uploads/images-1777596862450-408331888.webp | status=304 duration=6ms ip=::1
+[2026-05-05T01:53:59.363Z] [REQUEST] GET /uploads/images-1777596862475-799902129.webp | status=304 duration=5ms ip=::1
+[2026-05-05T01:53:59.363Z] [REQUEST] GET /uploads/images-1777596862451-754417098.webp | status=304 duration=4ms ip=::1
+[2026-05-05T01:53:59.367Z] [REQUEST] GET /uploads/images-1777596862476-487316542.webp | status=304 duration=3ms ip=::1
+[2026-05-05T01:53:59.367Z] [REQUEST] GET /uploads/images-1777596862477-122406803.webp | status=304 duration=3ms ip=::1
+[2026-05-05T01:54:55.754Z] [REQUEST] GET /api/users/settings | status=304 duration=67ms ip=::1
+[2026-05-05T01:54:55.756Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:54:55.768Z] [REQUEST] GET /api/products/1 | status=304 duration=81ms ip=::1
+[2026-05-05T01:54:55.772Z] [REQUEST] GET /api/products/1 | status=304 duration=3ms ip=::1
+[2026-05-05T01:54:55.870Z] [REQUEST] GET /uploads/images-1777596862448-902446751.webp | status=304 duration=1ms ip=::1
+[2026-05-05T01:54:55.872Z] [REQUEST] GET /uploads/images-1777596862450-408331888.webp | status=304 duration=3ms ip=::1
+[2026-05-05T01:54:55.875Z] [REQUEST] GET /uploads/images-1777596862451-754417098.webp | status=304 duration=3ms ip=::1
+[2026-05-05T01:54:55.876Z] [REQUEST] GET /uploads/images-1777596862475-799902129.webp | status=304 duration=3ms ip=::1
+[2026-05-05T01:54:55.877Z] [REQUEST] GET /uploads/images-1777596862476-487316542.webp | status=304 duration=4ms ip=::1
+[2026-05-05T01:54:55.878Z] [REQUEST] GET /uploads/images-1777596862477-122406803.webp | status=304 duration=5ms ip=::1
+[2026-05-05T01:55:00.510Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:55:00.511Z] [REQUEST] GET /api/products/1 | status=304 duration=2ms ip=::1
+[2026-05-05T01:55:00.513Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:55:00.520Z] [REQUEST] GET /api/products/1 | status=304 duration=8ms ip=::1
+[2026-05-05T01:55:00.557Z] [REQUEST] GET /uploads/images-1777596862450-408331888.webp | status=304 duration=5ms ip=::1
+[2026-05-05T01:55:00.558Z] [REQUEST] GET /uploads/images-1777596862451-754417098.webp | status=304 duration=5ms ip=::1
+[2026-05-05T01:55:00.559Z] [REQUEST] GET /uploads/images-1777596862475-799902129.webp | status=304 duration=6ms ip=::1
+[2026-05-05T01:55:00.559Z] [REQUEST] GET /uploads/images-1777596862476-487316542.webp | status=304 duration=5ms ip=::1
+[2026-05-05T01:55:00.560Z] [REQUEST] GET /uploads/images-1777596862477-122406803.webp | status=304 duration=5ms ip=::1
+[2026-05-05T01:55:00.560Z] [REQUEST] GET /uploads/images-1777596862448-902446751.webp | status=304 duration=9ms ip=::1
+[2026-05-05T01:55:35.427Z] [REQUEST] GET /api/products/1 | status=304 duration=65ms ip=::1
+[2026-05-05T01:55:35.428Z] [REQUEST] GET /api/users/settings | status=304 duration=65ms ip=::1
+[2026-05-05T01:55:35.430Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:55:35.439Z] [REQUEST] GET /api/products/1 | status=304 duration=10ms ip=::1
+[2026-05-05T01:55:35.457Z] [REQUEST] GET /uploads/images-1777596862448-902446751.webp | status=304 duration=4ms ip=::1
+[2026-05-05T01:55:35.457Z] [REQUEST] GET /uploads/images-1777596862450-408331888.webp | status=304 duration=4ms ip=::1
+[2026-05-05T01:55:35.458Z] [REQUEST] GET /uploads/images-1777596862451-754417098.webp | status=304 duration=4ms ip=::1
+[2026-05-05T01:55:35.459Z] [REQUEST] GET /uploads/images-1777596862475-799902129.webp | status=304 duration=4ms ip=::1
+[2026-05-05T01:55:35.459Z] [REQUEST] GET /uploads/images-1777596862476-487316542.webp | status=304 duration=3ms ip=::1
+[2026-05-05T01:55:35.460Z] [REQUEST] GET /uploads/images-1777596862477-122406803.webp | status=304 duration=4ms ip=::1
+[2026-05-05T01:55:37.185Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:55:37.186Z] [REQUEST] GET /api/products/1 | status=304 duration=3ms ip=::1
+[2026-05-05T01:55:37.188Z] [REQUEST] GET /api/products/1 | status=304 duration=1ms ip=::1
+[2026-05-05T01:55:37.191Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:55:37.224Z] [REQUEST] GET /uploads/images-1777596862448-902446751.webp | status=304 duration=4ms ip=::1
+[2026-05-05T01:55:37.225Z] [REQUEST] GET /uploads/images-1777596862450-408331888.webp | status=304 duration=4ms ip=::1
+[2026-05-05T01:55:37.225Z] [REQUEST] GET /uploads/images-1777596862451-754417098.webp | status=304 duration=4ms ip=::1
+[2026-05-05T01:55:37.226Z] [REQUEST] GET /uploads/images-1777596862475-799902129.webp | status=304 duration=4ms ip=::1
+[2026-05-05T01:55:37.226Z] [REQUEST] GET /uploads/images-1777596862476-487316542.webp | status=304 duration=3ms ip=::1
+[2026-05-05T01:55:37.227Z] [REQUEST] GET /uploads/images-1777596862477-122406803.webp | status=304 duration=3ms ip=::1
+[2026-05-05T01:56:31.165Z] [REQUEST] GET /api/users/settings | status=304 duration=71ms ip=::1
+[2026-05-05T01:56:31.167Z] [REQUEST] GET /api/products/1 | status=304 duration=73ms ip=::1
+[2026-05-05T01:56:31.168Z] [REQUEST] GET /api/users/settings | status=304 duration=2ms ip=::1
+[2026-05-05T01:56:31.178Z] [REQUEST] GET /api/products/1 | status=304 duration=8ms ip=::1
+[2026-05-05T01:56:31.239Z] [REQUEST] GET /uploads/images-1777596862448-902446751.webp | status=304 duration=5ms ip=::1
+[2026-05-05T01:56:31.240Z] [REQUEST] GET /uploads/images-1777596862450-408331888.webp | status=304 duration=4ms ip=::1
+[2026-05-05T01:56:31.241Z] [REQUEST] GET /uploads/images-1777596862451-754417098.webp | status=304 duration=1ms ip=::1
+[2026-05-05T01:56:31.242Z] [REQUEST] GET /uploads/images-1777596862475-799902129.webp | status=304 duration=1ms ip=::1
+[2026-05-05T01:56:31.242Z] [REQUEST] GET /uploads/images-1777596862476-487316542.webp | status=304 duration=1ms ip=::1
+[2026-05-05T01:56:31.245Z] [REQUEST] GET /uploads/images-1777596862477-122406803.webp | status=304 duration=4ms ip=::1
+[2026-05-05T01:56:31.975Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:56:31.977Z] [REQUEST] GET /api/products | status=304 duration=4ms ip=::1
+[2026-05-05T01:56:31.981Z] [REQUEST] GET /api/categories | status=304 duration=5ms ip=::1
+[2026-05-05T01:56:31.982Z] [REQUEST] GET /api/users/settings | status=304 duration=0ms ip=::1
+[2026-05-05T01:56:31.983Z] [REQUEST] GET /api/products | status=304 duration=3ms ip=::1
+[2026-05-05T01:56:31.984Z] [REQUEST] GET /api/categories | status=304 duration=1ms ip=::1
+[2026-05-05T01:56:34.662Z] [REQUEST] GET /api/users/settings | status=304 duration=2ms ip=::1
+[2026-05-05T01:56:34.664Z] [REQUEST] GET /api/products | status=304 duration=4ms ip=::1
+[2026-05-05T01:56:34.666Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:56:34.667Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:56:34.668Z] [REQUEST] GET /api/products | status=304 duration=2ms ip=::1
+[2026-05-05T01:56:34.695Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:56:34.750Z] [REQUEST] GET /api/categories | status=304 duration=89ms ip=::1
+[2026-05-05T01:56:34.756Z] [REQUEST] GET /api/categories | status=304 duration=1ms ip=::1
+[2026-05-05T01:56:34.773Z] [REQUEST] GET /uploads/images-1777596862448-902446751.webp | status=304 duration=1ms ip=::1
+[2026-05-05T01:56:35.422Z] [REQUEST] GET /api/products/1 | status=304 duration=7ms ip=::1
+[2026-05-05T01:56:35.425Z] [REQUEST] GET /api/products/1 | status=304 duration=2ms ip=::1
+[2026-05-05T01:56:35.457Z] [REQUEST] GET /uploads/images-1777596862450-408331888.webp | status=304 duration=1ms ip=::1
+[2026-05-05T01:56:35.458Z] [REQUEST] GET /uploads/images-1777596862451-754417098.webp | status=304 duration=1ms ip=::1
+[2026-05-05T01:56:35.461Z] [REQUEST] GET /uploads/images-1777596862475-799902129.webp | status=304 duration=1ms ip=::1
+[2026-05-05T01:56:35.462Z] [REQUEST] GET /uploads/images-1777596862476-487316542.webp | status=304 duration=2ms ip=::1
+[2026-05-05T01:56:35.464Z] [REQUEST] GET /uploads/images-1777596862477-122406803.webp | status=304 duration=1ms ip=::1
+[2026-05-05T01:58:16.346Z] [REQUEST] GET /api/users/settings | status=304 duration=69ms ip=::1
+[2026-05-05T01:58:16.348Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:58:16.353Z] [REQUEST] GET /api/products/1 | status=304 duration=78ms ip=::1
+[2026-05-05T01:58:16.356Z] [REQUEST] GET /api/products/1 | status=304 duration=2ms ip=::1
+[2026-05-05T01:58:16.539Z] [REQUEST] GET /uploads/images-1777596862448-902446751.webp | status=304 duration=2ms ip=::1
+[2026-05-05T01:58:16.546Z] [REQUEST] GET /uploads/images-1777596862451-754417098.webp | status=304 duration=6ms ip=::1
+[2026-05-05T01:58:16.546Z] [REQUEST] GET /uploads/images-1777596862475-799902129.webp | status=304 duration=6ms ip=::1
+[2026-05-05T01:58:16.547Z] [REQUEST] GET /uploads/images-1777596862476-487316542.webp | status=304 duration=6ms ip=::1
+[2026-05-05T01:58:16.547Z] [REQUEST] GET /uploads/images-1777596862477-122406803.webp | status=304 duration=6ms ip=::1
+[2026-05-05T01:58:16.549Z] [REQUEST] GET /uploads/images-1777596862450-408331888.webp | status=304 duration=9ms ip=::1
+[2026-05-05T01:59:03.425Z] [REQUEST] GET /api/users/settings | status=304 duration=87ms ip=::1
+[2026-05-05T01:59:03.427Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:59:03.435Z] [REQUEST] GET /api/products | status=304 duration=98ms ip=::1
+[2026-05-05T01:59:03.438Z] [REQUEST] GET /api/products | status=304 duration=2ms ip=::1
+[2026-05-05T01:59:03.440Z] [REQUEST] GET /api/categories | status=304 duration=101ms ip=::1
+[2026-05-05T01:59:03.442Z] [REQUEST] GET /api/categories | status=304 duration=1ms ip=::1
+[2026-05-05T01:59:03.504Z] [REQUEST] GET /uploads/images-1777596862448-902446751.webp | status=304 duration=1ms ip=::1
+[2026-05-05T01:59:24.293Z] [REQUEST] GET /api/users/settings | status=304 duration=73ms ip=::1
+[2026-05-05T01:59:24.295Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:59:24.298Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:59:24.300Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:59:24.307Z] [REQUEST] GET /api/products | status=304 duration=88ms ip=::1
+[2026-05-05T01:59:24.310Z] [REQUEST] GET /api/products | status=304 duration=2ms ip=::1
+[2026-05-05T01:59:24.320Z] [REQUEST] GET /api/categories | status=304 duration=100ms ip=::1
+[2026-05-05T01:59:24.323Z] [REQUEST] GET /api/categories | status=304 duration=2ms ip=::1
+[2026-05-05T01:59:24.366Z] [REQUEST] GET /uploads/images-1777596862448-902446751.webp | status=304 duration=1ms ip=::1
+[2026-05-05T01:59:45.412Z] [REQUEST] GET /api/users/settings | status=304 duration=86ms ip=::1
+[2026-05-05T01:59:45.414Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:59:45.418Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:59:45.421Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T01:59:45.426Z] [REQUEST] GET /api/categories | status=304 duration=99ms ip=::1
+[2026-05-05T01:59:45.429Z] [REQUEST] GET /api/products | status=304 duration=104ms ip=::1
+[2026-05-05T01:59:45.429Z] [REQUEST] GET /api/categories | status=304 duration=1ms ip=::1
+[2026-05-05T01:59:45.454Z] [REQUEST] GET /api/products | status=304 duration=9ms ip=::1
+[2026-05-05T01:59:45.477Z] [REQUEST] GET /uploads/images-1777596862448-902446751.webp | status=304 duration=1ms ip=::1
+[2026-05-05T02:00:18.670Z] [REQUEST] GET /api/users/settings | status=304 duration=68ms ip=::1
+[2026-05-05T02:00:18.672Z] [REQUEST] GET /api/categories | status=304 duration=70ms ip=::1
+[2026-05-05T02:00:18.673Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T02:00:18.677Z] [REQUEST] GET /api/users/settings | status=304 duration=2ms ip=::1
+[2026-05-05T02:00:18.678Z] [REQUEST] GET /api/categories | status=304 duration=3ms ip=::1
+[2026-05-05T02:00:18.681Z] [REQUEST] GET /api/products | status=304 duration=80ms ip=::1
+[2026-05-05T02:00:18.685Z] [REQUEST] GET /api/users/settings | status=304 duration=2ms ip=::1
+[2026-05-05T02:00:18.693Z] [REQUEST] GET /api/products | status=304 duration=9ms ip=::1
+[2026-05-05T02:00:18.721Z] [REQUEST] GET /uploads/images-1777596862448-902446751.webp | status=304 duration=7ms ip=::1
+[2026-05-05T02:04:49.374Z] [REQUEST] GET /api/products | status=304 duration=77ms ip=::1
+[2026-05-05T02:04:49.377Z] [REQUEST] GET /api/products | status=304 duration=2ms ip=::1
+[2026-05-05T02:04:49.381Z] [REQUEST] GET /api/users/settings | status=304 duration=83ms ip=::1
+[2026-05-05T02:04:49.383Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T02:04:49.385Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T02:04:49.387Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T02:04:49.419Z] [REQUEST] GET /api/categories | status=304 duration=121ms ip=::1
+[2026-05-05T02:04:49.421Z] [REQUEST] GET /api/categories | status=304 duration=1ms ip=::1
+[2026-05-05T02:04:49.462Z] [REQUEST] GET /uploads/images-1777596862448-902446751.webp | status=304 duration=0ms ip=::1
+[2026-05-05T02:06:22.551Z] [WARN   ] POST /api/auth/login | status=403 duration=266ms ip=::1
+[2026-05-05T02:06:45.973Z] [REQUEST] GET /api/categories | status=304 duration=151ms ip=::1
+[2026-05-05T02:06:45.975Z] [REQUEST] GET /api/products | status=304 duration=153ms ip=::1
+[2026-05-05T02:06:45.995Z] [REQUEST] GET /api/categories | status=304 duration=4ms ip=::1
+[2026-05-05T02:06:46.000Z] [REQUEST] GET /api/products | status=304 duration=8ms ip=::1
+[2026-05-05T02:06:46.064Z] [REQUEST] GET /api/users/settings | status=304 duration=242ms ip=::1
+[2026-05-05T02:06:46.070Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T02:06:46.076Z] [REQUEST] GET /api/users/settings | status=304 duration=2ms ip=::1
+[2026-05-05T02:06:46.079Z] [REQUEST] GET /api/users/settings | status=304 duration=1ms ip=::1
+[2026-05-05T02:06:46.152Z] [REQUEST] GET /uploads/images-1777596862448-902446751.webp | status=304 duration=1ms ip=::1
+[2026-05-05T02:08:13.073Z] [REQUEST] GET /api/users/settings | status=200 duration=173ms ip=::1
+[2026-05-05T02:08:13.082Z] [REQUEST] GET /api/products | status=200 duration=182ms ip=::1
+[2026-05-05T02:08:13.108Z] [REQUEST] GET /api/users/settings | status=200 duration=2ms ip=::1
+[2026-05-05T02:08:13.109Z] [REQUEST] GET /api/users/settings | status=200 duration=1ms ip=::1
+[2026-05-05T02:08:13.145Z] [REQUEST] GET /api/categories | status=200 duration=227ms ip=::1
+[2026-05-05T02:08:13.156Z] [REQUEST] GET /api/users/settings | status=200 duration=252ms ip=::1
+[2026-05-05T02:08:13.186Z] [REQUEST] GET /api/categories | status=200 duration=285ms ip=::1
+[2026-05-05T02:08:13.213Z] [REQUEST] GET /api/products | status=200 duration=311ms ip=::1
+[2026-05-05T02:08:13.353Z] [REQUEST] GET /uploads/images-1777596862448-902446751.webp | status=304 duration=0ms ip=::1
+[2026-05-05T02:09:00.403Z] [REQUEST] GET /api/categories | status=200 duration=113ms ip=::1
+[2026-05-05T02:09:00.451Z] [REQUEST] GET /api/categories | status=200 duration=157ms ip=::1
+[2026-05-05T02:09:00.472Z] [REQUEST] GET /api/users/settings | status=200 duration=182ms ip=::1
+[2026-05-05T02:09:00.480Z] [REQUEST] GET /api/users/settings | status=200 duration=1ms ip=::1
+[2026-05-05T02:09:00.481Z] [REQUEST] GET /api/users/settings | status=200 duration=2ms ip=::1
+[2026-05-05T02:09:00.513Z] [REQUEST] GET /api/users/settings | status=200 duration=217ms ip=::1
+[2026-05-05T02:09:00.528Z] [REQUEST] GET /api/products | status=200 duration=237ms ip=::1
+[2026-05-05T02:09:00.657Z] [REQUEST] GET /api/products | status=200 duration=359ms ip=::1
+[2026-05-05T02:09:00.663Z] [REQUEST] GET /uploads/images-1777596862448-902446751.webp | status=304 duration=1ms ip=::1
+[2026-05-05T02:09:33.825Z] [SUCCESS] Server started | port=5000 frontend=undefined env=development
+[2026-05-05T02:09:38.801Z] [REQUEST] GET /api/categories | status=200 duration=173ms ip=::1
+[2026-05-05T02:09:38.816Z] [REQUEST] GET /api/users/settings | status=200 duration=187ms ip=::1
+[2026-05-05T02:09:38.829Z] [REQUEST] GET /api/users/settings | status=200 duration=199ms ip=::1
+[2026-05-05T02:09:38.850Z] [REQUEST] GET /api/categories | status=200 duration=223ms ip=::1
+[2026-05-05T02:09:38.858Z] [REQUEST] GET /api/products | status=200 duration=249ms ip=::1
+[2026-05-05T02:09:38.897Z] [REQUEST] GET /api/products | status=200 duration=268ms ip=::1
+[2026-05-05T02:09:38.912Z] [REQUEST] GET /api/users/settings | status=200 duration=3ms ip=::1
+[2026-05-05T02:09:38.917Z] [REQUEST] GET /api/users/settings | status=200 duration=2ms ip=::1
+[2026-05-05T02:09:39.029Z] [REQUEST] GET /uploads/images-1777596862448-902446751.webp | status=304 duration=4ms ip=::1

@@ -22,6 +22,7 @@ export default function ProductMaster() {
   
   // Form State
   const [title, setTitle] = useState('');
+  const [brand, setBrand] = useState('');
   const [price, setPrice] = useState('');
   const [description, setDescription] = useState('');
   const [categoryId, setCategoryId] = useState('');
@@ -78,6 +79,7 @@ export default function ProductMaster() {
     try {
       await API.post('/products', { 
         title, 
+        brand,
         price: parseFloat(price), 
         description, 
         categoryId: categoryId || null,
@@ -106,6 +108,7 @@ export default function ProductMaster() {
 
   const resetForm = () => {
     setTitle('');
+    setBrand('');
     setPrice('');
     setDescription('');
     setCategoryId('');
@@ -217,14 +220,24 @@ export default function ProductMaster() {
       <Dialog open={open} onClose={() => setOpen(false)} PaperProps={{ sx: { borderRadius: 6, p: 2, width: '100%', maxWidth: 550 } }}>
         <DialogTitle sx={{ fontWeight: 800, fontSize: '1.5rem', color: '#1e293b' }}>New Product</DialogTitle>
         <DialogContent sx={{ display: 'flex', flexDirection: 'column', gap: 3, mt: 1 }}>
-          <TextField 
-            label="Product Title" 
-            fullWidth 
-            placeholder="e.g. iPhone 15 Pro Max"
-            value={title} 
-            onChange={e => setTitle(e.target.value)} 
-            sx={{ mt: 1, '& .MuiOutlinedInput-root': { borderRadius: 3 } }} 
-          />
+          <div className="grid grid-cols-2 gap-4">
+            <TextField 
+                label="Product Title" 
+                fullWidth 
+                placeholder="e.g. iPhone 15 Pro Max"
+                value={title} 
+                onChange={e => setTitle(e.target.value)} 
+                sx={{ mt: 1, '& .MuiOutlinedInput-root': { borderRadius: 3 } }} 
+            />
+            <TextField 
+                label="Brand" 
+                fullWidth 
+                placeholder="e.g. Apple"
+                value={brand} 
+                onChange={e => setBrand(e.target.value)} 
+                sx={{ mt: 1, '& .MuiOutlinedInput-root': { borderRadius: 3 } }} 
+            />
+          </div>
           
           <div className="grid grid-cols-2 gap-4">
               <TextField 

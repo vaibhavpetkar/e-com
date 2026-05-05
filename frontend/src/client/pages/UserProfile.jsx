@@ -26,7 +26,7 @@ export default function UserProfile() {
     try {
       const [uRes, oRes, aRes] = await Promise.all([
         API.get('/users/profile'),
-        API.get('/orders'), // We should probably have a /my-orders route, but using /orders for now
+        API.get('/orders/myorders'), 
         API.get('/users/addresses')
       ]);
       setUser(uRes.data);

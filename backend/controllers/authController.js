@@ -22,22 +22,32 @@ export const register = async (req, res) => {
         }
 
         // Check duplicate
-        const existing = await pool.query("SELECT id FROM users WHERE email=$1 AND is_deleted=false", [email]);
+        const existing = await pool.query("SELECT id, is_verified FROM users WHERE email=$1 AND is_deleted=false", [email]);
+        
+        let userId;
         if (existing.rows.length > 0) {
-            return res.status(409).json({ error: "Email already registered" });
+            if (existing.rows[0].is_verified) {
+                return res.status(409).json({ error: "Email already registered" });
+            } else {
+                // User exists but is unverified, update their password and resend OTP
+                const hash = await bcrypt.hash(password, 10);
+                await pool.query(
+                    "UPDATE users SET name=$1, password=$2 WHERE id=$3",
+                    [name, hash, existing.rows[0].id]
+                );
+                userId = existing.rows[0].id;
+            }
+        } else {
+            // Create user with is_verified = false
+            const hash = await bcrypt.hash(password, 10);
+            const userResult = await pool.query(
+                `INSERT INTO users (name, email, password, role, is_verified, is_active)
+                 VALUES ($1,$2,$3,$4,false,true)
+                 RETURNING id`,
+                [name, email, hash, role || "USER"]
+            );
+            userId = userResult.rows[0].id;
         }
-
-        const hash = await bcrypt.hash(password, 10);
-
-        // Create user with is_verified = false
-        const userResult = await pool.query(
-            `INSERT INTO users (name, email, password, role, is_verified, is_active)
-             VALUES ($1,$2,$3,$4,false,true)
-             RETURNING id, email, name`,
-            [name, email, hash, role || "USER"]
-        );
-
-        const user = userResult.rows[0];
 
         // Generate 6-digit OTP (expires in 5 minutes)
         const otp = generateOTP();
@@ -52,7 +62,12 @@ export const register = async (req, res) => {
         );
 
         // Send OTP email
-        await sendSignupOtpEmail(email, otp);
+        try {
+            await sendSignupOtpEmail(email, otp);
+        } catch (emailErr) {
+            console.error("Failed to send OTP email (check SMTP settings). OTP is:", otp);
+            // Continue registration anyway for local development
+        }
 
         return res.status(201).json({
             message: "Registration successful! OTP sent to your email.",
@@ -299,7 +314,11 @@ export const resendOtp = async (req, res) => {
         );
 
         // Send OTP email
-        await sendSignupOtpEmail(email, otp);
+        try {
+            await sendSignupOtpEmail(email, otp);
+        } catch (emailErr) {
+            console.error("Failed to send OTP email (check SMTP settings). OTP is:", otp);
+        }
 
         res.json({ message: "OTP resent! Please check your email." });
     } catch (error) {
@@ -334,7 +353,11 @@ export const forgotPassword = async (req, res) => {
             [email, otp, expires]
         );
 
-        await sendOtpEmail(email, otp);
+        try {
+            await sendOtpEmail(email, otp);
+        } catch (emailErr) {
+            console.error("Failed to send OTP email (check SMTP settings). OTP is:", otp);
+        }
 
         res.json({ message: "OTP sent to your email address." });
     } catch (error) {

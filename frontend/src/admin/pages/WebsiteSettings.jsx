@@ -34,7 +34,13 @@ export default function WebsiteSettings() {
     custom_css: '/* Custom CSS here */',
     custom_html_head: '<!-- Head injection -->',
     custom_html_footer: '<!-- Footer injection -->',
-    enable_dark_mode: 'false'
+    enable_dark_mode: 'false',
+    contact_email: 'support@profitpulse.com',
+    contact_phone: '+1 (555) 123-4567',
+    facebook_url: 'https://facebook.com',
+    twitter_url: 'https://twitter.com',
+    instagram_url: 'https://instagram.com',
+    discount_filters: '10,20,30,50'
   });
 
   useEffect(() => {
@@ -284,6 +290,76 @@ export default function WebsiteSettings() {
                     sx: { borderRadius: 3, bgcolor: '#f8fafc' },
                     startAdornment: <InputAdornment position="start"><AutoFixHighRoundedIcon sx={{ fontSize: 18 }} /></InputAdornment>
                   }}
+                />
+              </Grid>
+              <Grid item xs={12} md={6}>
+                <Typography variant="caption" fontWeight="900" color="#64748b" sx={{ ml: 1, mb: 1, display: 'block' }}>CONTACT EMAIL</Typography>
+                <TextField
+                  fullWidth size="small"
+                  value={settings.contact_email}
+                  onChange={(e) => setSettings({...settings, contact_email: e.target.value})}
+                  InputProps={{ sx: { borderRadius: 3, bgcolor: '#f8fafc' } }}
+                />
+              </Grid>
+              <Grid item xs={12} md={6}>
+                <Typography variant="caption" fontWeight="900" color="#64748b" sx={{ ml: 1, mb: 1, display: 'block' }}>CONTACT PHONE</Typography>
+                <TextField
+                  fullWidth size="small"
+                  value={settings.contact_phone}
+                  onChange={(e) => setSettings({...settings, contact_phone: e.target.value})}
+                  InputProps={{ sx: { borderRadius: 3, bgcolor: '#f8fafc' } }}
+                />
+              </Grid>
+              <Grid item xs={12} md={4}>
+                <Typography variant="caption" fontWeight="900" color="#64748b" sx={{ ml: 1, mb: 1, display: 'block' }}>FACEBOOK URL</Typography>
+                <TextField
+                  fullWidth size="small"
+                  value={settings.facebook_url}
+                  onChange={(e) => setSettings({...settings, facebook_url: e.target.value})}
+                  InputProps={{ sx: { borderRadius: 3, bgcolor: '#f8fafc' } }}
+                />
+              </Grid>
+              <Grid item xs={12} md={4}>
+                <Typography variant="caption" fontWeight="900" color="#64748b" sx={{ ml: 1, mb: 1, display: 'block' }}>TWITTER URL</Typography>
+                <TextField
+                  fullWidth size="small"
+                  value={settings.twitter_url}
+                  onChange={(e) => setSettings({...settings, twitter_url: e.target.value})}
+                  InputProps={{ sx: { borderRadius: 3, bgcolor: '#f8fafc' } }}
+                />
+              </Grid>
+              <Grid item xs={12} md={4}>
+                <Typography variant="caption" fontWeight="900" color="#64748b" sx={{ ml: 1, mb: 1, display: 'block' }}>INSTAGRAM URL</Typography>
+                <TextField
+                  fullWidth size="small"
+                  value={settings.instagram_url}
+                  onChange={(e) => setSettings({...settings, instagram_url: e.target.value})}
+                  InputProps={{ sx: { borderRadius: 3, bgcolor: '#f8fafc' } }}
+                />
+              </Grid>
+            </Grid>
+          </Paper>
+        </Grid>
+
+        {/* Section: Filters Management */}
+        <Grid item xs={12}>
+          <Paper sx={{ p: 4, borderRadius: 6, border: '1px solid #e2e8f0' }}>
+            <Stack direction="row" spacing={2} sx={{ alignItems: 'center', mb: 4 }}>
+              <Box sx={{ p: 1.5, borderRadius: 3, bgcolor: '#f0fdf4', color: '#16a34a' }}>
+                <LayersRoundedIcon />
+              </Box>
+              <Typography variant="h6" fontWeight="800">Filters Management (Discount & Pricing)</Typography>
+            </Stack>
+
+            <Grid container spacing={4}>
+              <Grid item xs={12}>
+                <Typography variant="caption" fontWeight="900" color="#64748b" sx={{ ml: 1, mb: 1, display: 'block' }}>DISCOUNT FILTER OPTIONS (%)</Typography>
+                <TextField
+                  fullWidth size="small"
+                  value={settings.discount_filters || ''}
+                  onChange={(e) => setSettings({...settings, discount_filters: e.target.value})}
+                  helperText="Enter discount percentages separated by commas (e.g., 10,20,30)"
+                  InputProps={{ sx: { borderRadius: 3, bgcolor: '#f8fafc' } }}
                 />
               </Grid>
             </Grid>
